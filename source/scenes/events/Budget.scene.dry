@@ -4,7 +4,7 @@ new-page: true
 tags: event
 priority: 2
 view-if: year >= 1929 and month == 1
-on-arrival: older_republic = old_republic; old_republic = pro_republic; on-arrival: month_actions += 1; {!
+on-arrival: older_republic = old_republic; old_republic = pro_republic; month_actions += 1; {!
 if (Q.economic_growth < 5) {
     Q.economic_growth += 0.8;
     if (Q.works_program) {
