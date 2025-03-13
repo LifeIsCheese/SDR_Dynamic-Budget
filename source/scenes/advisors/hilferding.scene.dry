@@ -56,5 +56,5 @@ title: Time Travel to 1936 November
 subtitle: Yeah
 unavailable-subtitle: No
 choose-if: advisor_action_timer == 0
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; year = 1936; month = 11;
 go-to: main
