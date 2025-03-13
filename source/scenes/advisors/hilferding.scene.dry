@@ -57,4 +57,4 @@ subtitle: Yeah
 unavailable-subtitle: No
 choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
-go-to: Return to main
+go-to: main
