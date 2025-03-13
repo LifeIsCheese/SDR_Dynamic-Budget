@@ -17,9 +17,6 @@ if (Q.right_coalition_failed && Q.economic_plan) {
     Q.workers_spd += 5;
     Q.unemployed_spd += 5;
 }
-if (Q.budget > 0) {
-    Q.budget -= 1;
-}
 // moved demographic changes to post_event
 !}
 tags: event
