@@ -16,4 +16,39 @@ if (year = 1930) {
         Q.budget -=1;
     }
 }
+if (year >= 1937) {
+    if (Q.works_program) {
+        Q.economic_growth += 0.3;
+        Q.inflation += 0.4;
+    }
+
+Q.unemployed -= Q.economic_growth - Q.inflation;
+    if (Q.works_program) {
+        Q.unemployed -= (Q.economic_growth/2);
+    }
+    if (Q.works_program) {
+        Q.economic_growth += 0.3;
+        Q.inflation += 0.2;
+    }
+if (Q.economic_growth >= 4) {
+    Q.budget += 1;
+    if ((Q.upper_taxes_rates+Q.lower_tax_rates) >= 7) {
+        Q.budget += 1;
+        Q.economic_growth -= ((Q.upper_tax_rates+(Q.lower_tax_rates/2))/14);
+    }
+}
+if (Q.economic_growth >= 9) {
+    Q.budget += 1;
+    if ((Q.upper_taxes_rates+Q.lower_tax_rates) >= 7) {
+        Q.budget += 1;
+        Q.economic_growth -= ((Q.upper_tax_rates+(Q.lower_tax_rates/2))/14);
+    }
+}
+if (Q.pro_republic > 75 && Q.pro_republic > Q.older_republic) {
+    Q.new_middle_ddp += (Q.pro_republic - Q.older_republic)
+    Q.old_middle_ddp += ((Q.pro_republic - Q.older_republic)/2)
+    Q.new_middle_dvp += ((Q.pro_republic - Q.older_republic)/2)
+    Q.old_middle_dvp += (Q.pro_republic - Q.older_republic)
+}
+}
 !}
