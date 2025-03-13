@@ -3,10 +3,10 @@ subtitle: As the year begins, we have recieved our annual budget.
 new-page: true
 tags: event
 priority: 2
-view-if: year >= 1929 and month = 1
+view-if: year >= 1928 and month = 6
 on-arrival: older_republic = old_republic; old_republic = pro_republic; month_actions += 1;{!
 
-if (year = 1929) {
+if (year = 1928) {
     if (Q.budget > 0) {
         Q.budget -=1;
     }
