@@ -1,55 +1,15 @@
 title: Budget for the year
-subtitle: A new year
+subtitle: As the year begins, we have recieved our annual budget.
 new-page: true
 tags: event
 priority: 2
 view-if: year >= 1929 and month == 1
 on-arrival: older_republic = old_republic; old_republic = pro_republic; month_actions += 1; {!
-if (Q.economic_growth < 5) {
-    Q.economic_growth += 0.8;
-    if (Q.works_program) {
-        Q.economic_growth += 0.3;
-        Q.inflation += 0.4;
-    }
-    if (Q.inflation < 5) {
-        Q.inflation += 0.2;
-        if (Q.works_program) {
-            Q.inflation += 0.4;
-        }
-    }
+
+if (year == 1929) {
+
+if (Q.budget > 0) {
+    Q.budget -= 1;
 }
-if (Q.unemployed >= 20 && Q.economic_growth >= 3) {
-    Q.unemployed -= Q.economic_growth;
-    if (Q.works_program) {
-        Q.unemployed -= (Q.economic_growth/2);
-    }
-} else if (Q.unemployed >= 20) {
-    Q.unemployed -= 2;
-    if (Q.works_program) {
-        Q.unemployed -= 1;
-    }
-    if (Q.unemployed >= 25) {
-        Q.unemployed -= 1;
-    }
-} else {
-    Q.economic_growth += 0.4;
-    if (Q.works_program) {
-        Q.economic_growth += 0.1;
-        Q.inflation += 0.2;
-    }
+
 }
-//Using Real growth for game balance
-Q.budget += economic_growth_2 - inflation-2
-    Q.budget += 1;
-    if ((Q.upper_taxes_rates+Q.lower_tax_rates) >= 7) {
-        Q.budget += 1;
-        Q.economic_growth -= ((Q.upper_tax_rates+(Q.lower_tax_rates/2))/14);
-    }
-if (Q.pro_republic > 75 && Q.pro_republic > Q.older_republic) {
-    Q.new_middle_ddp += (Q.pro_republic - Q.older_republic)
-    Q.old_middle_ddp += ((Q.pro_republic - Q.older_republic)/2)
-    Q.new_middle_dvp += ((Q.pro_republic - Q.older_republic)/2)
-    Q.old_middle_dvp += (Q.pro_republic - Q.older_republic)
-}
-month +=1;
-!}
