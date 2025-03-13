@@ -6,21 +6,17 @@ priority: 2
 view-if: year >= 1929 and month = 1
 on-arrival: older_republic = old_republic; old_republic = pro_republic; month_actions += 1;{!
 
-if (year = 1929) {
-    if (Q.budget > 0) {
-        Q.budget -=1;
-    }
-}
-if (year = 1930) {
-    if (Q.budget > 0) {
-        Q.budget -=1;
-    }
-}
+//if (year = 1929) {
+    //if (Q.budget > 0) {
+        //Q.budget -=1;
+    //}
+//}
+//if (year = 1930) {
+    //if (Q.budget > 0) {
+        //Q.budget -=1;
+    //}
+//}
 if (year >= 1937) {
-    if (Q.works_program) {
-        Q.economic_growth += 0.3;
-        Q.inflation += 0.4;
-    }
 
 Q.unemployed -= Q.economic_growth - Q.inflation;
     if (Q.works_program) {
