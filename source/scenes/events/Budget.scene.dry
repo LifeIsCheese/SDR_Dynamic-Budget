@@ -34,7 +34,7 @@ if (Q.economic_growth < 0) {
         if (Q.budget > 0) {
         Q.budget -=1;
     } else {
-Q.unemployed -= (Q.economic_growth/2);
+resources -= 1;
     }
 }
 if (Q.pro_republic > 75 && Q.pro_republic > Q.older_republic) {
