@@ -36,13 +36,6 @@ if (Q.unemployed >= 15 && Q.economic_growth >= 2) {
         Q.inflation += 0.4;
     }
 }
-if (Q.economic_growth >= 3) {
-    Q.budget += 1;
-    if ((Q.upper_taxes_rates+Q.lower_tax_rates) >= 6) {
-        Q.budget += 1;
-        Q.economic_growth -= ((Q.upper_tax_rates+(Q.lower_tax_rates/2))/12);
-    }
-}
 if (Q.pro_republic > 75 && Q.pro_republic > Q.older_republic) {
     Q.new_middle_ddp += (Q.pro_republic - Q.older_republic)
     Q.old_middle_ddp += ((Q.pro_republic - Q.older_republic)/2)
