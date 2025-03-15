@@ -51,7 +51,7 @@ view-if: wtb_adopted == 0 or budget >= 2
 subtitle: -2 budget
 unavailable-subtitle: -2 budget - [? if upper_tax_rates < -5 or lower_tax_rates < -5 : Tax rates are already too low. ?][? if status_quo : We have agreed to leave the budget untouched. ?]
 choose-if: budget >= 2 and upper_tax_rates >= -5 and lower_tax_rates >= -5 and not status_quo
-on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 3*(1-dissent); coalition_dissent += 1 if budget <= 2; dvp_relation += 5*(1-dissent) if budget > 2; z_relation += 5*(1-dissent) if budget > 2; unemployed -= 1 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 0.4; economic_growth += 0.4; socialism -= 1
+on-arrival: budget -= 2; upper_tax_rates -= 1; lower_tax_rates -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 3*(1-dissent); coalition_dissent += 1 if budget <= 2; dvp_relation += 5*(1-dissent) if budget > 2; z_relation += 5*(1-dissent) if budget > 2; unemployed -= 1 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; economic_growth += 0.4; socialism -= 1
 
 Cutting taxes benefits most the rich and middle-class, who pay more taxes than the working class. Our coalition partners are happy at our orthodox economic course.
 
