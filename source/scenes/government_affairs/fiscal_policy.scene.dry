@@ -82,7 +82,7 @@ Our regressive taxation policy benefits the rich while hurting the poor and work
 
 @raise_interest_rates
 title: Increase interest rates (which affects middle class and rural much more than workers),
-subtitle: This does not change overall revenue. [? if Q.interest_rates < 1 : Interest rates are too high. ?]
+subtitle: This does not change overall revenue. [? if interest_rates < 1 : Interest rates are too high. ?]
 choose-if: interest_rates < 1;
 on-arrival: inflation -= 2 if inflation <= 0; inflation -= 1 if inflation > 0; inflation -= 2 if inflation >= 4; inflation -= 2 if inflation >= 8;  unemployed += 0.5; ; workers_spd -= 1; unemployed_spd -= 1; rural_spd += 1*(1-dissent); old_middle_spd += 3*(1-dissent); new_middle_spd -= 4;  economic_growth -= 1; capital_strike_progress += 1; interest_rates +=1;
 
