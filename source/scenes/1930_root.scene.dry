@@ -208,10 +208,6 @@ Q.inflation = -3.8;
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
 Q.economic_growth = -1.5;
 
-//Added Intrest reates
-Q.interest_rates = 0
-
-
 Q.strife = 2;
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
