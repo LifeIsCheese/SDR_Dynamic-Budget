@@ -228,7 +228,8 @@ Q.inflation = 2.9;
 Q.economic_growth = 4.4;
 
 //Added Intrest reates
-Q.interest_rates = 0
+Q.interest_rates = 0;
+Q.inflation_growth = 0.1;
 
 Q.strife = 0;
 
