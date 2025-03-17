@@ -218,18 +218,18 @@ if (Q.month_actions >= 1) {
     // we're basically implicity drawing a Philips curve
     // budget deficits lead to some inflation
     if (Q.budget <= 0 && Q.budget > -2 && Q.inflation < 2.5) {
-        Q.inflation += 0.1;
+        Q.inflation += Q.inflation_growth;
     }
     if (Q.budget <= -2 && Q.budget > -5 && Q.inflation < 5) {
         Q.inflation += 0.2;
         if (Q.unemployed >= 12) {
-            Q.inflation -= 0.1;
+            Q.inflation -= Q.inflation_growth;
         }
     }
     if (Q.budget <= -5 && Q.inflation < 10) {
-        Q.inflation += 0.1*3;
+        Q.inflation += Q.inflation_growth*3;
         if (Q.unemployed >= 15) {
-            Q.inflation -= 0.1;
+            Q.inflation -= Q.inflation_growth;
         }
     }
     if (((Q.budget <= -5 && Q.inflation >= 10) || (Q.hyperinflation >= 1 && Q.budget < 0)) && Q.hyperinflation_enabled) {
@@ -253,37 +253,37 @@ if (Q.month_actions >= 1) {
     if (Q.economic_growth < -0.5 && Q.unemployed <= 18) {
         Q.unemployed += 0.1;
         if (Q.inflation >= -2) {
-            Q.inflation -= 0.1;
+            Q.inflation -= Q.inflation_growth;
         }
     }
     if (Q.economic_growth < -5 && Q.unemployed <= 28) {
         Q.unemployed += 0.1;
         if (Q.inflation >= -5) {
-            Q.inflation -= 0.1;
+            Q.inflation -= Q.inflation_growth;
         }
     }
     if (Q.economic_growth >= 2 && Q.unemployed >= 17) {
         Q.unemployed -= 0.1;
         if (Q.inflation < 3) {
-            Q.inflation += 0.1;
+            Q.inflation += Q.inflation_growth;
         }
     }
     if (Q.economic_growth >= 4 && Q.unemployed >= 12) {
         Q.unemployed -= 0.1;
         if (Q.inflation < 4) {
-            Q.inflation += 0.1;
+            Q.inflation += Q.inflation_growth;
         }
     }
     if (Q.economic_growth >= 6 && Q.unemployed >= 7) {
         Q.unemployed -= 0.1;
         if (Q.inflation < 6) {
-            Q.inflation += 0.1;
+            Q.inflation += Q.inflation_growth;
         }
     }
     if (Q.economic_growth >= 8 && Q.unemployed >= 3) {
         Q.unemployed -= 0.1;
         if (Q.inflation < 8) {
-            Q.inflation += 0.1;
+            Q.inflation += Q.inflation_growth;
         }
     }
     if (Q.economic_growth >= 4 && Q.inflation >= 7.5) {
@@ -294,28 +294,28 @@ if (Q.month_actions >= 1) {
     }
     if (Q.economic_growth >= 7) {
         Q.economic_growth -= 0.1;
-        Q.inflation += 0.1;
+        Q.inflation += Q.inflation_growth;
     }
     if (Q.economic_growth >= 10) {
         Q.economic_growth -= 0.2;
-        Q.inflation += 0.1;
+        Q.inflation += Q.inflation_growth;
     }
     if (Q.economic_growth >= 12) {
         Q.economic_growth -= 0.3;
-        Q.inflation += 0.1;
+        Q.inflation += Q.inflation_growth;
     }
     if (Q.inflation > 5 && Q.economic_growth >= 1) {
         Q.economic_growth -= 0.1;
         if (Q.inflation > 7 && Q.economic_growth >= 2) {
             Q.economic_growth -= 0.2;
-            Q.inflation -= 0.1;
+            Q.inflation -= Q.inflation_growth;
         }
     }
     if (Q.inflation >= 8) {
         Q.economic_growth -= 0.1;
-        Q.inflation -= 0.1;
+        Q.inflation -= Q.inflation_growth;
         if (Q.inflation >= 10) {
-            Q.inflation -= 0.1;
+            Q.inflation -= Q.inflation_growth;
         }
     }
     if (Q.works_program && !Q.return_to_normalcy) {
@@ -346,7 +346,7 @@ if (Q.month_actions >= 1) {
         Q.economic_growth += 0.1;
     }
     if (Q.unemployed >= 20 && Q.inflation >= -4) {
-        Q.inflation -= 0.1;
+        Q.inflation -= Q.inflation_growth;
     }
     // economy health rating - vibes based
     Q.economic_health = Q.economic_growth*10;
