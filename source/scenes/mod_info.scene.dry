@@ -10,6 +10,7 @@ new-page: true
 
 This mod adds a variety of changes to the base game, mostly in the form of flavor and minor improvements.
 
+- @dynamic_budget: Budget changes
 - @left: Left Plan + Council flavor
 - @centrist: Center flavor
 - @moderate: Reformist Plan flavor
@@ -25,6 +26,20 @@ This mod adds a variety of changes to the base game, mostly in the form of flavo
 - @ideas: Ideas and feedback
 - @changelog: Changelog
 - @root: Back
+
+@ @dynamic_budget
+
+= Budget Changes + Inflation and economic growth
+
+Budget is now based on economic growth, 3% > is 1 budget, 8% > is 2 budget. (Lasts even after 1936)
+
+Taxes also affecct budget, with the highest bring in doubling budget, but severely impacting econimic growth
+
+New option in fiscal policy, called Interest rates impact inflation by both a onetime effect and baseline growth.
+
+After 10% economic growth is achieved with inflation being lower than economic growth, the German economic miracle happens.
+  
+- @flavors: Back
 
 @moderate
 

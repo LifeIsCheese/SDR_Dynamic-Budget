@@ -16,10 +16,10 @@ Q.unemployed -= Q.economic_growth - Q.inflation;
         Q.economic_growth += 0.3;
         Q.inflation += 0.2;
     }
-if (Q.economic_growth >= 4 && Q.economic_growth > Q.inflation) {
+if (Q.economic_growth >= 3 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
 }
-if (Q.economic_growth >= 9 && Q.economic_growth > Q.inflation) {
+if (Q.economic_growth >= 8 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
 }
 if (Q.economic_growth < 0) {
