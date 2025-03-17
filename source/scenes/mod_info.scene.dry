@@ -10,7 +10,7 @@ new-page: true
 
 This mod adds a variety of changes to the base game, mostly in the form of flavor and minor improvements.
 
-- @dynamic_budget: Budget changes
+- @dynamic_budget: Budget + Economy + Fiscal changes
 - @left: Left Plan + Council flavor
 - @centrist: Center flavor
 - @moderate: Reformist Plan flavor
@@ -31,13 +31,13 @@ This mod adds a variety of changes to the base game, mostly in the form of flavo
 
 = Budget Changes + Inflation and economic growth
 
-Budget is now based on economic growth, 3% > is 1 budget, 8% > is 2 budget. (Lasts even after 1936)
-
-Taxes also affect budget, with the highest doubling the budget, but severely impacting economic growth.
+Budget is now based on economic growth, 3% > is 1 budget, 8% > is 2 budget. (Lasts after 1936) (Inflation has to be lower than economic growth)
 
 New option in fiscal policy called Interest rates. It impacts inflation by both a onetime effect and affects the baseline growth.
 
-After 10% economic growth is achieved with inflation being lower than economic growth, the German economic miracle happens.
+After 10% economic growth is achieved with inflation being lower than economic growth, the German economic miracle happens which then leads to 3 "plans". WIP
+
+If interest rates are high, and inflation is too high or economic growth too low. A housing crisis will happen WIP
 
 - @flavors: Back
 
@@ -127,67 +127,7 @@ The mod also contains many small changes that I felt would be good additions to 
 
 = Changelog
 
-**19/09/2024**: Added right-wing coalition as a possibility in 1928 if the SPD refuses to form a government, plus some bug fixes.
-
-**06/10/2024**: Updated the mod to fit base game's additions with 0.17 and 0.17.1 though mostly preserving the mod form of the features for now. Also added an alternate Blutmai event for if the right-wing coalition has formed, SAPD flavor, changes to defunding the Reichswehr, new coup investigation option for domestic enemies, and another Weimar Plan option (convincing them through the UIC)
-
-**12/10/2024**: Added more SAPD content (WIP and non-functional) as well as hyperinflation and deficit tax cuts.
-
-**13/10/2024**: Iron Front may now defect as part of a new neorevisionist split, may incorporate this into a reformist split either as a DDP/DStP boost or a right-wing SAPD equivalent.
-
-**14/10/2024**: New government card for when in toleration/opposition: Direct Democracy, allowing you to agitate directly for reforms. SAPD conference mechanic finished (I think)
-
-**15/10/2024**: Balancing and changes to Direct Democracy.
-
-**17/10/2024**: More balancing and changes to Direct Democracy; cooldown on certain topics for petitions, higher resource investment, but also higher support increases. Other bug fixes and tweaks.
-
-**19/10/2024**: WIP experimental changes to NSDAP popularity changes
-
-**10/12/2024**: Victory for the Republic made playable, including scenarios for where it results from a KPD presidency.
-
-**15/12/2024**: Endless mode (no content post-end, but still an option)
-
-**17/12/2024**: Updated mod to Death of Hindenburg
-
-**22/12/2024**: Weimar dissent (Weimar Plan can now fall apart)
-
-**25/12/2024**: Greatly expanded KPD content (KPD can now take ministries post war, crisis in the army if they take the Reichswehr, etc.). Playable Victory for the Republic mostly finished, with a few features still WIP.
-
-**3/1/2025**: Gustav Stresemann is no longer willing to concede his position as Foreign Minister (except in some cases)
-
-**4/1/2025**: Presidential elections 1932 added to track differences between the candidates themselves and not just the parties, as well as small RNG factor added,
-
-**5/1/2025**: Monopoly on violence tracker & political violence updates
-
-**6/1/2025**: Military policy updated, Hindenburg can now sack SPD chancellors too
-
-**10/1/2025**: March on Berlin updated for cases where Nazis are not strongest far-right movement
-
-**12/1/2025**: Blutmai tweaks
-
-**16/1/2025**: Support changes changed and Nazi peak implemented
-
-**18/1/2025**: Work in progress timeline extension to around 1937
-
-**20/1/2025**: Some changes to over the time support, including a soft cap on SPD support post return to normalcy
-
-**21/1/2025**: Eviler DVP (sorry guys)
-
-**24/1/2025**: Reichsexekuting Thuringia if SPD president added
-
-*27/1/2025**: Seldte martial law added and generally just more of the March on Berlin seldte variation content
-
-**30/1/2025**: Economic factors feed into each other, effect support. Also modified post-34 bourgeois economic plan to include tariff hikes if budget deficit
-
-**11/2/2025**: Post civil war elections added & new mechanic to radicalize the new middle class, increasing support and making them less offended by leftist actions
-
-**13/2/2025**: Minor faction rework, changing dissent to emphasize the historical Centrist niche of keeping the party together
-
-**14/2/2025**: Hilferding eventually concedes to the necessity of an economic plan...
-
-**16/2/2025**: Political crisis event if multiple elections without majority.
-
-**17/2/2025**: 1930 start date for those who want a challenge!
+**2025/03/16**: test release
 
 - @flavors: Back
 
