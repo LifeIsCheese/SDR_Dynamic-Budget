@@ -33,7 +33,7 @@ This mod adds a variety of changes to the base game, mostly in the form of flavo
 
 Budget is now based on economic growth, 3% > is 1 budget, 8% > is 2 budget. (Lasts after 1936) (Inflation has to be lower than economic growth)
 
-New option in fiscal policy called Interest rates. It impacts inflation by both a onetime effect and affects the baseline growth.
+New option in fiscal policy called Interest rates. It impacts inflation and economic growth by both a onetime effect and the baseline growth.
 
 After 10% economic growth is achieved with inflation being lower than economic growth, the German economic miracle happens which then leads to 3 "plans". WIP
 
