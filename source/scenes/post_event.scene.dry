@@ -358,7 +358,21 @@ if (Q.month_actions >= 1) {
         Q.economic_health -= (Q.inflation-3);
     }
     /// Interest Rates, affecting baseline inflation.
-
+    if (Q.interest_rates = -2) {
+        Q.inflation_growth = 0.16;
+    }
+    if (Q.interest_rates = -1) {
+        Q.inflation_growth = 0.13;
+    }
+    if (Q.interest_rates = 0) {
+        Q.inflation_growth = 0.1;
+    }
+    if (Q.interest_rates = 1) {
+        Q.inflation_growth = 0.6;
+    }
+    if (Q.interest_rates = 2) {
+        Q.inflation_growth = 0.1;
+    }
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
         Q.workers_spd += (Q.unemployed/8)/12;
