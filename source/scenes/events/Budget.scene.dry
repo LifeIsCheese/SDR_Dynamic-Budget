@@ -16,16 +16,16 @@ Q.unemployed -= Q.economic_growth - Q.inflation;
         Q.economic_growth += 0.3;
         Q.inflation += 0.2;
     }
-if (Q.economic_growth >= 4 && Q.economic_growth > Q.inflation) {
+if (Q.economic_growth > 3 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
-    if (Q.upper_taxes_rates+Q.lower_tax_rates) >= 7) {
+    if (Q.upper_taxes_rates+Q.lower_tax_rates) > 6) {
         Q.budget += 1;
         Q.economic_growth -= ((Q.upper_tax_rates+(Q.lower_tax_rates/2))/14);
     }
 }
-if (Q.economic_growth >= 9 && Q.economic_growth > Q.inflation) {
+if (Q.economic_growth > 8 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
-    if (Q.upper_taxes_rates+Q.lower_tax_rates) >= 7) {
+    if (Q.upper_taxes_rates+Q.lower_tax_rates) > 6) {
         Q.budget += 1;
         Q.economic_growth -= ((Q.upper_tax_rates+(Q.lower_tax_rates/2))/14);
     }
