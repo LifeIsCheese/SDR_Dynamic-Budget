@@ -373,6 +373,9 @@ if (Q.month_actions >= 1) {
     if (Q.interest_rates = 2) {
         Q.inflation_growth = 0.1;
     }
+    if (Q.interest_rates = 3) {
+        Q.inflation_growth = 0.05;
+    }
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
         Q.workers_spd += (Q.unemployed/8)/12;
