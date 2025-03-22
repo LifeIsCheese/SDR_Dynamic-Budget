@@ -18,7 +18,7 @@ if (Q.economic_growth) {
 
 [+ month : month +] [+ year +]
 
-Interest available: [+ interest +]
+Interest available -2: [+ interest +]
 
 interest_rates available: [+ interest_rates +]
 
