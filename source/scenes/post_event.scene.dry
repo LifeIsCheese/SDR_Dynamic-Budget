@@ -361,21 +361,26 @@ if (Q.month_actions >= 1) {
     if (Q.interest_rates == 2) {
         Q.inflation_growth = 0.5;
         Q.economic_growth -= 0.1;
+        Q.s_interest = "Very High";
     }
     if (Q.interest_rates == 1) {
         Q.inflation_growth = 0.75;
         Q.economic_growth -= 0.05;
+        Q.s_interest = "High";
     }
     if (Q.interest_rates == 0) {
         Q.inflation_growth = 0.1;
+        Q.s_interest = "Normal";
     }
     if (Q.interest_rates == -1) {
         Q.inflation_growth = 0.125;
         Q.economic_growth += 0.05;
+        Q.s_interest = "Low";
     }
     if (Q.interest_rates == -2) {
         Q.inflation_growth = 0.15;
         Q.economic_growth += 0.1;
+        Q.s_interest = "Very Low";
     }
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
