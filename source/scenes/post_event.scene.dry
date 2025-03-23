@@ -371,7 +371,7 @@ if (Q.month_actions >= 1) {
     }
     if (Q.interest_rates == -1) {
         Q.inflation_growth = 0.125;
-        Q.economic_growth +=1 0.05
+        Q.economic_growth += 0.05;
     }
     if (Q.interest_rates == -2) {
         Q.inflation_growth = 0.15;
@@ -1316,7 +1316,7 @@ if (choices && choices[0].title != "Continue...") {
 
 if (typeof window !== "undefined" && window.generateBar) {
 }
-!
+!}
 go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0; main.main_easy if has_event = 0 and difficulty < 0
 
 = [+ month : month +] [+ year +]
