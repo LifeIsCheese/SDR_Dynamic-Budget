@@ -261,7 +261,7 @@ blockquote + blockquote.attribution {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #f3f3e3;
+    background-color: #350707;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -310,13 +310,13 @@ a.card {
   display: inline-block;
   width: 120px;
   height: 150px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid #ccc;
+  box-shadow: 5px 5px 10px rgba(37, 4, 4, 0.466);
+  border: 10px solid #ff2222;
   margin-bottom: 0.5em;
   position: relative;
 }
 a.card:hover {
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 10px rgba(37, 4, 4, 0.466);
   left: -5px;
   top: -5px;
 }
@@ -324,8 +324,8 @@ div.blank-card {
   display: inline-block;
   width: 120px;
   height: 150px;
-  background-color: #ddd;
-  border: 10px solid #ccc;
+  background-color: #f8ffb8;
+  border: 10px solid #f2ffba;
   margin-bottom: 0.5em;
 }
 
@@ -378,7 +378,7 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 .face-figure {
   /*vertical-align: top;*/
   display: inline-block;
-  border: 5px solid #ccc;
+  border: 5px solid #ff0000;
   float: left;
   max-width: 35%;
   /*max-height: 180px;*/
