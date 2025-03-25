@@ -74,7 +74,7 @@ header h2:before {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 2px,
+  text-shadow: rgba(85, 85, 85, 0.75) 1px 1px 1px,
                rgba(0, 0, 0, 0.1) -1px -1px 2px;
 }
 a {
@@ -83,9 +83,28 @@ a {
 }
 p {
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0.9em;
   text-indent: 1em;
 }
+p.dnvp {
+  display: none;
+}
+p.other {
+  display: block;
+}
+.scrollable-box {
+  width: 540px;  /* Default width */
+  height: 200px; /* Fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+/* Adjust only the width for smaller screens */
+@media (max-width: 600px) {
+  .scrollable-box {
+    width: 80%;   /* Make it adapt to screen size */
+    max-width: 540px; /* Prevent it from getting too wide */
+  }
+}
+
 /*
 #content h1 + p {
   text-indent: 0;
@@ -120,6 +139,7 @@ ul.choices {
   margin: 0.25em 0 0 0;
   list-style-type: none;
   border-radius: 4px;
+  clear: left;
 }
 ul.choices li {
   border-bottom: 1px solid #876;
@@ -135,7 +155,7 @@ ul.choices li.unavailable {
   cursor: default !important;
 }
 ul.choices li:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 0, 0, 0.1);
   cursor: pointer;
 }
 ul.choices li:last-child {
@@ -336,7 +356,6 @@ div.blank-card {
   vertical-align: top;
 }
 
-/* TODO: unavailable card */
 .unavailable-card {
   color: #999;
   background-color: rgba(0, 0, 0, 0.1) !important;
@@ -375,15 +394,29 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 
 /* Unlike cards, face images can have different sizes. */
 .face-figure {
+  /*vertical-align: top;*/
   display: inline-block;
   border: 5px solid #ccc;
-  float: right;
-  max-width: 150px;
-  max-height: 180px;
-  margin: 1em;
+  float: left;
+  max-width: 35%;
+  /*max-height: 180px;*/
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  overflow: hidden;
 }
-.face-image {
-  width: 140px;
+.face-figure2 {
+  /*vertical-align: top;*/
+  display: inline-block;
+  border: 5px solid #ccc;
+  float: left;
+  /*max-height: 180px;*/
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+}
+.face-img {
+  /*max-width: 150px;*/
+  vertical-align: bottom;
   object-fit: cover;
 }
 
@@ -454,6 +487,9 @@ img {
   #qualities {
       font-size: 1em;
   }
+  #content td.small-font {
+    font-size: 0.8em !important;
+}
   #tools_wrapper {
     position: static;
   }
@@ -510,15 +546,17 @@ img {
 }
 
 table {
+    table-layout: fixed;
     border-spacing: 0.5em;
+}
+
+td, th {
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
 /* Styles for parties */
 .seat.kpd {
-    fill: #8B0000;
-}
-.seat.sapd {
-    fill: #FF7F50;
+    fill: #700000;
 }
 .seat.spd {
     fill: #E3000F;
@@ -526,13 +564,13 @@ table {
     stroke-width: 1.5px;
 }
 .seat.ddp {
-    fill: #DCCA4A;
+    fill: #D3C24D;
 }
 .seat.z {
     fill: #000;
 }
 .seat.bvp {
-    fill: #69A2BE;
+    fill: #A2D8E0;
 }
 .seat.dvp {
     fill: #D5AC27;
@@ -541,12 +579,50 @@ table {
     fill: #909090;
 }
 .seat.dnvp {
-    fill: #3F7BC1;
+    fill: #3E88B3;
 }
 .seat.nsdap {
-    fill: #954B00;
+    fill: #7A3C00;
 }
-
+.seat.sapd {
+    fill: #9B0000;
+}
+.seat.dnf {
+  fill: #003755;
+}
+.seat.kvp {
+  fill: #0087DC;
+}
+.seat.lvp {
+  fill: #FFCC00;
+}
+.seat.farm {
+  fill: #38C538;
+}
+.seat.farm2 {
+  fill: #006400;
+}
+.seat.farm3 {
+  fill: #7FCEB1;
+}
+.seat.farm4 {
+  fill: #11DD11;
+}
+.seat.wp {
+  fill: #b8996f;
+}
+.seat.vrp {
+  fill: #0075EB;
+}
+.seat.aspd {
+  fill: #fe9e00;
+}
+.seat.csvd {
+  fill: #8ED8E4;
+}
+.seat.vnr {
+  fill: #D3D3A9;
+}
 .tooltip-text {
   text-decoration: underline;
   text-decoration-style: dotted;
