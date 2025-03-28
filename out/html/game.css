@@ -78,7 +78,7 @@ header h2:before {
                rgba(0, 0, 0, 0.1) -1px -1px 2px;
 }
 a {
-  color: #900;
+  color: rgba(153, 0, 0, 0);
   text-decoration: none;
 }
 p {
@@ -261,7 +261,7 @@ blockquote + blockquote.attribution {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #350707;
+    background-color: #dbdbdbbb;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

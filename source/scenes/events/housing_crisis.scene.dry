@@ -10,35 +10,38 @@ tags: event
 
 High interest rates combined with a slow economy leads to people of all social classes struggle to either find houses / apartments, or struggle to pay them off.
 
-The people and the press are clamoring for action to reduce inflation.
+The people and the press are clamoring for action to fix this housing crisis.
 
-- @taxes: Raise taxes.
-- @welfare: Reduce welfare and social spending.
-- @price_controls: Impose price and wage controls.
-- @bank: Surely the Reichsbank has a plan this time?
+- @interest: lower interest rates.
+- @rent: Introduce a rent cap
+- @invest: Further invest in nationwide housing projects
 - @nothing: Realistically, there is nothing we can do.
 
-@taxes
-on-arrival: upper_tax_rates += 1; lower_tax_rates += 1; budget += 2; unemployed += 1.5; capital_strike_progress -= 1; inflation -= 1; hyperinflation -= 0.2; new_middle_spd -= 3; old_middle_spd -= 3; workers_spd -= 3; rural_spd -= 3; kpd_coalition_dissent += 1; kpd_relation -= 5; left_dissent += 5; economic_growth -= 0.4
+@interest
+title: Lower interest rates.
+subtitle: [? if interest_rates <= -2 : Interest rates are too low. ?]
+choose-if: interest_rates > -2
+on-arrival: interest_rates -=3; left_dissent += 2; labor_dissent += 2; center_dissent += 2
 
-Raising taxes is unpopular among everyone, but it might be what it takes to keep inflation under control.
+This is merely a bandage fix, whith the majority of our party are clamoring for further reform.
 
-@welfare
-on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; unemployed += 1.5; new_middle_spd += 4*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd -= 5; unemployed_spd -= 5; inflation -= 1; hyperinflation -= 0.2; left_dissent += 5; labor_dissent += 5; center_dissent += 5; kpd_coalition_dissent += 1; economic_growth -= 0.4
+@rent
+title: Introduce a federal rent cap.
+subtitle: -1 Budget. Our coalition partners will not like this. [? if interest_rates <= -2 : Interest rates are too low. ?]
+choose-if: budget >=1
+on-arrival: budget -=1; new_middle_spd += 2*(1-dissent); old_middle_spd += 2*(1-dissent); workers_spd += 4*(1-dissent); coalition_dissent += 1; dvp_relation -= 5*(1-dissent); z_relation -= 5*(1-dissent); capital_strike_progress += 1; economic_growth -= 0.2
 
-Reducing the amount of government spending should reduce the inflation rate, according to classical economics. But it imposes pain upon the people who are suffering the most.
+This is popular in all classes, especially the working class. But the bourgeoisie will be displeased.
 
-@price_controls
-on-arrival: capital_strike_progress += 3; inflation -= 3; hyperinflation = 0; coalition_dissent += 1; unemployed += 1; old_middle_spd -= 4; new_middle_spd -= 3; rural_spd -= 5; workers_spd -= 2; unemployed_spd += 3; labor_dissent += 6; dvp_relation -= 6; z_relation -= 4; ddp_relation -= 4; economic_growth -= 0.4
+@invest
+title: Invest in housing.
+subtitle: -2 Budget.
+choose-if: budget >=2
+on-arrival: budget -=2; new_middle_spd += 8*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 8*(1-dissent); economic_growth += 0.9
 
-Price controls are very unpopular with the bourgeoisie and their representatives, as well as rural producers, while wage controls hurt organized workers. However, the policies do stem the tide of inflation, at least somewhat.
-
-@bank
-on-arrival: capital_strike_progress += 2
-
-Unfortunately, but perhaps expectedly, the Reichsbank is refusing to help the government, claiming that our socialist policies are solely to blame. Reichsbank president Hjalmar Schacht is all but calling for the fall of the government.
+Millions of Reichsmarks pour into the construction of public and co-operative housing.
 
 @nothing
-on-arrival: capital_strike_progress += 1
+on-arrival: workers_spd -= 2; old_middle_spd -= 8; new_middle_spd -= 8; rural_spd -= 2; unemployed_spd -= 2; pro_republic -= 5; old_middle_nsdap += 8; new_middle_nsdap += 8; rural_nsdap += 2; socialism -= 2
 
-Realistically, there is nothing we can do to stem the tide of inflation.
+There is nothing we can do.
