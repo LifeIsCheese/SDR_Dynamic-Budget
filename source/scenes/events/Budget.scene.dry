@@ -19,14 +19,15 @@ Q.unemployed -= Q.economic_growth - Q.inflation;
 if (Q.economic_growth >= 3 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
 }
-if (Q.economic_growth >= 8 && Q.economic_growth > Q.inflation) {
+if (Q.economic_growth >= 6 && Q.economic_growth > Q.inflation) {
+    Q.budget += 1;
+}
+if (Q.economic_growth >= 10 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
 }
 if (Q.economic_growth < 0) {
         if (Q.budget > 0) {
         Q.budget -=1;
-    } else {
-resources -= 1;
     }
 }
 if (Q.pro_republic > 75 && Q.pro_republic > Q.older_republic) {
