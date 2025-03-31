@@ -216,4 +216,4 @@ Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ 
 
 = testing
 
-Reichswehr: [+ reichswehr_strength +] thousand troops.
+Testing: [+ resources +]
