@@ -173,7 +173,7 @@ blockquote + blockquote.attribution {
   padding: 0.6em;
   width: 14rem;
   color: rgb(212, 212, 212);
-  background-color: rgba(49, 3, 3, 0.418);
+  background-color: rgb(209, 209, 209);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 .tools.left {
@@ -197,8 +197,8 @@ blockquote + blockquote.attribution {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 2px,
-               rgba(0, 0, 0, 0.1) -1px -1px 2px;
+  text-shadow: rgb(209, 209, 209) 2px 2px 2px,
+               rgba(0, 0, 0, 0) -1px -1px 2px;
 }
 #qualities h1 + p:first-line {
   font-weight: normal;
