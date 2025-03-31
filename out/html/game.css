@@ -108,21 +108,21 @@ p {
 }
 */
 p.game-over {
-  border: 2px solid #bbb;
+  border: 2px solid #ff2d2d;
   padding: 0.5em;
   margin: 0.5em 0 0 0;
   border-radius: 4px;
-  color: #999;
+  color: #ff2d2d;
 }
 ul.choices {
-  border: 2px solid #876;
+  border: 2px solid rgb(194, 50, 50);
   padding: 0;
   margin: 0.25em 0 0 0;
   list-style-type: none;
   border-radius: 4px;
 }
 ul.choices li {
-  border-bottom: 1px solid #876;
+  border-bottom: 1px solid rgb(194, 50, 50);
   padding: 0.5em;
 }
 ul.choices li div.subtitle {
@@ -172,8 +172,8 @@ blockquote + blockquote.attribution {
 .tools {
   padding: 0.6em;
   width: 14rem;
-  color: #431;
-  background-color: #f3f3f3;
+  color: rgb(179, 132, 38);
+  background-color: rgba(49, 3, 3, 0.418);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 .tools.left {
@@ -214,17 +214,17 @@ blockquote + blockquote.attribution {
 }
 .tab_button {
     font-family: "Minion Pro", Georgia, serif;
-    background-color: #ddd;
+    background-color: rgba(49, 3, 3, 0.418);
     /*float: left;*/
     border: none;
     outline: none;
     padding: 10px;
 }
 .tab_button.active {
-    background-color: #f3f3f3;
+    background-color: rgba(49, 3, 3, 0.418);
 }
 .tab_button:hover {
-    background-color: #ececec;
+    background-color: rgba(49, 3, 3, 0.418);
 }
 
 
@@ -309,7 +309,7 @@ a.card {
   display: inline-block;
   width: 120px;
   height: 150px;
-  box-shadow: 5px 5px 10px rgba(46, 4, 4, 0.425);
+  box-shadow: 5px 5px 10px rgba(216, 137, 137, 0.425);
   border: 10px solid #d32828;
   margin-bottom: 0.5em;
   position: relative;
@@ -323,7 +323,7 @@ div.blank-card {
   display: inline-block;
   width: 120px;
   height: 150px;
-  background-color: #ddd;
+  background-color: rgba(49, 3, 3, 0.418);
   border: 10px solid #d32828;
   margin-bottom: 0.5em;
 }
