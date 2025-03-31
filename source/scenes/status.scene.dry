@@ -212,8 +212,31 @@ Unemployed: SPD: [+ unemployed_spd_display +]%, [? if sapd_formed == 1 : SAPD: [
 
 Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ catholics_sapd_display +]%, ?] Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, DDP: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]%
 
-@Affairs
+@politics
 
-= Internal
+= Inter-party Relations
 
-Right Wing dissent: [+ (coup_progress + capital_strike_progress) +]
+
+Z: [+ z_relation : relationships +]
+
+DDP: [+ ddp_relation : relationships +]
+
+DVP: [+ dvp_relation : relationships +]
+
+KPD: [+ kpd_relation : relationships +]
+
+DNVP: [+ dnvp_relation : relationships +]
+
+NSDAP: [+ nsdap_relation : relationships +]
+
+= Internal Factions of the SPD
+
+Left strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+
+Center strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+
+Labor strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+
+Reformist strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+
+[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
