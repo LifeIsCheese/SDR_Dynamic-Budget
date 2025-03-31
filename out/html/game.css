@@ -59,7 +59,7 @@ header h2:before {
 
 #content #read-marker {
   border: none;
-  border-top: 1px solid rgb(209, 209, 209);
+  border-top: 1px solid #3b3b29;
   height: 1px;
   width: 20%;
   clear: left;
@@ -173,7 +173,7 @@ blockquote + blockquote.attribution {
   padding: 0.6em;
   width: 14rem;
   color: rgb(134, 44, 44);
-  background-color: rgb(209, 209, 209);
+  background-color: #3b3b29;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 .tools.left {
@@ -207,7 +207,7 @@ blockquote + blockquote.attribution {
 
 /* tabs */
 .tab_container {
-    background-color: rgb(209, 209, 209);
+    background-color: #121018;
     margin-top: -0.6em;
     margin-left: -0.6em;
     margin-right: -0.6em;
