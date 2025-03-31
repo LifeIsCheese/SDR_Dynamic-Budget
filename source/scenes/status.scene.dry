@@ -213,6 +213,11 @@ Unemployed: SPD: [+ unemployed_spd_display +]%, [? if sapd_formed == 1 : SAPD: [
 Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ catholics_sapd_display +]%, ?] Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, DDP: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]%
 
 @test
+on-arrival: {!
+Q.republican_sentiment_disp = Math.round(Q.republican_sentiment);
+Q.socialist_sentiment_disp = Math.round(Q.republican_sentiment);
+Q.nationalist_sentiment_disp = Math.round(Q.nationalist_sentiment);
+!}
 
 = Inter-party Relations
 
