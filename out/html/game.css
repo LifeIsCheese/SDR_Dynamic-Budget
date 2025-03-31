@@ -172,7 +172,7 @@ blockquote + blockquote.attribution {
 .tools {
   padding: 0.6em;
   width: 14rem;
-  color: rgb(212, 212, 212);
+  color: rgb(134, 44, 44);
   background-color: rgb(209, 209, 209);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
@@ -214,17 +214,17 @@ blockquote + blockquote.attribution {
 }
 .tab_button {
     font-family: "Minion Pro", Georgia, serif;
-    background-color: rgba(49, 3, 3, 0.418);
+    background-color: rgb(209, 209, 209);
     /*float: left;*/
     border: none;
     outline: none;
     padding: 10px;
 }
 .tab_button.active {
-    background-color: rgba(49, 3, 3, 0.418);
+    background-color: rgba(92, 7, 7, 0.418);
 }
 .tab_button:hover {
-    background-color: rgba(49, 3, 3, 0.418);
+    background-color: rgba(88, 29, 29, 0.418);
 }
 
 
