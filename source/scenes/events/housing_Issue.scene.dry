@@ -1,4 +1,4 @@
-title: Housing Crisis
+title: Housing Issue
 subtitle: Workers are seeing rent spike up, while the middle class struggle to pay off their mortgages
 view-if: inflation >= 6 and interest_rates >=1 and spd_in_government and inflation > economic_growth
 max-visits: 1
@@ -6,7 +6,7 @@ new-page: true
 on-arrival: capital_strike_progress += 1; inflation -=2; workers_spd -= 2; old_middle_spd -= 8; new_middle_spd -= 8; rural_spd -= 2; unemployed_spd -= 2; pro_republic -= 5; old_middle_nsdap += 8; new_middle_nsdap += 8; rural_nsdap += 2; socialism -= 2
 tags: event
 
-= Housing Crisis
+= Housing Isssue
 
 High interest rates combined with a slow economy leads to people of all social classes struggle to either find houses / apartments, or struggle to pay them off.
 
@@ -19,23 +19,23 @@ The people and the press are clamoring for action to fix this housing crisis.
 
 @interest
 title: Lower interest rates.
-subtitle: [? if interest_rates <= -2 : Interest rates are too low. ?]
+subtitle: (Heavily increases inflation) [? if interest_rates <= -2 : Interest rates are too low. ?]
 choose-if: interest_rates > -2
-on-arrival: interest_rates -=3; left_dissent += 2; labor_dissent += 2; center_dissent += 2
+on-arrival: interest_rates -=3; left_dissent += 2; labor_dissent += 2; center_dissent += 2; inflation +=4
 
-This is merely a bandage fix, whith the majority of our party are clamoring for further reform.
+This is merely a bandage fix, with the majority of our party are clamoring for further reform.
 
 @rent
 title: Introduce a federal rent cap.
-subtitle: -1 Budget. Our coalition partners will not like this. [? if interest_rates <= -2 : Interest rates are too low. ?]
+subtitle: -1 Budget. Our coalition partners will <span style="color:rgb(128, 0, 0);">**not**</span> like this. [? if budget <= 0 : Insufficient budget. ?]
 choose-if: budget >=1
-on-arrival: budget -=1; new_middle_spd += 2*(1-dissent); old_middle_spd += 2*(1-dissent); workers_spd += 4*(1-dissent); coalition_dissent += 1; dvp_relation -= 5*(1-dissent); z_relation -= 5*(1-dissent); capital_strike_progress += 1; economic_growth -= 0.2
+on-arrival: budget -=1; new_middle_spd += 2*(1-dissent); old_middle_spd += 2*(1-dissent); workers_spd += 4*(1-dissent); coalition_dissent += 2; dvp_relation -= 5*(1-dissent); z_relation -= 5*(1-dissent); capital_strike_progress += 1; economic_growth -= 0.2
 
-This is popular in all classes, especially the working class. But the bourgeoisie will be displeased.
+This is popular in all classes, especially the working class. But the bourgeoisie will be displeased due to our intrusion in the economy.
 
 @invest
 title: Invest in housing.
-subtitle: -2 Budget.
+subtitle: -2 Budget. [? if budget <= 1 : Insufficient budget. ?]
 choose-if: budget >=2
 on-arrival: budget -=2; new_middle_spd += 8*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 8*(1-dissent); economic_growth += 0.9
 
