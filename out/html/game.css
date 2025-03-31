@@ -1,20 +1,20 @@
 body {
   font-family: "Minion Pro", Georgia, serif;
   /*font-size: 1.125em;*/
-  background-color: #121018;
+  background-color: #f3f3e3;
   padding: 0;
   line-height: 155%;
   overflow-y: scroll;
 }
 header, #content, footer {
-  color: rgb(145, 136, 18);
+  color: #431;
   max-width: 540px;
   margin: 0 auto;
   overflow: auto;
 }
 #content {
   position: relative;
-  background-color: #3b3b29;
+  background-color: #f3f3f3;
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
@@ -37,7 +37,7 @@ header {
   margin-bottom: 0.5em;
   padding-left: 1em;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-  background-color: #121018;
+  background-color: #f3f3e3;
 }
 #header-links a {
   padding-right: 1em;
@@ -59,7 +59,7 @@ header h2:before {
 
 #content #read-marker {
   border: none;
-  border-top: 1px solid rgb(209, 209, 209);
+  border-top: 1px solid #000;
   height: 1px;
   width: 20%;
   clear: left;
@@ -108,21 +108,21 @@ p {
 }
 */
 p.game-over {
-  border: 2px solid #ff2d2d;
+  border: 2px solid #bbb;
   padding: 0.5em;
   margin: 0.5em 0 0 0;
   border-radius: 4px;
-  color: #ff2d2d;
+  color: #999;
 }
 ul.choices {
-  border: 2px solid rgb(194, 50, 50);
+  border: 2px solid #876;
   padding: 0;
   margin: 0.25em 0 0 0;
   list-style-type: none;
   border-radius: 4px;
 }
 ul.choices li {
-  border-bottom: 1px solid rgb(194, 50, 50);
+  border-bottom: 1px solid #876;
   padding: 0.5em;
 }
 ul.choices li div.subtitle {
@@ -130,7 +130,7 @@ ul.choices li div.subtitle {
   font-style: italic;
 }
 ul.choices li.unavailable {
-  color: #ad8b8bb2;
+  color: #999;
   background-color: rgba(0, 0, 0, 0.1) !important;
   cursor: default !important;
 }
@@ -172,8 +172,8 @@ blockquote + blockquote.attribution {
 .tools {
   padding: 0.6em;
   width: 14rem;
-  color: rgb(134, 44, 44);
-  background-color: rgb(209, 209, 209);
+  color: #431;
+  background-color: #f3f3f3;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 .tools.left {
@@ -197,8 +197,8 @@ blockquote + blockquote.attribution {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  text-shadow: rgb(209, 209, 209) 2px 2px 2px,
-               rgba(0, 0, 0, 0) -1px -1px 2px;
+  text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 2px,
+               rgba(0, 0, 0, 0.1) -1px -1px 2px;
 }
 #qualities h1 + p:first-line {
   font-weight: normal;
@@ -207,24 +207,24 @@ blockquote + blockquote.attribution {
 
 /* tabs */
 .tab_container {
-    background-color: rgb(209, 209, 209);
+    background-color: #dedede;
     margin-top: -0.6em;
     margin-left: -0.6em;
     margin-right: -0.6em;
 }
 .tab_button {
     font-family: "Minion Pro", Georgia, serif;
-    background-color: rgb(209, 209, 209);
+    background-color: #ddd;
     /*float: left;*/
     border: none;
     outline: none;
     padding: 10px;
 }
 .tab_button.active {
-    background-color: rgba(92, 7, 7, 0.418);
+    background-color: #f3f3f3;
 }
 .tab_button:hover {
-    background-color: rgba(88, 29, 29, 0.418);
+    background-color: #ececec;
 }
 
 
@@ -260,7 +260,7 @@ blockquote + blockquote.attribution {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #121018;
+    background-color: #f3f3e3;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -271,10 +271,10 @@ blockquote + blockquote.attribution {
  * only transition on fade-in
  * */
 #bg2 {
-    z-index: 0;
+    z-index: -100;
 }
 #bg1 {
-    z-index: 0;
+    z-index: -99;
 }
 .b {
 }
@@ -309,13 +309,13 @@ a.card {
   display: inline-block;
   width: 120px;
   height: 150px;
-  box-shadow: 5px 5px 10px rgba(216, 137, 137, 0.425);
-  border: 10px solid #d32828;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border: 10px solid #ccc;
   margin-bottom: 0.5em;
   position: relative;
 }
 a.card:hover {
-  box-shadow: 10px 10px 10px rgba(49, 3, 3, 0.418);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   left: -5px;
   top: -5px;
 }
@@ -323,8 +323,8 @@ div.blank-card {
   display: inline-block;
   width: 120px;
   height: 150px;
-  background-color: rgba(49, 3, 3, 0.418);
-  border: 10px solid #d32828;
+  background-color: #ddd;
+  border: 10px solid #ccc;
   margin-bottom: 0.5em;
 }
 
@@ -376,7 +376,7 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 /* Unlike cards, face images can have different sizes. */
 .face-figure {
   display: inline-block;
-  border: 5px solid #d32828;
+  border: 5px solid #ccc;
   float: right;
   max-width: 150px;
   max-height: 180px;
