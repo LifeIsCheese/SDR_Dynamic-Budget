@@ -7,7 +7,7 @@ body {
   overflow-y: scroll;
 }
 header, #content, footer {
-  color: #431;
+  color: rgb(209, 209, 209);
   max-width: 540px;
   margin: 0 auto;
   overflow: auto;
@@ -130,7 +130,7 @@ ul.choices li div.subtitle {
   font-style: italic;
 }
 ul.choices li.unavailable {
-  color: #999;
+  color: #ad8b8bb2;
   background-color: rgba(0, 0, 0, 0.1) !important;
   cursor: default !important;
 }
@@ -172,7 +172,7 @@ blockquote + blockquote.attribution {
 .tools {
   padding: 0.6em;
   width: 14rem;
-  color: rgb(179, 132, 38);
+  color: rgb(212, 212, 212);
   background-color: rgba(49, 3, 3, 0.418);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
