@@ -7,14 +7,14 @@ body {
   overflow-y: scroll;
 }
 header, #content, footer {
-  color: rgb(209, 209, 209);
+  color: rgb(145, 136, 18);
   max-width: 540px;
   margin: 0 auto;
   overflow: auto;
 }
 #content {
   position: relative;
-  background-color: #121018;
+  background-color: #ffffff;
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
