@@ -14,7 +14,8 @@ The people and the press are clamoring for action to fix this housing crisis.
 
 - @interest: lower interest rates.
 - @rent: Introduce a rent cap
-- @invest: Further invest in nationwide housing projects
+- @invest: Invest in nationwide housing projects
+-@invest_wtb: Further invest in nationwide housing projects
 - @nothing: Realistically, there is nothing we can do.
 
 @interest
@@ -34,12 +35,22 @@ on-arrival: budget -=1; new_middle_spd += 2*(1-dissent); old_middle_spd += 2*(1-
 This is popular in all classes, especially the working class. But the bourgeoisie will be displeased due to our intrusion in the economy.
 
 @invest
+view-if: wtb_adopted == 0
 title: Invest in housing.
-subtitle: -2 Budget. [? if budget <= 1 : Insufficient budget. ?]
+subtitle: -2 Budget. [? if budget <= 2 : Insufficient budget. ?]
 choose-if: budget >=2
 on-arrival: budget -=2; new_middle_spd += 8*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 8*(1-dissent); economic_growth += 0.9
 
 Millions of Reichsmarks pour into the construction of public and co-operative housing.
+
+@invest_wtb
+view-if: wtb_adopted == 1
+title: Invest in housing.
+subtitle: -1 Budget. Cost reduced due to WTB plan being implemented [? if budget <= 1 : Insufficient budget. ?]
+choose-if: budget >=1
+on-arrival: budget -=2; new_middle_spd += 8*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 8*(1-dissent); economic_growth += 0.9
+
+Millions of Reichsmarks pour into further construction of public and co-operative housing.
 
 @nothing
 on-arrival: workers_spd -= 2; old_middle_spd -= 8; new_middle_spd -= 8; rural_spd -= 2; unemployed_spd -= 2; pro_republic -= 5; old_middle_nsdap += 8; new_middle_nsdap += 8; rural_nsdap += 2; socialism -= 2

@@ -73,7 +73,7 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 = Affairs
 
-<span style="color:rgb(58, 50, 15);">**Reactionary nger**</span>: [+ (coup_progress + capital_strike_progress) +]%
+<span style="color:rgb(58, 50, 15);">**Reactionary Anger**</span>: [+ (coup_progress + capital_strike_progress) +]%
 
 # = Public Opinion
 
