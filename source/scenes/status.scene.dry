@@ -216,5 +216,5 @@ Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ 
 
 = The Right
 
-<span style="color:rgb(50, 42, 8);">**Coup likelyhood  **</span>: [? if investigate_far_right >=1 : [+ (coup_progress * 10) +]% ?] [? if investigate_far_right < 1 : We have not investigated the far right enough to know this. ?]
-<span style="color:rgb(20, 11, 95);">**Capital strike likelyhood  **</span>: [? if investigate_corruption >=1 : [+ (capital_strike_progress * 10) +]% ?] [? if investigate_corruption < 1 : We have not investigated into corruption enough to know this. ?]
+<span style="color:rgb(50, 42, 8);">**Coup likelyhood**</span>: [+ (coup_progress * 10) +]%
+<span style="color:rgb(20, 11, 95);">**Capital strike likelyhood**</span>: [+ (capital_strike_progress * 10) +]%
