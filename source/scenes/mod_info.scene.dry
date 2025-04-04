@@ -1,7 +1,7 @@
 title: Mod Info
 go-to: flavors
 
-Note: the base game's github is currently mid-update. I have updated the mod to match the github meaning some things might be slightly broken until the main game has finished updating.
+Note: Idk what direction to take this submod in. 
 
 @flavors
 new-page: true
@@ -10,140 +10,34 @@ new-page: true
 
 This mod adds a variety of changes to the base game, mostly in the form of flavor and minor improvements.
 
-- @dynamic_budget: Budget + Economy + Fiscal changes
-- @left: Left Plan + Council flavor
-- @centrist: Center flavor
-- @moderate: Reformist Plan flavor
-- @economics: Economic changes
-- @sapd: SAPD flavor
-- @extension: Content to 1936
-- @start_dates: 1930 start date
-- @civil_war_flavor: Civil War flavor
-- @weakened_presidency_hitler: Weakened Presidency + Hitler takeover flavor
-- @coalition_flavor: Coalition flavor
-- @minor_changes: Other minor changes
-- @plans: Plans for the mod
-- @ideas: Ideas and feedback
-- @changelog: Changelog
-- @root: Back
+- @dynamic_budget: Budget + Economy
+- @interest_rates: Interest + Housing
+- @dynamic_budget: Budget + Economy
+- @QOL: Stuff
 
 @dynamic_budget
 
-= Budget Changes + Inflation and economic growth
+= Budget Changes
 
-Budget is now based on economic growth, 3% > is 1 budget, 8% > is 2 budget. (Lasts after 1936) (Inflation has to be lower than economic growth)
-
-New option in fiscal policy called Interest rates. It impacts inflation and economic growth by both a onetime effect and the baseline growth.
+Budget is now based on economic growth, 3% > is 1 budget, 8% > is 2 budget, 10% triggers an economic miracle. (Lasts after 1936) (Inflation has to be lower than economic growth)
 
 - @flavors: Back
 
-@moderate
+@interest_rates
 
-= Reformist Plan flavor
+= Fiscal Changes + Inflation and economic growth
 
-When you adopt the Reformist Plan now, you have an option to try and convince Zentrum and the DDP to adopt the Reformist Plan as a shared programme, as a sort of republican compromise. The Left will oppose this, as will the Center, so you can only do it if the Left is weak enough (tip: Otto Braun's negotiating helps). 
-                                                                                                                                                                                                                                                                                          
-Once you've managed, you can now rally for the Weimar Plan together with Zentrum and the DDP (Julius Leber has an advisor action for this now) which will increase support for the republic, hurt extremist parties and also increase the support of all three of your parties. You can also enact the Weimar Plan through your allies if they are in government and you aren't, or if you lack the Finance/Economic ministry.
-  
-- @flavors: Back
-
-@economics
-
-= Economic Changes
-
-I have added hyperinflation if you have a big budget deficit and high inflation, and plan to add a way to end hyperinflation through the replacement of the Reichsmark with the Volksmark. Also, you can do tax cuts even if you don't have enough budget if you've adopted the WTB plan.
-
-@left
-
-= Left Plan flavor
-
-You can rally alongside the KPD for the Left Plan on May Day, leading to confrontations with the fascists and bourgeois outrage. Additionally, you can transition into a full Soviet Republic through a constitutional amendment that comes after the Left Plan.
+Base inflation rate is determined by interest rates, a basic housing issue event will happen if interest rates are too high and economic growth is stagnant (will polish this)
 
 - @flavors: Back
 
-@centrist
+@QOL
 
-= Centrist flavor
+= More information
 
-The Centrists now fill their historical niche of being acceptable to both sides of the party and controlling dissent, and you might find the party a lot less stable without them. Furthermore, if the crisis gets too bad, Hilferding may eventually concede to the necessity of an economic plan.
-
-@start_dates
-
-= 1930 start date
-
-You can now start the game in January 1930 for a real challenge. The depression has already hit and your coalition is on the verge of collapse.
-
-@sapd
-
-= SAPD flavor
-
-The SAPD is now a distinct party rather than being lumped in with the right-wing "Others"! It also has its own event allowing it to consolidate into an actually formidable force amongst workers if you lean too hard into Volkspartei rhetoric or if Labor, Left and Center all defect, and can then use its position to try and organize an Einheitsfront, with penalties for the SPD and KPD if they refuse.
+Investigating now actually gives information on what the right is up to.
 
 - @flavors: Back
-
-@civil_war_flavor
-
-= Civil War Flavor
-
-You can play even after a Victory for the Republic outcome in a civil war. This includes cases where your civil war is fought alongside the Communists, where it isn't, where it erupts due to Thalmann taking over, etc. The routes where the Communists fight alongside you have a multitude of content as well.
-
-- @flavors: Back
-
-@weakened_presidency_hitler
-
-= Weakened Presidency Hitler
-
-A very rare scenario in terms of actually occuring in a game, I have added unique scenarios (though quite WIP) for if Hitler is elected President after you weaken the Presidency so that it no longer has unrestrained power. I am thinking of maybe eventually extending this flavor to encompass all Nazi takeovers so that you can play them out a bit even if the result always amounts to the same.
-
-- @flavors: Back
-
-@coalition_flavor
-
-= Coalition Flavor
-
-I have made it so that a right-wing coalition from Zentrum to the DNVP can form in 1928 if the SPD refuses to form a government. This will ban Blutmai regardless of what the SPD does, giving an alternate event, and collapse following the Young Plan referendum due to the DNVP's opposition to the Young Plan. Tied into this, the SPD can agitate for referendums while in opposition or toleration using the new Direct Democracy card. I plan to add more similar flavor to coalitions in future though this is the main one, likely for a while.
-
-- @flavors: Back
-
-@extension
-
-= Content to 1936
-
-Content to 1936 has been added in the form of events, including the Abysinnia Crisis and the Spanish Civil War
-
-@minor_changes
-
-= Minor Changes
-
-The mod also contains many small changes that I felt would be good additions to the game. These include the DNVP and KPD benefitting rather than the NSDAP from a capital strike if the NSDAP has suffered a crisis, new police option for investigating coups (though WIP and potentially redundant), Unity Government won't be offered if there isn't a substantial threat to Germany, the DDP and DVP gaining support from increases in support for the republic, military policy changes, more proactive reactionaries (Hindenburg included), presidential election changes, DVP reducing capital strike progress if in government & friendly, and made it so that Nazis in Crisis won't fire if the economy is still doing very badly. More similar minor tweaks will occur and when they do will be added here.
-
-- @flavors: Back
-
-@changelog
-
-= Changelog
-
-**2025/03/16**: test release 2
-
-- @flavors: Back
-
-@plans
-
-= Plans for the mod
-
-Going to wrap up playable "Victory for the Republic" and finish Communist takeover outcomes (SPD banned if relations not good enough and Thalmann, otherwise potential forceful incorporation into SED under Conciliators)
-
-Also plan to add different endings for Austria that Germany can influence, and even extend the game to 1936. Then, I'll make the game not end the moment Hitler takes power but instead when the SPD ceases to exist.
-
-- @flavors: Back
-
-@ideas
-
-= Ideas and Feedback
-
-If you have any ideas or feedback on my mod you can ask me on the game's discord server (I'm oracle372) or on Reddit (I'm u/CuttleCraft). Please also mention any bugs you may find.
-
-- @flavors: Back
-
+                 
                                                                                                                                                                                                                                                                                           
                                                                                                                                                                                                                                                                                          
