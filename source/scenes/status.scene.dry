@@ -218,6 +218,10 @@ Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ 
 
 (Investigate to unlock intel)
 
-<span style="color:rgb(54, 43, 12);">**Coup likelihood**</span>: [? if investigate_far_right >= 1 : [+ coup_progress +]%, ?]
+<span style="color:rgb(54, 43, 12);">**Coup likelihood**</span>: [? if investigate_far_right >= 1 and coup_progress >= 1 : [+ coup_progress +]0%, ?]
 
-<span style="color:rgb(9, 90, 26);">**Capital strike likelihood**</span>: [? if investigate_corruption >= 1 : [+ capital_strike_progress +]%, ?]
+<span style="color:rgb(9, 90, 26);">**Capital strike likelihood**</span>: [? if investigate_corruption >= and capital_strike_progress >= 1 : [+ capital_strike_progress +]0%, ?]
+
+= The Economy
+
+<span style="color:rgb(255, 0, 0);">**Economic democraticization**</span>: [? if economic_democracy >= 1 : [+ economic_democracy +]0%, ?]
