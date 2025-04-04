@@ -33,29 +33,29 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [+ president +]
+<span style="color:rgb(82, 82, 82);">**President**</span>: [+ president +]
 
-Chancellor: [+ chancellor +] ([+ chancellor_party +])
+<span style="color:rgb(0, 0, 0);">**Chancellor**</span>: [+ chancellor +] ([+ chancellor_party +])
 
 Reichstag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]%
-[? if sapd_formed == 1 : SAPD: [+ sapd_r +]% ?]
+<span style="color:rgb(255, 0, 0);">**SPD**</span>: [+ spd_r +]%
+[? if sapd_formed == 1 : <span style="color:rgb(255, 93, 93);">**SAPD**</span>: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]%
+<span style="color:rgb(0, 255, 106);">**Z + BVP**</span>: [+ z_r +]%
 # 1928: 10, 1930: 13
-KPD: [+ kpd_r +]%
+<span style="color:rgb(92, 0, 0);">**KPD**</span>: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]%
+<span style="color:rgb(255, 242, 67);">**DDP**</span>: [+ ddp_r +]%
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]%
+<span style="color:rgb(187, 185, 52);">**DVP**</span>: [+ dvp_r +]%
 # 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]%
+<span style="color:rgb(0, 26, 255);">**DNVP**</span>: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]%
+<span style="color:rgb(100, 78, 17);">**NDSAP**</span>: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
-Others: [+ other_r +]%
+<span style="color:rgb(107, 107, 107);">**Others**</span>: [+ other_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
@@ -78,29 +78,29 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 = Inter-party Relations
 
 
-Z: [+ z_relation : relationships +]
+<span style="color:rgb(0, 255, 106);">**Z**</span>: [+ z_relation : relationships +]
 
-DDP: [+ ddp_relation : relationships +]
+<span style="color:rgb(255, 242, 67);">**DDP**</span>: [+ ddp_relation : relationships +]
 
-DVP: [+ dvp_relation : relationships +]
+<span style="color:rgb(187, 185, 52);">**DVP**</span>: [+ dvp_relation : relationships +]
 
-KPD: [+ kpd_relation : relationships +]
+<span style="color:rgb(92, 0, 0);">**KPD**</span>: [+ kpd_relation : relationships +]
 
-DNVP: [+ dnvp_relation : relationships +]
+<span style="color:rgb(0, 26, 255);">**DNVP**</span>: [+ dnvp_relation : relationships +]
 
-NSDAP: [+ nsdap_relation : relationships +]
+<span style="color:rgb(100, 78, 17);">**NDSAP**</span>: [+ nsdap_relation : relationships +]
 
 = Internal Factions of the SPD
 
-Left strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+<span style="color:rgb(85, 0, 0);">**Left strength**</span>: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-Center strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+<span style="color:rgb(172, 38, 38);">**Center strength**</span>: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-Labor strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+<span style="color:rgb(255, 0, 0);">**Labor strength**</span>: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
-Reformist strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+<span style="color:rgb(255, 104, 104);">**Reformist**</span>: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
 
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+[? if neorevisionism > 0 : <span style="color:rgb(248, 171, 171);">**Neorevisionist strength**</span>: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
 
 @paramilitaries
@@ -225,3 +225,6 @@ Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ 
 = The Economy
 
 <span style="color:rgb(255, 0, 0);">**Economic democraticization**</span>: [? if economic_democracy >= 1 : [+ economic_democracy +]0%, ?]
+
+= The party
+
