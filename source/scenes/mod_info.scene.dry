@@ -18,7 +18,7 @@ This mod adds a variety of changes to the base game, mostly in the form of flavo
 
 = Budget Changes
 
-Budget is now based on economic growth, 3% > is 1 budget, 8% > is 2 budget, 10% triggers an economic miracle. (Lasts after 1936) (Inflation has to be lower than economic growth)
+Budget is now based on economic growth, 3% > is 1 budget, 6% > is 2 budget, 10% triggers an economic miracle. (Lasts after 1936) (Inflation has to be lower than economic growth)
 
 - @flavors: Back
 
