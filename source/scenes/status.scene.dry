@@ -226,7 +226,7 @@ Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ 
 
 <span style="color:rgb(255, 0, 0);">**Economic democraticization**</span>: [? if economic_democracy >= 1 : [+ economic_democracy +]0%, ?]
 
-<span style="color:rgb(41, 255, 59);">**State of Welfare**</span>: >= 1 : [+ welfare +]
+<span style="color:rgb(41, 255, 59);">**State of Welfare**</span>: [+ welfare +]
 
 = Plots
 
