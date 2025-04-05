@@ -382,6 +382,13 @@ if (Q.month_actions >= 1) {
         Q.economic_growth += 0.1;
         Q.s_interest = "Very Low";
     }
+    /// Plot changes
+    if (Q.plot_target == "hjalmar") {
+        Q.hjalmar_plot += Q.plot_strength;
+    }
+    if (Q.plot_target == "bruning") {
+        Q.bruning_plot += Q.plot_strength;
+    }
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
         Q.workers_spd += (Q.unemployed/8)/12;

@@ -234,6 +234,7 @@ Q.s_interest = "Normal";
 
 //Added Plots
 Q.plot_strength = 0;
+Q.plot_target = 0;
 Q.hjalmar_plot = 0;
 Q.bruning_plot = 0;
 Q.hunger_chancellor = 0;
