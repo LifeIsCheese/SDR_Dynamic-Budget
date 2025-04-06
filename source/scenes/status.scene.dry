@@ -230,8 +230,6 @@ Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ 
 
 = Plots
 
-Spy network <span style="color:rgb(0, 0, 0);">**Power**</span>: [+ spy_network +]%
-
 Plot <span style="color:rgb(0, 0, 0);">**Power**</span>: [+ plot_strength +]%
 
 Death of <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span>: [+ hjalmar_plot +]%
