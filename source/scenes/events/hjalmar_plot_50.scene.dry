@@ -5,6 +5,7 @@ tags: event
 priority: 1
 view-if: year >= 1929 and hjalmar_plot >= 50
 on-arrival: interior_police_loyalty -=0.2; prussian_police_loyalty -= 0.2
+
 = Suspicion from the right
 
 Our infiltrators have informed us of the right suspicion in our ongoing plot against Hjalmar Schacht. Of course they haven't found out anything related to it, but it does raise a serious security issue. 
