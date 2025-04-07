@@ -1,0 +1,11 @@
+title: Operation Reversed Scale
+subtitle: The preparations are in order, we just need the approval
+new-page: true
+max-visits: 1
+tags: event
+priority: 1
+view-if: year >= 1929 and hjalmar_plot >= 100
+
+= Operation Reversed Scale
+
+blah blah blah blah
