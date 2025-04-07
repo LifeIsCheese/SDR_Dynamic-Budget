@@ -16,7 +16,7 @@ We fear that the right has sent <span style="color:rgb(0, 0, 0);">**spies**</spa
 
 Current interior police loyalty: [+ interior_police_loyalty : loyalty +]. [? if interior_police_loyalty < 0.55: The police show frighteningly low levels of loyalty. ?]
 
-Current prussian police loyalty: [+ prussian_police_loyalty : loyalty +]. [? if iprussian_police_loyalty < 0.7: The Prussian police show frighteningly low levels of loyalty. ?]
+Current prussian police loyalty: [+ prussian_police_loyalty : loyalty +]. [? if iprussian_police_loyalty < 0.5: The Prussian police seem untrustworthy. ?]
 
 - @purge: Start the purges.
 - @bribe: Perhaps we can bribe them.
