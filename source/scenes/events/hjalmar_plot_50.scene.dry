@@ -20,7 +20,7 @@ Current prussian police loyalty: [+ prussian_police_loyalty : loyalty +]. [? if 
 
 - @purge: Start the purges.
 - @bribe: Perhaps we can bribe them.
-- @investigate:
+- @investigate: All precautions must be taken, better safe than sorry.
 - @root: We are fine as it is.
 
 @purge
