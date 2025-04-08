@@ -1,7 +1,7 @@
 title: The KPD presents its list of goals for the coalition.
 new-page: true
 tags: event
-on-arrival: hjalmar_plot = "successful"; capital_strike_progress = 0; coup_progress *= 0.5; Q.plot_target = "none"; plot_strength = 0
+on-arrival: hjalmar_plot = "successful"; capital_strike_progress = 0; coup_progress *= 0.5; plot_target = "none"; plot_strength = 0
 
 = Operation Reversed Scale
 
