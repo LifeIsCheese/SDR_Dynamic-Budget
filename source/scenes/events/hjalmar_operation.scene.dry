@@ -6,6 +6,25 @@ tags: event
 priority: 1
 view-if: year >= 1929 and hjalmar_plot >= 100
 
-= Operation Reversed Scale
+= Plots and preparations
 
-blah blah blah blah
+It's too late to turn back now...
+
+These are our current estimates of loyalty within the police, if any of the 2 are disloyal it *will* lead to disaster. 
+
+Current interior police loyalty: [+ interior_police_loyalty : loyalty +]. [? if interior_police_loyalty < 0.55: .The police show frighteningly low levels of loyalty. ?]
+
+Current prussian police loyalty: [+ prussian_police_loyalty : loyalty +]. [? if prussian_police_loyalty < 0.5: .The Prussian police seem untrustworthy. ?]
+
+- @go: Operation Reversed Scale is given the go ahead.
+- @bribe: For extra measure.
+
+@go
+subtitle: "Who made that mess?", you did [? if chancellor == "Braun":king ?].
+go-to: hjalmar_schacht_death
+
+@bribe
+subtitle: -1 budget. Promise a pay raise well after the assisnation attempt.
+choose-if: budget > 0
+on-arrival: interior_police_loyalty *= 2; prussian_police_loyalty *= 2; budget -=1
+go-to: hjalmar_schacht_death
