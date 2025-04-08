@@ -21,10 +21,11 @@ Current prussian police loyalty: [+ prussian_police_loyalty : loyalty +]. [? if 
 
 @go
 subtitle: "Who made that mess?", you did [? if chancellor == "Braun":king ?].
+on-arrival: hjalmar_plot = "successful"
 go-to: hjalmar_schacht_death
 
 @bribe
 subtitle: -1 budget. Promise a pay raise well after the assisnation attempt.
 choose-if: budget > 0
-on-arrival: interior_police_loyalty *= 2; prussian_police_loyalty *= 2; budget -=1
+on-arrival: interior_police_loyalty *= 2; prussian_police_loyalty *= 2; budget -=1; hjalmar_plot = "successful"
 go-to: hjalmar_schacht_death
