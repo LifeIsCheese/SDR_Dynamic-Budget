@@ -1,8 +1,9 @@
 title: Operation Reversed Scale
 view-if: hjalmar_plot == "successful"
 new-page: true
+max-visits: 1
 tags: event
-on-arrival: capital_strike_progress = 0; coup_progress *= 0.5; plot_target = "none"; plot_strength = 0; rfb_banned = 1;
+on-arrival: capital_strike_progress = 0; coup_progress *= 0.5; plot_target = "none"; plot_strength = 0; reichsbank_a = 1;
 
 = Operation Reversed Scale
 

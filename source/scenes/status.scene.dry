@@ -232,6 +232,6 @@ Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ 
 
 Plot <span style="color:rgb(0, 0, 0);">**Power**</span>: [+ plot_strength +]%
 
-Death of <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span>: [+ hjalmar_plot +]%
+Death of <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span>: [+ hjalmar_plot +][? if hjalmar_plot != "successful": % ?]
 
-Death of <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span>: [+ bruning_plot +]%
+Death of <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span>: [+ bruning_plot +][? if bruning_plot != "successful": % ?]
