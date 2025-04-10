@@ -374,12 +374,12 @@ if (Q.month_actions >= 1) {
     }
     if (Q.interest_rates == -1) {
         Q.inflation_growth = 0.125;
-        Q.economic_growth += 0.05;
+        Q.economic_growth += 0.2;
         Q.s_interest = "Low";
     }
     if (Q.interest_rates == -2) {
         Q.inflation_growth = 0.15;
-        Q.economic_growth += 0.1;
+        Q.economic_growth += 0.4;
         Q.s_interest = "Very Low";
     }
     /// Plot changes

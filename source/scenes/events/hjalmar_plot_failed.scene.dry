@@ -3,7 +3,7 @@ view-if: hjalmar_plot == "failed"
 new-page: true
 max-visits: 1
 tags: event
-on-arrival: capital_strike_progress += 5; coup_progress *= 1.5; plot_target = "none"; plot_strength = 0; reichsbank_a = 0;
+on-arrival: capital_strike_progress += 5; coup_progress *= 1.5; plot_target = "none"; plot_strength = 0; reichsbank_a = 0; coalition_dissent = 999; z_relation -=15; ddp_relation -=15; dvp_relation -=20; new_middle_spd -=7; old_middle_spd -=7
 
 = A cornershop...
 
