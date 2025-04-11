@@ -1,6 +1,6 @@
 title: Housing Issue
 subtitle: Workers are seeing rent spike up, while the middle class struggle to pay off their mortgages
-view-if: inflation >= 6 and interest_rates >=1 and spd_in_government and inflation > economic_growth
+view-if: inflation >= 6 and interest_rates ==1 and spd_in_government and inflation > economic_growth or inflation >= 5 and interest_rates >=2 and spd_in_government and inflation > economic_growth
 max-visits: 1
 new-page: true
 on-arrival: capital_strike_progress += 1; inflation -=2; workers_spd -= 2; old_middle_spd -= 8; new_middle_spd -= 8; rural_spd -= 2; unemployed_spd -= 2; pro_republic -= 5; old_middle_nsdap += 8; new_middle_nsdap += 8; rural_nsdap += 2; socialism -= 2

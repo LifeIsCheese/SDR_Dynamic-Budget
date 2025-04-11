@@ -20,11 +20,16 @@ if (Q.economic_growth >= 3 && Q.economic_growth > Q.inflation) {
     Q.economic_growth -= (Q.upper_tax_rates + Q.lower_tax_rates) / 6;
     if (Q.upper_tax_rates + Q.lower_tax_rates >= 6) {
         Q.budget +=1;
-        Q.economic_growth -= (Q.upper_tax_rates + Q.lower_tax_rates) / 6;
+        Q.economic_growth -= (Q.upper_tax_rates + Q.lower_tax_rates) / 3;
     }
 }
 if (Q.economic_growth >= 6 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
+    Q.economic_growth -= (Q.upper_tax_rates + Q.lower_tax_rates) / 6;
+    if (Q.upper_tax_rates + Q.lower_tax_rates >= 6) {
+        Q.budget +=1;
+        Q.economic_growth -= (Q.upper_tax_rates + Q.lower_tax_rates) / 3;
+    }
 }
 if (Q.economic_growth >= 10 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
@@ -32,6 +37,11 @@ if (Q.economic_growth >= 10 && Q.economic_growth > Q.inflation) {
     Q.rural_spd +=2;
     Q.new_middle_spd +=2;
     Q.old_middle_spd +=2;
+    Q.economic_growth -= (Q.upper_tax_rates + Q.lower_tax_rates) / 6;
+    if (Q.upper_tax_rates + Q.lower_tax_rates >= 6) {
+        Q.budget +=1;
+        Q.economic_growth -= (Q.upper_tax_rates + Q.lower_tax_rates) / 3;
+    }
 }
 if (Q.economic_growth < 0) {
         if (Q.budget > 0) {
