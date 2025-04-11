@@ -1,0 +1,10 @@
+title: Our plans have been uncovered!
+view-if: hjalmar_plot >=70 and interior_police_loyalty < 0.55 and prussian_police_loyalty < 0.5
+new-page: true
+max-visits: 1
+tags: event
+on-arrival: hjalmar_plot == "failed"; plot_strength = 0; plot_target = "none"; hjalmar_event = 2
+
+After a daily afternoon jog, Wladimir Woytinsky found that our plans of assisnation has been leaked to the press!
+
+uh ohhhh..
