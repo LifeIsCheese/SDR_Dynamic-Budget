@@ -1,0 +1,13 @@
+title: The media
+view-if: hjalmar_event == 2
+new-page: true
+max-visits: 1
+tags: event
+
+= [+ year +], A great Scandal
+
+- From an excerpt from a small town newspaper.
+
+It has been made apparent, the crimes of the so called ‘Social Democratic Party’ has been revealed to us, through trusted sources. A plan to assassinate the nation’s saviour from the disaster that was hyperinflation, all to further the radical SPD’s agenda. 
+
+This only serves as a testament of the demonic forces that the SPD harbors, only now removing its sheep’s clothing. For too long have we tolerated the SPD, we urge *you* dear reader to go to the polls and save Germany.
