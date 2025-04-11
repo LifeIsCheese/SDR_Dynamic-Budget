@@ -17,9 +17,7 @@ Q.unemployed -= Q.economic_growth - Q.inflation;
     }
 if (Q.economic_growth >= 3 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
-    if (Q.upper_tax_rates + Q.lower_tax_rates >= 6) {
-        economic_growth -= 1;
-    }
+    Q.economic_growth -= (Q.upper_tax_rates + Q.lower_tax_rates) / 10;
 }
 if (Q.economic_growth >= 6 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
