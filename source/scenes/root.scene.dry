@@ -244,6 +244,7 @@ Q.hans_opinion = 0;
 
 //foreign investment
 Q.foreign_investment = 0;
+Q.foreign_investment_old = 0;
 
 //Event chains 
 Q.hjalmar_event = 0;
