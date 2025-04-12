@@ -225,7 +225,7 @@ Q.income = 1600;
 Q.inflation = 2.9;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
-Q.economic_growth = 4.4;
+Q.economic_growth = 3.4;
 
 //Added Interest reates
 Q.interest_rates = 1;
@@ -243,8 +243,8 @@ Q.reichsbank_a = 0;
 Q.hans_opinion = 0;
 
 //foreign investment
-Q.foreign_investment = 0;
-Q.foreign_investment_old = 0;
+Q.foreign_investment = 1;
+Q.foreign_investment_old = 1;
 
 //Event chains 
 Q.hjalmar_event = 0;
