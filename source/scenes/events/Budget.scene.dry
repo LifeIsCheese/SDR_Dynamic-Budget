@@ -32,11 +32,7 @@ if (Q.economic_growth >= 6 && Q.economic_growth > Q.inflation) {
     }
 }
 if (Q.economic_growth >= 10 && Q.economic_growth > Q.inflation) {
-    Q.budget += 1;
-    Q.workers_spd +=2;
-    Q.rural_spd +=2;
-    Q.new_middle_spd +=2;
-    Q.old_middle_spd +=2;
+    Q.budget += 1
     Q.economic_growth -= (Q.upper_tax_rates + Q.lower_tax_rates) / 6;
     if (Q.upper_tax_rates + Q.lower_tax_rates >= 6) {
         Q.budget +=1;
