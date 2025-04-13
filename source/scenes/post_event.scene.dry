@@ -1,7 +1,6 @@
 title: Post Event
 new-page: true
 on-arrival: {!
-Q.economic_growth = (economic_growth - foreign_investment_old);
 Q.last_advisor_action = 0;
 // make sure no stat is below 0.
 for (var c of Q.classes) {
@@ -1329,8 +1328,6 @@ if (choices && choices[0].title != "Continue...") {
 
 if (typeof window !== "undefined" && window.generateBar) {
 }
-Q.economic_growth = (Q.economic_growth + foreign_investment);
-Q.foreign_investment_old = Q.foreign_investment;
 !}
 go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0; main.main_easy if has_event = 0 and difficulty < 0
 
