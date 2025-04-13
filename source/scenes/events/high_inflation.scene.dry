@@ -1,6 +1,6 @@
 title: High Inflation
 subtitle: Workers are seeing their purchasing power decline.
-view-if: inflation >= 9 and high_inflation_timer = 0 and spd_in_government
+view-if: inflation >= 9 and inflation > economic_growth and high_inflation_timer = 0 and spd_in_government
 new-page: true
 on-arrival: capital_strike_progress += 1; hyperinflation += 0.2; workers_spd -= 4; old_middle_spd -= 6; new_middle_spd -= 6; rural_spd -= 5; unemployed_spd -= 4; high_inflation_timer = 4 if inflation > 8; high_inflation_timer = 2 if inflation >= 10; pro_republic -= 5; old_middle_nsdap += 2; new_middle_nsdap += 2; rural_nsdap += 2; socialism -= 2
 tags: event

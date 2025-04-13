@@ -69,7 +69,7 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 [? if black_thursday_seen = 1 : <span style="color:rgb(153, 10, 10);">**Unemployment**</span>: [+ unemployed_2 +]% ?]
 
-<span style="color:rgb(65, 131, 74);">**Economic Growth**</span>: [+ economic_growth_2 +]%
+<span style="color:rgb(65, 131, 74);">**Economic Growth**</span>: [+ economic_growth +]%
 
 <span style="color:rgb(152, 158, 68);">**Interest Rates**</span>: [+ s_interest +]
 
