@@ -13,6 +13,7 @@ card-image: img/portraits/HilferdingRudolf.jpg
 [? if hjalmar_plot == "successful": Hans Luther opinion: [+ hans_opinion +] [? if hans_opinion <= 5 : Despite his low opinion of us, we have *other* ways of persuading him. ?] ?]
 
 - @money:yay 
+- @root: why
 
 @money
 subtitle: Hjalmar. for some reason, doesn't want more foreign_investment. +1 foreign_investment
