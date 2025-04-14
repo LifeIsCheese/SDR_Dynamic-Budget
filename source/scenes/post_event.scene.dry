@@ -365,7 +365,7 @@ if (Q.month_actions >= 1) {
         Q.s_interest = "Very High";
     }
     if (Q.interest_rates == 1) {
-        Q.inflation_growth = 0.5;
+        Q.inflation_growth = 0.075;
         Q.s_interest = "High";
     }
     if (Q.interest_rates == 0) {
@@ -374,12 +374,12 @@ if (Q.month_actions >= 1) {
         Q.s_interest = "Normal";
     }
     if (Q.interest_rates == -1) {
-        Q.inflation_growth = 0.15;
+        Q.inflation_growth = 0.125;
         Q.economic_growth += 0.2;
         Q.s_interest = "Low";
     }
     if (Q.interest_rates == -2) {
-        Q.inflation_growth = 0.2;
+        Q.inflation_growth = 0.175;
         Q.economic_growth += 0.3;
         Q.s_interest = "Very Low";
     }
