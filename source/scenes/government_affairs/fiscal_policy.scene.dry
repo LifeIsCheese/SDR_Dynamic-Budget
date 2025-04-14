@@ -25,8 +25,6 @@ Lower-income tax rates: [+ lower_tax_rates : taxation +]
 - @cut_overall: Cut overall taxes.
 - @cut_overall_wtb: Cut overall taxes.
 - @regressive
-- @raise_interest_rates
-- @lower_interest_rates
 - @tariffs
 - @root: Do not change the tax system.
 - @easy_discard
