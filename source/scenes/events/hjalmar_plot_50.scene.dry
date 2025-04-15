@@ -4,7 +4,7 @@ new-page: true
 max-visits: 1
 tags: event
 priority: 1
-view-if: year >= 1929 and hjalmar_plot >= 50
+view-if: year >= 1929 and hjalmar_plot >= 50 and plot_strength == 5 or plot_strength == 10 or plot_strength == 20
 on-arrival: interior_police_loyalty -=0.2; prussian_police_loyalty -= 0.2
 
 = Suspicion from the right
