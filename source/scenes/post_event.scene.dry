@@ -390,6 +390,25 @@ if (Q.month_actions >= 1) {
     if (Q.plot_target == "bruning") {
         Q.bruning_plot += Q.plot_strength;
     }
+    /// Hans luther opinion
+    if (Q.hans_opinion == 5) {
+        Q.hans_string = "Estatic";
+    }
+    if (Q.hans_opinion == 4) {
+        Q.hans_string = "Cordial";
+    }
+    if (Q.hans_opinion == 3) {
+        Q.hans_string = "Cooperative";
+    }
+    if (Q.hans_opinion == 2) {
+        Q.hans_string = "Suspicious";
+    }
+    if (Q.hans_opinion == 1) {
+        Q.hans_string = "Spiteful";
+    }
+    if (Q.hans_opinion == 0) {
+        Q.hans_string = "Hateful";
+    }
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
         Q.workers_spd += (Q.unemployed/8)/12;

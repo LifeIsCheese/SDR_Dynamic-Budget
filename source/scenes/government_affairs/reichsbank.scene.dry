@@ -10,23 +10,33 @@ card-image: img/portraits/Reichsbank.jpg
 
 [? if hjalmar_plot == "successful": Now that the Reichsbank is controlled by Hans Luther, perhaps now the Reichsbank will heed our policies.?]
 
-[? if hjalmar_plot == "successful": Hans Luther opinion: [+ hans_opinion +]. [? if hans_opinion <= 5 : Despite his low opinion of us, we have *other* ways of persuading him. ?] ?]
+[? if hjalmar_plot == "successful": Hans Luther opinion: [+ hans_string +]. [? if hans_opinion <= 2 : We can persuade him by talking to him directly. ?] ?]
 
 - @raise_interest_rates
 - @lower_interest_rates
+- @bribe: Maybe 1 million Reichsmarks can change his mind.
+- @root: No, we're going to our own thing.
 
 @raise_interest_rates
 title: Increase interest rates
 subtitle: Affects middle class and rural much more than workers. [? if interest_rates >= 2 : Interest rates are too high. ?] [? if reichsbank_a != 1 : Hjalmar Schacht would never listen to us. ?]
-choose-if: 2 > interest_rates and reichsbank_a == 1
-on-arrival: inflation -= 1.5 if inflation <= 0; inflation -= 1 if inflation > 0; inflation -= 2 if inflation >= 4; inflation -= 2 if inflation >= 8; unemployed += inflation; workers_spd -= 1; unemployed_spd -= 1; rural_spd -= 1*(1-dissent); old_middle_spd -= 3*(1-dissent); new_middle_spd -= 4; capital_strike_progress += 1; interest_rates +=1; economic_growth -= 0.5 if economic_growth <= 0; economic_growth -= 1 if economic_growth > 0; economic_growth -= 1 if economic_growth >= 3; economic_growth -= 2 if economic_growth >= 8
+choose-if: 2 > interest_rates and reichsbank_a == 1 and hans_opinion > 2
+on-arrival: inflation -= 1.5 if inflation <= 0; inflation -= 1 if inflation > 0; inflation -= 2 if inflation >= 4; inflation -= 2 if inflation >= 8; unemployed += inflation; workers_spd -= 1; unemployed_spd -= 1; rural_spd -= 1*(1-dissent); old_middle_spd -= 3*(1-dissent); new_middle_spd -= 4; capital_strike_progress += 1; interest_rates +=1; economic_growth -= 0.5 if economic_growth <= 0; economic_growth -= 1 if economic_growth > 0; economic_growth -= 1 if economic_growth >= 3; economic_growth -= 2 if economic_growth >= 8; month_actions +=1; hans_opinion -=1 if economic_growth < 3
 
-Increasing interest rates decreases inflation, especially if inflation is high.
+Increasing interest rates decreases inflation, especially if inflation is high. [? if economic_growth < 3: Hans luther reluctanctly agrees, but thinks less of us because he thinks economic growth is too low?]
 
 @lower_interest_rates
 title: Decrease interest rates (which affects middle class and rural much more than workers),
 subtitle: Affects middle class and rural much more than workers [? if interest_rates <= -2 : Interest rates are too low. ?] [? if reichsbank_a != 1 : Hjalmar Schacht would never listen to us. ?]
-choose-if: interest_rates > -2 and reichsbank_a == 1
-on-arrival: inflation += 1.5 if inflation <= 0; inflation += 1 if inflation > 0; inflation += 1 if inflation >= 4; inflation += 1 if inflation >= 8; unemployed -= 0.5; workers_spd += 1; unemployed_spd += 1; rural_spd += 1*(1-dissent); old_middle_spd += 3*(1-dissent); new_middle_spd += 4; capital_strike_progress -= 1; interest_rates -=1; economic_growth += 0.5 if economic_growth <= 0; economic_growth += 1 if economic_growth > 0; economic_growth += 1 if economic_growth >= 3; economic_growth += 2 if economic_growth >= 8
+choose-if: interest_rates > -2 and reichsbank_a == 1 and hans_opinion > 2
+on-arrival: inflation += 1.5 if inflation <= 0; inflation += 1 if inflation > 0; inflation += 1 if inflation >= 4; inflation += 1 if inflation >= 8; unemployed -= 0.5; workers_spd += 1; unemployed_spd += 1; rural_spd += 1*(1-dissent); old_middle_spd += 3*(1-dissent); new_middle_spd += 4; capital_strike_progress -= 1; interest_rates -=1; economic_growth += 0.5 if economic_growth <= 0; economic_growth += 1 if economic_growth > 0; economic_growth += 1 if economic_growth >= 3; economic_growth += 2 if economic_growth >= 8; month_actions +=1; hans_opinion -= 1 if inflation >= 5
 
-Decreasing interest rates stimulates economic growth, but increases inflation.
+Decreasing interest rates stimulates economic growth, but increases inflation. [? if inflation >= 5: Hans luther reluctanctly agrees, but thinks less of us because he thinks inflation is too high?]
+
+@bribe
+title: Perhaps he needs an, "incentive"
+subtitle: -1 resources
+choose-if: resources > 0
+on-arrival: hans_opinion +=1
+
+By transferring our funds in Hans Luther's wallet, he may think more highly of us.  
