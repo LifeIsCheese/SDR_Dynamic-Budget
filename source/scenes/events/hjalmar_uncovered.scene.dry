@@ -12,4 +12,7 @@ The contents inside, revealed our plans to assassinate Hjalmar Schacht, foiling 
 - @title: Shit.
 
 @title
-on-arrival: woytinsky_advisor = 1
+subtitle: Woytinsky has announced his temporary retirement.
+on-arrival: woytinsky_advisor = 0
+
+We bid Woytinsky fare well.
