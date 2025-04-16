@@ -5,7 +5,7 @@ tags: govt_affairs
 frequency: 500
 view-if: spd_in_government = 1 and finance_minister_party = "SPD" 
 on-arrival: reichsbank_timer += 6; month_actions += 1
-card-image: img/portraits/Reichsbank.jpg
+card-image: img/Reichsbank.jpg
 
 = Reichsbank
 
