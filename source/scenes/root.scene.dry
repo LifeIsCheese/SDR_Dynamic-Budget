@@ -519,7 +519,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'constitutional_reform', 'weimar_enacting', 'referendum',
             'land_referendum', 'nationalization_referendum', 'wtb_referendum',
             'council_referendum', 'abortion_referendum', 'buyer_referendum', 'council_development',
-            'spanish_war', 'education_science', 'curriculum',
+            'spanish_war', 'education_science', 'curriculum', 'reichsbank',
             // events
             'emergency_cuts', 'unemployment_insurance',
             'sa_ban', 'sh_ban', 'papen_chancellor',
@@ -581,6 +581,7 @@ Q.abortion_referendum_timer = 0;
 Q.buyer_referendum_timer = 0;
 Q.council_development_timer = 0;
 Q.spanish_war_timer = 0;
+Q.reichsbank_timer = 0;
 // event timers
 Q.emergency_cuts_timer = 0;
 Q.unemployment_insurance_timer = 0;
