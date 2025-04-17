@@ -36,6 +36,12 @@ if (Q.economic_growth < 0) {
         Q.budget -=1;
     }
 }
+if (Q.economic_base > Q.economic_growth) {
+    Q.economic_base -= Q.economic_growth;
+}
+if (Q.economic_growth >= Q.economic_base) {
+    Q.economic_base = 3.29;
+}
 if (Q.pro_republic > 75 && Q.pro_republic > Q.older_republic) {
     Q.new_middle_ddp += (Q.pro_republic - Q.older_republic)
     Q.old_middle_ddp += ((Q.pro_republic - Q.older_republic)/2)
