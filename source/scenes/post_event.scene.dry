@@ -409,6 +409,8 @@ if (Q.month_actions >= 1) {
     if (Q.hans_opinion == 0) {
         Q.hans_string = "Hateful";
     }
+    /// Economic Goal calculation
+    Q.economic_goal = (3.6 - ( (Q.lower_tax_rates / 4 / Q.inflation) + (Q.upper_tax_rates / 3 / Q.inflation) + (Q.tariffs / 6 / Q.inflation) )) + Q.inflation / 10;
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
         Q.workers_spd += (Q.unemployed/8)/12;

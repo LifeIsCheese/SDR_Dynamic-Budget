@@ -226,6 +226,7 @@ Q.inflation = 2.9;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
 Q.economic_growth = 3.4;
+Q.economic_goal = 3.6;
 
 //Added Interest reates
 Q.interest_rates = 1;
