@@ -361,11 +361,14 @@ if (Q.month_actions >= 1) {
     /// Interest Rates, affecting baseline inflation and economic growth
     if (Q.interest_rates == 2) {
         Q.inflation_growth = 0.25;
+        if (Q.inflation > Q.economic_growth) {
+            Q.inflation_growth = -0.1;
+        }
         Q.economic_growth -= 0.1;
         Q.s_interest = "Very High";
     }
     if (Q.interest_rates == 1) {
-        Q.inflation_growth = 0.075;
+        Q.inflation_growth = 0.07;
         Q.s_interest = "High";
     }
     if (Q.interest_rates == 0) {

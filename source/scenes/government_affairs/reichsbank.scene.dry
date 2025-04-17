@@ -31,7 +31,7 @@ on-arrival: inflation -= 1.5 if inflation <= 0; inflation -= 1 if inflation > 0;
 Increasing interest rates decreases inflation, especially if inflation is high. [? if economic_growth < 3: Hans luther reluctanctly agrees, but thinks less of us because he thinks economic growth is too low?]
 
 @lower_interest_rates
-title: Decrease interest rates (which affects middle class and rural much more than workers),
+title: Decrease interest rates
 subtitle: Affects middle class and rural much more than workers [? if interest_rates <= -2 : Interest rates are too low. ?] [? if reichsbank_a != 1 : Hjalmar Schacht would never listen to us. ?]
 choose-if: interest_rates > -2 and reichsbank_a == 1 and hans_opinion > 2
 on-arrival: inflation += 1.5 if inflation <= 0; inflation += 1 if inflation > 0; inflation += 1 if inflation >= 4; inflation += 1 if inflation >= 8; workers_spd += 1; unemployed_spd += 1; rural_spd += 1*(1-dissent); old_middle_spd += 3*(1-dissent); new_middle_spd += 4; capital_strike_progress -= 1; interest_rates -=1; economic_growth += 0.5 if economic_growth <= 0; economic_growth += 1 if economic_growth > 0; economic_growth += 1 if economic_growth >= 3; economic_growth += 2 if economic_growth >= 8; month_actions +=1; hans_opinion -= 1 if inflation >= 5
