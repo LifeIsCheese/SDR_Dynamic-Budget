@@ -206,24 +206,24 @@ blockquote + blockquote.attribution {
 
 /* tabs */
 .tab_container {
-    background-color: #0d1017;
+    background-color: #200d0d;
     margin-top: -0.6em;
     margin-left: -0.6em;
     margin-right: -0.6em;
 }
 .tab_button {
     font-family: "Minion Pro", Geor gia, serif;
-    background-color: #9a0d1b;
+    background-color: #3a1b1e;
     /*float: left;*/
     border: none;
     outline: none;
     padding: 10px;
 }
 .tab_button.active {
-    background-color:#b11423;
+    background-color:#442024;
 }
 .tab_button:hover {
-    background-color: #8b0c19;
+    background-color: #6a2f35;
 }
 
 
