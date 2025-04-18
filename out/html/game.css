@@ -1,7 +1,7 @@
 body {
   font-family: "Minion Pro", Georgia, serif;
   /*font-size: 1.125em;*/
-  background-color: #f3f3e3;
+  background-color: #130101;
   padding: 0;
   line-height: 155%;
   overflow-y: scroll;
@@ -59,7 +59,7 @@ header h2:before {
 
 #content #read-marker {
   border: none;
-  border-top: 1px solid #000;
+  border-top: 1px solid #ffffff;
   height: 1px;
   width: 20%;
   clear: left;
