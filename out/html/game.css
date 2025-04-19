@@ -7,14 +7,14 @@ body {
   overflow-y: scroll;
 }
 header, #content, footer {
-  color: rgb(231, 179, 73);
+  color: rgb(255, 255, 255);
   max-width: 540px;
   margin: 0 auto;
   overflow: auto;
 }
 #content {
   position: relative;
-  background-color: #130101;
+  background-color: #200d0d;
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
@@ -78,7 +78,7 @@ header h2:before {
                rgba(0, 0, 0, 0.1) -1px -1px 2px;
 }
 a {
-  color: #900;
+  color: rgb(255, 247, 131);
   text-decoration: none;
 }
 p {
@@ -172,8 +172,8 @@ blockquote + blockquote.attribution {
 .tools {
   padding: 0.6em;
   width: 14rem;
-  color: rgb(231, 179, 73);
-  background-color: #130101;
+  color: rgb(253, 253, 253);
+  background-color: #200d0d;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 .tools.left {
