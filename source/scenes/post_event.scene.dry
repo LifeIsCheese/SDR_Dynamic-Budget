@@ -393,7 +393,17 @@ if (Q.month_actions >= 1) {
     if (Q.plot_target == "bruning") {
         Q.bruning_plot += Q.plot_strength;
     }
+    /// Loyalty decay
+    if (Q.loyalty_decay <= 0) {
+        loyalty_decay = 0;
+    }
+    Q.prussian_police_loyalty -= Q.loyalty_decay;
+    Q.interior_police_loyalty -= Q.loyalty_decay;
     /// Hans luther opinion
+    if (Q.hans_opinion >= 6) {
+        Q.hans_string = "Glazing";
+        Q.hans_opinion -=1;
+    }
     if (Q.hans_opinion == 5) {
         Q.hans_string = "Estatic";
     }

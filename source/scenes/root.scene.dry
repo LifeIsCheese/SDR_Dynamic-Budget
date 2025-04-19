@@ -235,6 +235,7 @@ Q.inflation_growth = 0.1;
 Q.s_interest = "Normal";
 
 //Added Plots
+Q.loyalty_decay = 0;
 Q.spy_network = 0;
 Q.plot_strength = 0;
 Q.plot_target = 0;
