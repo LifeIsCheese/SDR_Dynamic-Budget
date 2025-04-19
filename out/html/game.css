@@ -7,7 +7,7 @@ body {
   overflow-y: scroll;
 }
 header, #content, footer {
-  color: rgb(215 215 215);
+  color: #3a1b1e;
   max-width: 540px;
   margin: 0 auto;
   overflow: auto;
@@ -36,7 +36,6 @@ header {
   display: inline-block;
   margin-bottom: 0.5em;
   padding-left: 1em;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
   background-color: #3a1b1e;
 }
 #header-links a {
