@@ -7,7 +7,7 @@ body {
   overflow-y: scroll;
 }
 header, #content, footer {
-  color: rgb(255, 255, 255);
+  color: rgb(215 215 215);
   max-width: 540px;
   margin: 0 auto;
   overflow: auto;
@@ -74,11 +74,9 @@ header h2:before {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 2px,
-               rgba(0, 0, 0, 0.1) -1px -1px 2px;
 }
 a {
-  color: rgb(255, 247, 131);
+  color: #ff2940;
   text-decoration: none;
 }
 p {
@@ -172,7 +170,7 @@ blockquote + blockquote.attribution {
 .tools {
   padding: 0.6em;
   width: 14rem;
-  color: rgb(253, 253, 253);
+  color: rgb(215 215 215);
   background-color: #200d0d;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
@@ -309,7 +307,7 @@ a.card {
   width: 120px;
   height: 150px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid #967c31;
+  border: 10px solid #442024;
   margin-bottom: 0.5em;
   position: relative;
 }
@@ -323,7 +321,7 @@ div.blank-card {
   width: 120px;
   height: 150px;
   background-color: #1b0a0a;
-  border: 10px solid #816e3a;
+  border: 10px solid #442024;
   margin-bottom: 0.5em;
 }
 
