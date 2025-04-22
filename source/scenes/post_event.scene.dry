@@ -396,11 +396,26 @@ if (Q.month_actions >= 1) {
         Q.bruning_plot += Q.plot_strength;
     }
     /// Loyalty decay
-    if (Q.loyalty_decay <= 0) {
-        Q.loyalty_decay = 0;
+    Q.loyalty_decay_rate = (loyalty_decay - (spy_network / 300));
+     if (Q.loyalty_decay_rate >= 0){
+        Q.prussian_police_loyalty -= Q.loyalty_decay_rate;
+        Q.interior_police_loyalty -= Q.loyalty_decay_rate;
     }
-    Q.prussian_police_loyalty -= Q.loyalty_decay;
-    Q.interior_police_loyalty -= Q.loyalty_decay;
+    if (Q.loyalty_decay_rate == 0) {
+        Q.Sloyalty_decay = "None";
+    }
+    if (Q.loyalty_decay_rate == 0.01) {
+        Q.Sloyalty_decay = "Bothering";
+    }
+    if (Q.loyalty_decay_rate == 0.02) {
+        Q.Sloyalty_decay = "Alarming";
+    }
+    if (Q.loyalty_decay_rate == 0.03) {
+        Q.Sloyalty_decay = "Urgent";
+    }
+    if (Q.loyalty_decay_rate >= 0.04) {
+        Q.Sloyalty_decay = "Do something!";
+    }
     /// Hans luther opinion
     if (Q.hans_opinion >= 6) {
         Q.hans_string = "Glazing";

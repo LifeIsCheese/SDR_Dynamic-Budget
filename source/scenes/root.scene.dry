@@ -236,7 +236,10 @@ Q.s_interest = "Normal";
 
 //Added Plots
 Q.loyalty_decay = 0;
+Q.loyalty_decay_rate = 0;
+Q.Sloyalty_decay = "None"
 Q.spy_network = 0;
+Q.Sspy_network = "None"
 Q.plot_strength = 0;
 Q.plot_target = 0;
 Q.hjalmar_plot = 0;
