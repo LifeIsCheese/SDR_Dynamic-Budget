@@ -71,15 +71,15 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 <span style="color:rgb(61, 150, 156);">**Inflation**</span>: [+ inflation_2 +]%
 
-[? if black_thursday_seen = 1 : <span style="color:rgb(153, 10, 10);">**Unemployment**</span>: [+ unemployed_2 +]% ?]
+[? if black_thursday_seen = 1 : <span style="color:#990a0a;">**Unemployment**</span>: [+ unemployed_2 +]% ?]
 
-<span style="color:rgb(65, 131, 74);">**Economic**</span> growth: [+ economic_growth_2 +]%
+<span style="color:rgb(65, 131, 74);">**Economic growth**</span>: [+ economic_growth_2 +]%
 
 <span style="color:rgb(152, 158, 68);">**Interest Rates**</span>: [+ s_interest +]
 
-<span style="color:rgb(65, 131, 74);">**Economic**</span> goal: [+ economic_goal_2 +]%
+<span style="color:rgb(95, 131, 65);">**Economic goal**</span> goal: [+ economic_goal_2 +]%
 
-Foreign investment: +[+ foreign_investment +]% to GDP growth
+<span style="color:rgb(110, 65, 131);">**Foreign investment**</span>: +[+ foreign_investment +]% to <span style="color:rgb(95, 131, 65);">**growth**</span>
 
 # = Public Opinion
 

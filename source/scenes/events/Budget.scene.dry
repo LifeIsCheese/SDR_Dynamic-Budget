@@ -19,11 +19,11 @@ if (Q.economic_growth >= Q.economic_goal && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
     Q.hans_opinion +=1;
 }
-if (Q.economic_growth >= Q.economic_goal * 1.5 && Q.economic_growth > Q.inflation) {
+if (Q.economic_growth >= Q.economic_goal * 2 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
     Q.hans_opinion +=1;
 }
-if (Q.economic_growth >= Q.economic_goal * 2 && Q.economic_growth > Q.inflation) {
+if (Q.economic_growth >= Q.economic_goal * 3 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
     Q.hans_opinion +=1;
     Q.workers_spd += 6*(1-dissent);
