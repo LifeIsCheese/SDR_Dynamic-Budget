@@ -14,7 +14,7 @@ if (Q.economic_growth) {
 }
 Q.economic_goal_2 = '0';
 if (Q.economic_goal) {
-    Q.economic_goal_2 = Q.economic_base.toFixed(1);
+    Q.economic_goal_2 = Q.economic_goal.toFixed(1);
 }
 !}
 
@@ -41,7 +41,7 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 <span style="color:rgb(82, 82, 82);">**President**</span>: [+ president +]
 
-<span style="color:rgb(0, 0, 0);">**Chancellor**</span>: [+ chancellor +] ([+ chancellor_party +])
+<span style="color:rgb(129, 129, 129);">**Chancellor**</span>: [+ chancellor +] ([+ chancellor_party +])
 
 Reichstag composition:
 
@@ -49,7 +49,7 @@ Reichstag composition:
 <span style="color:rgb(182, 45, 45);">**SPD**</span>: [+ spd_r +]%
 [? if sapd_formed == 1 : <span style="color:rgb(255, 93, 93);">**SAPD**</span>: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-<span style="color:rgb(67, 194, 78);">**Z**</span> + <span style="color:rgb(62, 107, 206);">**BVP**</span>: [+ z_r +]%
+<span style="color:rgb(0, 0, 0);">**Z**</span> + <span style="color:rgb(62, 107, 206);">**BVP**</span>: [+ z_r +]%
 # 1928: 10, 1930: 13
 <span style="color:rgb(92, 0, 0);">**KPD**</span>: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
@@ -73,11 +73,11 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 [? if black_thursday_seen = 1 : <span style="color:rgb(153, 10, 10);">**Unemployment**</span>: [+ unemployed_2 +]% ?]
 
-<span style="color:rgb(65, 131, 74);">**Economic Growth**</span>: [+ economic_growth_2 +]%
+<span style="color:rgb(65, 131, 74);">**Economic**</span> growth: [+ economic_growth_2 +]%
 
 <span style="color:rgb(152, 158, 68);">**Interest Rates**</span>: [+ s_interest +]
 
-Economic goal: [+ economic_goal_2 +]%
+<span style="color:rgb(65, 131, 74);">**Economic Growth**</span> goal: [+ economic_goal_2 +]%
 
 Foreign investment: +[+ foreign_investment +]% to GDP growth
 
@@ -88,7 +88,7 @@ Foreign investment: +[+ foreign_investment +]% to GDP growth
 = Inter-party Relations
 
 
-<span style="color:rgb(0, 255, 106);">**Z**</span>: [+ z_relation : relationships +]
+<span style="color:rgb(0, 0, 0);">**Z**</span>: [+ z_relation : relationships +]
 
 <span style="color:rgb(241, 235, 143);">**DDP**</span>: [+ ddp_relation : relationships +]
 
@@ -188,7 +188,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 [? if sapd_formed == 1 : <span style="color:rgb(255, 93, 93);">**SAPD**</span>: [+ sapd_votes +]% ?]
 
-<span style="color:rgb(67, 194, 78);">**Z**</span> + <span style="color:rgb(62, 107, 206);">**BVP**</span>: [+ z_votes +]%
+<span style="color:rgb(0, 0, 0);">**Z**</span> + <span style="color:rgb(62, 107, 206);">**BVP**</span>: [+ z_votes +]%
 
 <span style="color:rgb(92, 0, 0);">**KPD**</span>: [+ kpd_votes +]%
 
@@ -234,7 +234,7 @@ Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ 
 
 = Plots
 
-Plot <span style="color:rgb(20, 20, 20);">**Power**</span>: [+ plot_strength +]%
+Plot power: [+ plot_strength +]%
 
 Death of <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span>: [+ hjalmar_plot +][? if hjalmar_plot != "successful" or hjalmar_plot != "failed": % ?]
 
