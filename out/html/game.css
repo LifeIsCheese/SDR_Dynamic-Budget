@@ -1,20 +1,31 @@
+:root{
+  --bgBack-color: #1a0607cb;
+  --bg-color: #130101;
+  --mainbg-color: #200d0d;
+  --header-color: #3a1b1e;
+  --text-color: #d8d8d8;
+  --active-color: #442024;
+  --hover-color: #6a2f35;
+
+
+}
 body {
   font-family: "Minion Pro", Georgia, serif;
   /*font-size: 1.125em;*/
-  background-color: #130101;
+  background-color: var(--bg-color);
   padding: 0;
   line-height: 155%;
   overflow-y: scroll;
 }
 header, #content, footer {
-  color: #d8d8d8;
+  color: var(--text-color);
   max-width: 540px;
   margin: 0 auto;
   overflow: auto;
 }
 #content {
   position: relative;
-  background-color: #200d0d;
+  background-color: var(--mainbg-color);
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
@@ -36,7 +47,7 @@ header {
   display: inline-block;
   margin-bottom: 0.5em;
   padding-left: 1em;
-  background-color: #3a1b1e;
+  background-color: var(--header-color);
 }
 #header-links a {
   padding-right: 1em;
@@ -75,7 +86,7 @@ header h2:before {
   letter-spacing: 0.1em;
 }
 a {
-  color: #d7d7d7;
+  color: var(--text-color);
   text-decoration: none;
 }
 p {
@@ -170,7 +181,7 @@ blockquote + blockquote.attribution {
   padding: 0.6em;
   width: 14rem;
   color: rgb(215 215 215);
-  background-color: #200d0d;
+  background-color: var(--mainbg-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 .tools.left {
@@ -203,29 +214,29 @@ blockquote + blockquote.attribution {
 
 /* tabs */
 .tab_container {
-    background-color: #200d0d;
+    background-color: var(--mainbg-color);
     margin-top: -0.6em;
     margin-left: -0.6em;
     margin-right: -0.6em;
 }
 .tab_button {
     font-family: "Minion Pro", Geor gia, serif;
-    background-color: #3a1b1e;
+    background-color: var(--header-color);
     /*float: left;*/
     border: none;
     outline: none;
     padding: 10px;
 }
 .tab_button.active {
-    background-color:#442024;
+    background-color: var(--active-color);
 }
 .tab_button:hover {
-    background-color: #6a2f35;
+    background-color: var(--hover-color);
 }
 
 
 .overlay {
-    background: #1a0607cb;
+    background: var(--bgBack-color);
     display: none;
     position: fixed;
     width: 100%;
@@ -305,7 +316,7 @@ a.card {
   width: 120px;
   height: 150px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid #442024;
+  border: 10px solid var(--active-color);
   margin-bottom: 0.5em;
   position: relative;
 }
@@ -319,7 +330,7 @@ div.blank-card {
   width: 120px;
   height: 150px;
   background-color: #1b0a0a;
-  border: 10px solid #442024;
+  border: 10px solid var(--active-color);
   margin-bottom: 0.5em;
 }
 
