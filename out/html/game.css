@@ -5,7 +5,7 @@
   --header-color: #f3f3e3;
   --text-color: #431;
   --htext-color: #900;
-  --active-color: #f3f3f3;
+  --active-color: #cecece;
   --hover-color: #ececec;
 
 
@@ -191,7 +191,7 @@ blockquote + blockquote.attribution {
 .tools {
   padding: 0.6em;
   width: 14rem;
-  color: rgb(215 215 215);
+  color: var(--text-color);
   background-color: var(--mainbg-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
@@ -340,7 +340,7 @@ div.blank-card {
   display: inline-block;
   width: 120px;
   height: 150px;
-  background-color: #1b0a0a;
+  background-color: var(--bg-color);
   border: 10px solid var(--active-color);
   margin-bottom: 0.5em;
 }
