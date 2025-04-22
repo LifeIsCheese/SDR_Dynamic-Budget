@@ -397,7 +397,7 @@ if (Q.month_actions >= 1) {
     }
     /// Loyalty decay
     if (Q.loyalty_decay <= 0) {
-        loyalty_decay = 0;
+        Q.loyalty_decay = 0;
     }
     Q.prussian_police_loyalty -= Q.loyalty_decay;
     Q.interior_police_loyalty -= Q.loyalty_decay;
