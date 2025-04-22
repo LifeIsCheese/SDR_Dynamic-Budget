@@ -1,13 +1,24 @@
 :root{
+  --bgBack-color: rgba(0,0,0,0.7);
+  --bg-color: #f3f3f3;
+  --mainbg-color: #f3f3f3;
+  --header-color: #f3f3e3;
+  --text-color: #431;
+  --htext-color: #900;
+  --active-color: #f3f3f3;
+  --hover-color: #ececec;
+
+
+}
+.darkmode{
   --bgBack-color: #1a0607cb;
   --bg-color: #130101;
   --mainbg-color: #200d0d;
   --header-color: #3a1b1e;
   --text-color: #d8d8d8;
+  --htext-color: #ffffff;
   --active-color: #442024;
   --hover-color: #6a2f35;
-
-
 }
 body {
   font-family: "Minion Pro", Georgia, serif;
@@ -86,7 +97,7 @@ header h2:before {
   letter-spacing: 0.1em;
 }
 a {
-  color: var(--text-color);
+  color: var(--htext-color);
   text-decoration: none;
 }
 p {
