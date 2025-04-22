@@ -247,3 +247,5 @@ Current interior police loyalty: [+ interior_police_loyalty : loyalty +].
 Current prussian police loyalty: [+ prussian_police_loyalty : loyalty +]. 
 
 Loyalty decay: [+ Sloyalty_decay +].
+
+Spy network strength: [+ Sspy_network +].

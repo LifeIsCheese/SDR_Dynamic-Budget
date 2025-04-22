@@ -416,6 +416,19 @@ if (Q.month_actions >= 1) {
     if (Q.loyalty_decay_rate >= 0.04) {
         Q.Sloyalty_decay = "Do something!";
     }
+    ///spy strength
+    if (Q.spy_network == 0) {
+        Q.Sspy_network == "What's that, what's a spy network";
+    }
+    if (Q.spy_network == 3) {
+        Q.Sspy_network == "Fledgling";
+    }
+    if (Q.spy_network == 6) {
+        Q.Sspy_network == "Influential";
+    }
+    if (Q.spy_network == 9) {
+        Q.Sspy_network == "Dominant ";
+    }
     /// Hans luther opinion
     if (Q.hans_opinion >= 6) {
         Q.hans_string = "Glazing";
