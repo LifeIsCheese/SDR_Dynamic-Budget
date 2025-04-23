@@ -5,7 +5,7 @@ max-visits: 1
 tags: event
 priority: 1
 view-if: year >= 1929 and hjalmar_plot >= 50 and plot_strength == 5 or plot_strength == 10 or plot_strength == 20
-on-arrival: interior_police_loyalty -=0.2; prussian_police_loyalty -= 0.2
+on-arrival: interior_police_loyalty -=0.1; prussian_police_loyalty -= 0.1; loyalty_decay = 0.01;
 
 = Suspicion from the right
 
@@ -25,15 +25,14 @@ Current interior police loyalty: [+ interior_police_loyalty : loyalty +]. [? if 
 
 @purge
 subtitle: We can purge the most suspicous of our police, this well set us back by a few months.
-choose-if: budget > 0
-on-arrival: hjalmar_plot = 10
+on-arrival: hjalmar_plot = 10; interior_police_loyalty *= 1.5; prussian_police_loyalty *= 1.5;
 
 Despite our crude efforts, the results seem promising.
 
 @bribe
 subtitle: -1 budget. By doing a general pay raise, we can ensure that any infiltrators have an incentive to stay shut.
 choose-if: budget > 0
-on-arrival: interior_police_loyalty *= 1.5; prussian_police_loyalty *= 2; budget -=1
+on-arrival: interior_police_loyalty *= 1.5; prussian_police_loyalty *= 1.5; budget -=1
 
 Despite reformist cries of already spending too much on this operation, this seems to be the most effective course of action.
 

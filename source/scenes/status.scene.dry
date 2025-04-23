@@ -20,8 +20,6 @@ if (Q.economic_goal) {
 
 = Status
 
-tesing
-
 [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
