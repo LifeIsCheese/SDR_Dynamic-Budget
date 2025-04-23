@@ -428,6 +428,8 @@ if (Q.month_actions >= 1) {
     }
     if (Q.spy_network == 9) {
         Q.Sspy_network == "Dominant ";
+        Q.prussian_police_loyalty += 0.01;
+        Q.interior_police_loyalty += 0.01;
     }
     /// Hans luther opinion
     if (Q.hans_opinion >= 6) {
