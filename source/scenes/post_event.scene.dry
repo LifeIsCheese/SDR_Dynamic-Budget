@@ -402,34 +402,34 @@ if (Q.month_actions >= 1) {
         Q.interior_police_loyalty -= Q.loyalty_decay_rate;
     }
     if (Q.loyalty_decay_rate == 0) {
-        Q.s_loyalty_decay = "None";
+        Q.s_loyalty_decay = 'None';
     }
     if (Q.loyalty_decay_rate == 0.01) {
-        Q.s_loyalty_decay = "Bothering";
+        Q.s_loyalty_decay = 'Bothering';
     }
     if (Q.loyalty_decay_rate == 0.02) {
-        Q.s_loyalty_decay = "Alarming";
+        Q.s_loyalty_decay = 'Alarming';
     }
     if (Q.loyalty_decay_rate == 0.03) {
-        Q.s_loyalty_decay = "Urgent";
+        Q.s_loyalty_decay = 'Urgent';
     }
     if (Q.loyalty_decay_rate >= 0.04) {
-        Q.s_loyalty_decay = "Do something!";
+        Q.s_loyalty_decay = 'Do something';
     }
     ///spy strength
     if (Q.spy_network == 0) {
-        Q.s_spy_network == "What's that, what's a spy network";
+        Q.s_spy_network = 'What's that, whats a spy network';
     }
     if (Q.spy_network == 3) {
-        Q.s_spy_network == "Fledgling";
+        Q.s_spy_network = 'Fledgling';
     }
     if (Q.spy_network == 6) {
-        Q.s_spy_network == "Influential";
+        Q.s_spy_network = 'Influential';
     }
     if (Q.spy_network == 9) {
-        Q.s_spy_network == "Dominant ";
-        Q.prussian_police_loyalty += 0.01;
-        Q.interior_police_loyalty += 0.01;
+        Q.s_spy_network = 'Dominant';
+        Q.interior_police_loyalty += 0.02;
+        Q.prussian_police_loyalty += 0.02;
     }
     /// Hans luther opinion
     if (Q.hans_opinion >= 6) {
