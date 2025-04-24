@@ -1,0 +1,15 @@
+title: Operation Ivory Tower
+view-if: bruning_plot == "successful"
+new-page: true
+max-visits: 1
+tags: event
+on-arrival: judicial_reform = 2; rfb_banned = 1; sa_ban = 1; z_relation +=20; ddp_relation +=15; dvp_relation +=15; workers_dnvp -=15; workers_ddp +=4; workers_dvp +=1; workers_z += 4; workers_spd += 6; time_to_election = 3
+call: set_next_election_time
+
+= The Ivory Tower Collapses
+
+**Then drag the angels down to the plight of humanity, and let them beg to God for their salvation.**
+
+“The current Chancellor of the Republic, dubbed The Hunger Chancellor by the working class, was found on the stairs of his residence, slumped over dead with a pool of blood surrounding him. His cause of death, as of now, remains unknown, and any trace of evidence has seemingly been taken away from the scene in a deliberate attempt to cover their tracks. Members of the Reichstag, most notably Otto Braun and [+ z_party_leader +] have recently called for an emergency session to discuss the course of action, as such an event could spark an upsurge of extremist activity.”
+
+The Reichstag has spoken, we will crush the paramilitaries as much as possible.
