@@ -20,6 +20,8 @@ if (Q.economic_goal) {
 
 = Status
 
+updated?
+
 [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
