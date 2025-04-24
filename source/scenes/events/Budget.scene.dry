@@ -17,15 +17,15 @@ Q.unemployed -= Q.economic_growth - Q.inflation;
     }
 if (Q.economic_growth >= Q.economic_goal && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
-    Q.hans_opinion +=1;
+    Q.hans_opinion = 3;
 }
 if (Q.economic_growth >= Q.economic_goal * 2 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
-    Q.hans_opinion +=1;
+    Q.hans_opinion = 4;
 }
 if (Q.economic_growth >= Q.economic_goal * 3 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
-    Q.hans_opinion +=1;
+    Q.hans_opinion = 5;
     Q.workers_spd += 6*(1-dissent);
     Q.new_middle_spd += 6*(1-dissent);
     Q.old_middle_spd += 5*(1-dissent);
@@ -37,7 +37,7 @@ if (Q.economic_growth < 0) {
     }
 }
 if (Q.economic_base > Q.economic_growth) {
-    Q.economic_base -= Q.economic_growth;
+    Q.economic_base -= (Q.economic_growth / 2);
 }
 if (Q.economic_growth >= Q.economic_base) {
     Q.economic_base = 3.29;
