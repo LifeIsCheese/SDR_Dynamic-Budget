@@ -25,7 +25,7 @@ Current interior police loyalty: [+ interior_police_loyalty : loyalty +]. [? if 
 
 @purge
 subtitle: We can purge the most suspicous of our police, this well set us back by a few months.
-on-arrival: hjalmar_plot = 10; interior_police_loyalty *= 1.5; prussian_police_loyalty *= 1.5
+on-arrival: hjalmar_plot = 10; interior_police_loyalty *= 1.5; prussian_police_loyalty *= 1.5; loyalty_decay = 0
 
 Despite our crude efforts, the results seem promising.
 
@@ -39,6 +39,6 @@ Despite reformist cries of already spending too much on this operation, this see
 @investigate
 subtitle: We can perform an investigation to find these spies, but the speed of our planning will be significantly slower.
 choose-if: budget > 0
-on-arrival: plot_strength *= 0.5; interior_police_loyalty *= 1.5; prussian_police_loyalty *= 1.5
+on-arrival: plot_strength *= 0.5; interior_police_loyalty *= 1.5; prussian_police_loyalty *= 1.5; loyalty_decay = 0
 
 The investigatations are approved, with many key members being outed as Nazi spies.
