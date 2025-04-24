@@ -395,65 +395,6 @@ if (Q.month_actions >= 1) {
     if (Q.plot_target == "bruning") {
         Q.bruning_plot += Q.plot_strength;
     }
-    /// Loyalty decay
-    Q.loyalty_decay_rate = (loyalty_decay - (spy_network / 300));
-     if (Q.loyalty_decay_rate >= 0){
-        Q.prussian_police_loyalty -= Q.loyalty_decay_rate;
-        Q.interior_police_loyalty -= Q.loyalty_decay_rate;
-    }
-    if (Q.loyalty_decay_rate == 0) {
-        Q.Sloyalty_decay = "None";
-    }
-    if (Q.loyalty_decay_rate == 0.01) {
-        Q.Sloyalty_decay = "Bothering";
-    }
-    if (Q.loyalty_decay_rate == 0.02) {
-        Q.Sloyalty_decay = "Alarming";
-    }
-    if (Q.loyalty_decay_rate == 0.03) {
-        Q.Sloyalty_decay = "Urgent";
-    }
-    if (Q.loyalty_decay_rate >= 0.04) {
-        Q.Sloyalty_decay = "Do something!";
-    }
-    ///spy strength
-    if (Q.spy_network == 0) {
-        Q.Sspy_network == "What's that, what's a spy network";
-    }
-    if (Q.spy_network == 3) {
-        Q.Sspy_network == "Fledgling";
-    }
-    if (Q.spy_network == 6) {
-        Q.Sspy_network == "Influential";
-    }
-    if (Q.spy_network == 9) {
-        Q.Sspy_network == "Dominant ";
-        Q.prussian_police_loyalty += 0.01;
-        Q.interior_police_loyalty += 0.01;
-    }
-    /// Hans luther opinion
-    if (Q.hans_opinion >= 6) {
-        Q.hans_string = "Glazing";
-        Q.hans_opinion -=1;
-    }
-    if (Q.hans_opinion == 5) {
-        Q.hans_string = "Estatic";
-    }
-    if (Q.hans_opinion == 4) {
-        Q.hans_string = "Cordial";
-    }
-    if (Q.hans_opinion == 3) {
-        Q.hans_string = "Cooperative";
-    }
-    if (Q.hans_opinion == 2) {
-        Q.hans_string = "Suspicious";
-    }
-    if (Q.hans_opinion == 1) {
-        Q.hans_string = "Spiteful";
-    }
-    if (Q.hans_opinion == 0) {
-        Q.hans_string = "Hateful";
-    }
     /// Economic Goal calculation
     Q.economic_goal = (Q.economic_base - ( (Q.lower_tax_rates / 4 / Q.inflation) + (Q.upper_tax_rates / 3 / Q.inflation) + (Q.tariffs / 6 / Q.inflation) )) + Q.inflation / 15;
     /// economy effects support
