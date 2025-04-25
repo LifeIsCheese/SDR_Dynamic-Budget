@@ -250,27 +250,32 @@ Loyalty decay: [+ s_loyalty_decay +].
 
 Spy network strength: [+ s_spy_network +].
 
-@derrick
+@Targets
 
 = Profile
 
-<img src="img/d_rose.jpg">
+Hjalmar Schacht
+
+<img class="face-status" src="img/d_rose.jpg">
 
 = Status
 
-Mood: Reflecting
+Mood: Suspious
 
 Body: Healthy
 
-Condition: Peak
+Politics: Far right
 
-Languges:
-    English: 100%
-    German: 55%
-    Russian: 0%
+= Informants
 
-= Belief
+Informant 1: Comprimised
 
-Politics: Reformist
+Informant 2: Suspect
 
-Party influence: Dominant
+Informant 3: Clear
+
+= Reward
+
+Reichsbank can be influenced
+
+RFB banned
