@@ -1,18 +1,6 @@
 title: Budget for the year
 subtitle: As the year begins, we have recieved our annual budget.
 new-page: true
-on-display: {!  
-    var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure2";  
-
-    var image = new Image();  
-    image.className = "face-img";  
-    image.src = "img/d_rose.jpg";  
-
-    cardEl.appendChild(image);  
-    var contentDiv = document.querySelector("#page #mid_panel #content");
-    contentDiv.appendChild(cardEl);
-!}
 tags: event
 priority: 2
 view-if: year >= 1929 and month == 2 and spd_in_government
