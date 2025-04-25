@@ -249,7 +249,8 @@ Q.reichsbank_a = 0;
 Q.hans_opinion = 2;
 Q.hans_string = "Suspicious";
 Q.bruning_death_support = 0;
-
+Q.assassination_partners = "None";
+Q.assassination_partners_string = "None";
 //foreign investment
 Q.foreign_investment = 1;
 Q.foreign_investment_old = 0;
