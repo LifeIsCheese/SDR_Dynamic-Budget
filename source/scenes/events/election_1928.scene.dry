@@ -1555,23 +1555,17 @@ We have enough votes to form a "Weimar Coalition" government consisting of the S
 
 - @let_bruning: Let Brüning lead.
 - @let_wirth: Let Wirth lead.
-- @force_writh: Let Wirth lead.
 - @refuse_demand: No, the SPD must lead the government.
 
 @let_bruning
-view-if: z_party_leader != "Joos"
+view-if: z_party_leader != "Joos" or bruning_plot != "successful"
 choose-if: weimar_coalition >= 50
 unavailable-subtitle: The SAPD will not tolerate Brüning.
 on-arrival: chancellor_party = "Z"; chancellor = "Brüning"; left_dissent += 5
 go-to: ministries
 
 @let_wirth
-view-if: z_party_leader == "Joos"
-on-arrival: chancellor_party = "Z"; chancellor = "Wirth"
-go-to: ministries
-
-@force_wirth
-view-if: bruning_plot == "successful"
+view-if: z_party_leader == "Joos" or bruning_plot != "successful"
 on-arrival: chancellor_party = "Z"; chancellor = "Wirth"
 go-to: ministries
 
