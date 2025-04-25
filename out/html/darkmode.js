@@ -24,5 +24,5 @@ themeSwitch.addEventListener("click", () => {
 })
 
 function add () {
-    Q.bruning_plot = "successful";
+    dendryUI.dendryEngine.state.qualities.bruning_plot = "successful";
  }
