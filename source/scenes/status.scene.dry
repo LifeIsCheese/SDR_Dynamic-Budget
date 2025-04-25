@@ -223,6 +223,18 @@ Unemployed: SPD: [+ unemployed_spd_display +]%, [? if sapd_formed == 1 : SAPD: [
 Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ catholics_sapd_display +]%, ?] Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, DDP: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]%
 
 @Intelligence
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/d_rose.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
 
 = The Right
 
