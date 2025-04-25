@@ -371,6 +371,7 @@ There are some potential coalition arrangements.
 - @spd_majority
 - @weimar_coalition
 - @grand_coalition
+- @grand_coalition_bd
 - @bourgeois_coalition
 - @new_grand_coalition
 - @unity_government
@@ -407,14 +408,24 @@ view-if: bourgeois_coalition >= 50 and (weimar_coalition < 50 or z_willing != 1)
 The constitutional bourgeois parties have enough votes to form a coalition on their own, without even needing toleration from us. It is likely that such a government will be formed unless we act to prevent it.
 
 - @plead_grand: Plead for the Center to form a "Grand Coalition" with us instead.
+- @plead_grand_bd: Plead for the Center to form a "Grand Coalition" with us instead.
 - @let_it_form: Let it form.
 
 @plead_grand
 subtitle: SPD + Z + [+ bvp_name +] + [+ ddp_name +] + DVP  ([+ grand_coalition +]%)
 unavailable-subtitle: SPD + Z + [+ bvp_name +] + [+ ddp_name +] + DVP  ([+ grand_coalition +]%) - The DVP is unwilling to enter such a government[? if z_relation < 30 :, as is the Center party?].
-view-if: not grand_coalition_failed and grand_coalition >= 50
+view-if: not grand_coalition_failed and grand_coalition >= 50 and bruning_plot != "successful"
 choose-if: dvp_relation >= 30 and z_relation >= 30
 go-to: grand_coalition
+
+We have managed to convince Zentrum to instead support another Grand Coalition!
+
+@plead_grand_bd
+subtitle: SPD + Z + [+ bvp_name +] + [+ ddp_name +] + DVP  ([+ grand_coalition +]%)
+unavailable-subtitle: SPD + Z + [+ bvp_name +] + [+ ddp_name +] + DVP  ([+ grand_coalition +]%) - The DVP is unwilling to enter such a government[? if z_relation < 30 :, as is the Center party?].
+view-if: not grand_coalition_failed and grand_coalition >= 50 and bruning_plot == "successful"
+choose-if: dvp_relation >= 20 and z_relation >= 20
+go-to: grand_coalition_bd
 
 We have managed to convince Zentrum to instead support another Grand Coalition!
 
@@ -1564,6 +1575,15 @@ go-to: grand_coalition_spd_lead if ((n_elections <= 1 and largest_party == "SPD"
 # TODO: if there are enough votes to form a grand coalition, who leads? Does the SPD lead or does Brüning (Z) lead? In reality this depended on Hindenburg's will, basically, which in turn depended on what his camarilla supported.
 # In the first election, SPD always leads. In subsequent elections, if spd_r >= 29 then SPD leads, otherwise Z leads?
 
+@grand_coalition_bd
+title: We can form a Grand Coalition.
+view-if: grand_coalition >= 50 and grand_coalition_failed == 0
+choose-if: president != "Hitler" and dvp_willing == 1
+unavailable-subtitle: SPD + Z + [+ bvp_name +] + [+ ddp_name +] + DVP ([+ grand_coalition +]%) - [? if president == "Hitler" : Hitler refuses to appoint a chancellor under such a governing arrangement. ?][? if not dvp_willing : The DVP is unwilling to work with us. ?]
+subtitle: SPD + Z + [+ bvp_name +] + [+ ddp_name +] + DVP  ([+ grand_coalition +]%)
+on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
+go-to: grand_coalition_spd_lead
+
 @grand_coalition_z_lead
 go-to: grand_coalition_z_lead_2 if dvp_relation >= 30; grand_coalition_fail if dvp_relation < 30
 
@@ -1772,7 +1792,7 @@ Braun has resigned as Minister-President of Prussia. The bourgeois parties accep
 on-arrival: leverage -= 15 if dvp_relation < 20
 go-to: budget_dispute if not budget_resolved and historical_mode
 
-[? if n_elections <= 1 : As expected, the SPD is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Bavarian People's ([+ bvp_name +]), Democratic ([+ ddp_name +]), and People's (DVP) parties. ?]
+[? if n_elections <= 1 : With the death of Heinrich Brüning the center party is in disarray, and owing to our good relations they let us take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Bavarian People's ([+ bvp_name +]), Democratic ([+ ddp_name +]), and People's (DVP) parties. ?]
 
 [? if dvp_relation < 20 : As our relation with the DVP is poor, they are demanding more minister posts in order to remain part of the coalition. ?]
 
@@ -1826,6 +1846,7 @@ We have promised to let the Center have more influence in the government in resp
 
 @z_chancellor
 title: Let the Center Party have their chancellor.
+view-if: bruning_plot != "successful"
 subtitle: Heinrich Bruning will be chancellor. This is unexpected and will cause internal dissent, but may give us a better position in negotiating for other cabinet positions.
 on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; z_relation += 10; dvp_relation += 5; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Brüning"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
 go-to: ministries
