@@ -12,7 +12,6 @@
   var main = function(dendryUI) {
     ui = dendryUI;
     game = ui.game;
-
     // Add your custom code here.
   };
 
