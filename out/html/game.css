@@ -400,6 +400,9 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
   margin: 1em;
 }
 .face-status {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 150px;
   height: 150px;
   object-fit: contain;
