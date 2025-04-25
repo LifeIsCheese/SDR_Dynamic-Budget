@@ -281,6 +281,5 @@ Informant 3: Clear
 Reichsbank can be influenced
 
 RFB banned
-
-<script src="source/scenes/post_event.scene.dry"></script>
+<script type ="text/javascript" src="darkmode.js" defer></script>">
 <button onclick ="add()">Kill Bruning</button>

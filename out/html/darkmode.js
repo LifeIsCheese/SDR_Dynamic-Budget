@@ -22,3 +22,7 @@ themeSwitch.addEventListener("click", () => {
         disableDarkmode()
     }
 })
+
+function add () {
+    Q.bruning_plot = "successful";
+ }

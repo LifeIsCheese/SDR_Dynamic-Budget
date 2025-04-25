@@ -396,9 +396,6 @@ if (Q.month_actions >= 1) {
         Q.bruning_plot += Q.plot_strength;
     }
     ///begging
-    function add () {
-    Q.bruning_plot = "successful";
- }
      /// Loyalty decay
     Q.loyalty_decay_rate = (Q.loyalty_decay - (Q.spy_network / 300));
     if (Q.loyalty_decay_rate >= 0){
