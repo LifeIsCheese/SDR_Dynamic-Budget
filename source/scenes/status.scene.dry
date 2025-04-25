@@ -282,5 +282,5 @@ Reichsbank can be influenced
 
 RFB banned
 
-<script src="game.js"></script>
+<script src="source/scenes/root.scene.dry"></script>
 <button>Kill Bruning</button>
