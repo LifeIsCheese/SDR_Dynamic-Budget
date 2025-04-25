@@ -263,10 +263,6 @@ Q.strife = 0;
 
 //Testing maybe idk
 
-function add () {
-    Q.bruning_plot = "successful";
- }
-
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
 Q.rural_qol = 100;
