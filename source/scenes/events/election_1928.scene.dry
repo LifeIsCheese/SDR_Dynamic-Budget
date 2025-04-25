@@ -1403,6 +1403,7 @@ We have appointed Rudolf Breitscheid as emergency chancellor. The Communists con
 - @emergency_no_confidence
 
 @bruning_emergency_chancellor
+view-if: bruning_plot != "successful"
 
 Brüning is happy to be Chancellor, but not as a figurehead for an all-SPD minority cabinet. He is asking that he be allowed to form a minority bourgeois government, backed by SPD toleration. Otherwise, he will refuse.
 
@@ -1419,7 +1420,7 @@ The Center Party is pleased, and somewhat surprised, that we have appointed [+ c
 - @far_right_coup
 
 @wirth_emergency_chancellor
-view-if: z_party_leader == "Joos"
+view-if: z_party_leader == "Joos" or bruning_plot == "successful
 on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; spd_in_government = 1; z_relation += 10; foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = "SPD"; labor_minister_party = "SPD"; reichswehr_minister_party = "SPD"; economic_minister_party = "SPD"; finance_minister_party = "SPD"; agriculture_minister_party = "SPD" 
 
 The Center Party is pleased that we have appointed [+ chancellor +] as chancellor.
@@ -1510,7 +1511,7 @@ We have won the vote of no confidence, and are currently ruling under an SPD min
 @weimar_coalition
 title: We can form a Weimar Coalition.
 subtitle: SPD + Z + [+ ddp_name +] ([+ weimar_coalition +]%)
-choose-if: president != "Hitler" and z_willing == 1
+choose-if: president != "Hitler" and z_willing == 1 or bruning_plot == "successful"
 unavailable-subtitle: SPD + Z + [+ ddp_name +] ([+ weimar_coalition +]%) - [? if president == "Hitler" : Hitler refuses to appoint a chancellor under such a governing arrangement. ?][? if not z_willing : The Center Party is unwilling to coalition with us. ?]
 view-if: weimar_coalition >= 50 or (weimar_coalition + sapd_r >= 50 and kpd_relations >= 30)
 on-arrival: leverage += 5; leverage += 5 if z_party_leader == "Joos"; in_weimar_coalition = 1; spd_in_government = 1; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "Z"; interior_minister_party = "Z"; justice_minister_party = ddp_name; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "Z"; agriculture_minister_party = "Z"; foreign_minister = "Wirth"; interior_minister = "Wirth"; justice_minister = "Koch-Weser"; labor_minister = "Stegerwald"; reichswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Köhler"; agriculture_minister = "Hermes";
@@ -1545,6 +1546,7 @@ We have enough votes to form a "Weimar Coalition" government consisting of the S
 
 - @let_bruning: Let Brüning lead.
 - @let_wirth: Let Wirth lead.
+- @force_writh: Let Wirth lead.
 - @refuse_demand: No, the SPD must lead the government.
 
 @let_bruning
@@ -1556,6 +1558,11 @@ go-to: ministries
 
 @let_wirth
 view-if: z_party_leader == "Joos"
+on-arrival: chancellor_party = "Z"; chancellor = "Wirth"
+go-to: ministries
+
+@force_wirth
+view-if: bruning_plot == "successful"
 on-arrival: chancellor_party = "Z"; chancellor = "Wirth"
 go-to: ministries
 
@@ -1858,7 +1865,7 @@ This is highly unexpected, and many in the left and center of our party are crit
 
 @z_chancellor_wirth
 title: Let Joseph Wirth of the Center Party be chancellor.
-view-if: z_party_leader == "Joos"
+view-if: z_party_leader == "Joos" or bruning_plot == "successful"
 subtitle: Wirth is on the left wing of the Center Party. This may give us a better position in negotiating for other cabinet positions.
 on-arrival: left_dissent += 2; z_relation += 6; ddp_relation += 3; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Wirth"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
 go-to: ministries
