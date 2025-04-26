@@ -283,6 +283,7 @@ blockquote + blockquote.attribution {
 }
 .status_button:hover {
   background-color: var(--hover-color);
+  border: 2px solid var(--htext-color);
 }
 
 
