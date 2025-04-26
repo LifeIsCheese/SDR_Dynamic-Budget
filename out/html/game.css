@@ -244,6 +244,14 @@ blockquote + blockquote.attribution {
 .tab_button:hover {
     background-color: var(--hover-color);
 }
+.status_button {
+  font-family: "Minion Pro", Geor gia, serif;
+  background-color: var(--header-color);
+  border: 10px solid var(--active-color);
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 4px;
+}
 
 
 .overlay {

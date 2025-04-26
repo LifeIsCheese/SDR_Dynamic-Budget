@@ -282,4 +282,4 @@ Reichsbank can be influenced
 
 RFB banned
 <script src="new_shit.js"></script>
-<button onclick ="add()">Kill Bruning</button>
+<button class = "status_button" onclick ="add()">Kill Bruning</button>
