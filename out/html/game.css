@@ -281,7 +281,7 @@ blockquote + blockquote.attribution {
   border-radius: 0.4rem;
   padding: 4px;
 }
-.tab_button:hover {
+.status_button:hover {
   background-color: var(--hover-color);
 }
 
