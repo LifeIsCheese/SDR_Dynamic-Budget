@@ -246,11 +246,14 @@ blockquote + blockquote.attribution {
 }
 .status_button {
   font-family: "Minion Pro", Geor gia, serif;
-  background-color: var(--header-color);
-  border: 10px solid var(--active-color);
+  background-color: var(--active-color);
+  border: 2px solid var(--header-color);
   outline: none;
   border-radius: 0.4rem;
   padding: 4px;
+}
+.tab_button:hover {
+  background-color: var(--hover-color);
 }
 
 
