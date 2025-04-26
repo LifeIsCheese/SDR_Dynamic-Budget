@@ -234,9 +234,6 @@ blockquote + blockquote.attribution {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 20px;
-  right: 20px;
 }
 #theme-switch svg{
   fill: var(--active-color);
