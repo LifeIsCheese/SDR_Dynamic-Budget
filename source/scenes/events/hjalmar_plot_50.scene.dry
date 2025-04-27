@@ -32,7 +32,7 @@ Despite our crude efforts, the results seem promising.
 @bribe
 subtitle: -1 budget. By doing a general pay raise, we can ensure that any infiltrators have an incentive to stay shut.
 choose-if: budget > 0
-on-arrival: interior_police_loyalty *= 1.5; prussian_police_loyalty *= 1.5; budget -=1
+on-arrival: interior_police_loyalty *= 1.5; prussian_police_loyalty *= 1.5; budget -=1; barmat +=1
 
 Despite reformist cries of already spending too much on this operation, this seems to be the most effective course of action.
 

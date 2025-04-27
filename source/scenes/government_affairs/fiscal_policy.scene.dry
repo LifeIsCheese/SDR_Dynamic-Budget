@@ -130,5 +130,5 @@ on-arrival: tax_reform -= 0.1; month_actions +=1
 @investigate
 title: Investigate the root causes of why taxation is blah blah blah
 choose-if: tax_reform_progress == tax_reform and tax_reform_progress >= 0.6
-subtitle: +1 month [? if tax_reform_progress >= tax_reform: We dont know to to further reform taxation. ?] [? if tax_reform == 0.6 : We physically cannot reform the tax system with our current technology?]
+subtitle: +1 month [? if tax_reform == 0.6 : We physically cannot reform the tax system with our current technology?]
 on-arrival: tax_reform_progress -= 0.1; month_actions +=1
