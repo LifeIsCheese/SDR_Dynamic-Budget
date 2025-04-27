@@ -1,13 +1,27 @@
-function death () {
+function bdeath () {
     dendryUI.dendryEngine.state.qualities.bruning_plot = "successful";
  }
 
-function fail () {
+function bfail () {
     dendryUI.dendryEngine.state.qualities.bruning_plot = "failed";
  }
-function fifty () {
+function bfifty () {
     dendryUI.dendryEngine.state.qualities.bruning_plot = 50;
  }
-function hundred () {
+function bhundred () {
     dendryUI.dendryEngine.state.qualities.bruning_plot = 100;
+ }
+
+ function hdeath () {
+    dendryUI.dendryEngine.state.qualities.hjalmar_plot = "successful";
+ }
+
+function hfail () {
+    dendryUI.dendryEngine.state.qualities.hjalmar_plot = "failed";
+ }
+function hfifty () {
+    dendryUI.dendryEngine.state.qualities.hjalmar_plot = 50;
+ }
+function hhundred () {
+    dendryUI.dendryEngine.state.qualities.hjalmar_plot = 100;
  }
