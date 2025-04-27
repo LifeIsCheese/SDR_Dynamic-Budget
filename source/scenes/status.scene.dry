@@ -253,10 +253,9 @@ Loyalty decay: [+ s_loyalty_decay +].
 Spy network strength: [+ s_spy_network +].
 
 @Targets
-<script src="new_shit.js"></script>
 
 = Profile
-
+<script src="new_shit.js"></script>
 Hjalmar Schacht
 
 <img class="face-status" src="img/d_rose.jpg">
