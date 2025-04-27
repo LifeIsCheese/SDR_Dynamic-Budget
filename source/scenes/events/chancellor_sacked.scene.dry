@@ -1,6 +1,6 @@
 title: Hindenburg Sacks [+ chancellor +]!
 subtitle: Hindenburg has turned on us...
-view-if: (president == "Hindenburg" and presidential_powers != 1 and spd_in_government == 1 and ((reichswehr_loyalty <= 0.05 or ((capital_strike_seen or in_left_front) and unemployed >= 20 and budget < 1 and economic_democracy+nationalization_progress >= 3 and land_reform > 0)) or (hindenburg_angry >= 100)) and ((coup_progress >= 3 and chancellor_party == "SPD") or (coup_progress >= 6 and chancellor_party == "Z"))) and papen_chancellor_timer <= 0 and chancellor != "Brüning"
+view-if: (president == "Hindenburg" and presidential_powers != 1 and spd_in_government == 1 and ((reichswehr_loyalty <= 0.05 or ((capital_strike_seen or in_left_front) and unemployed >= 20 and budget < 1 and economic_democracy+nationalization_progress >= 3 and land_reform > 0)) or (hindenburg_angry >= 100)) and ((coup_progress >= 3 and chancellor_party == "SPD") or (coup_progress >= 6 and chancellor_party == "Z"))) and papen_chancellor_timer <= 0 and chancellor != "Brüning" and bruning_plot != "successful"
 new-page: true
 on-arrival: dvp_relation -= 8; z_relation -= 4 if chancellor_party != "Z"; pro_republic -= 3; pro_republic -= 1 if spd_r >= 30; pro_republic -= 1 if weimar_coalition >= 50; coup_progress -= 1; spd_sackings += 1; judicial_reform -= 1
 go-to: bruning_right if right_coalition >= 50 and not right_coalition_failed and year < 1929; no_majority if right_coalition < 50 or right_coalition_failed or year >= 1929
