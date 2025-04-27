@@ -3,7 +3,7 @@ view-if: barmat >= 3
 new-page: true
 max-visits: 1
 tags: event
-on-arrival: workers_spd -= 10; workers_nsdap +=5; workers_dnvp +=5; new new_middle_spd -=5; new_middle_dvp +=5; z_relation -= 10; ddp_relation -= 10; dvp_relation -=15; kpd_relation -=15
+on-arrival: workers_spd -= 10; workers_nsdap +=5; workers_dnvp +=5; new_middle_spd -=5; new_middle_dvp +=5; z_relation -= 10; ddp_relation -= 10; dvp_relation -=15; kpd_relation -=15
 
 = Vestiges of Barmat
 
