@@ -24,6 +24,7 @@ Lower-income tax rates: [+ lower_tax_rates : taxation +]
 - @raise_overall: Increase overall taxes.
 - @cut_overall: Cut overall taxes.
 - @cut_overall_wtb: Cut overall taxes.
+- @reform_menu: Reform taxation
 - @regressive
 - @tariffs
 - @root: Do not change the tax system.
@@ -112,3 +113,22 @@ on-arrival: tariffs -= 1; budget -= 2; inflation -= 0.5; workers_spd += 4*(1-dis
 Lowering tariffs helps workers and the urban poor by reducing prices for basic necessities. In addition, other countries are pleased by lower tariffs, and are more willing to negotiate on many issues.
 
 Farmers are hurt by this policy, as cheap imported grain leads to ruin for some small producers. In general, cheap imports are detrimental for small-scale industries aimed at the domestic market.
+
+@reform_menu
+
+Tax evasion has been a critical problem in Germany for over a millennia. We can *try* our best to change this by either, making it harder to do tax evasion or making it more efficient.
+
+- @reform_tax
+- @investigate
+
+@reform_tax
+title: Reform the tax system.
+choose-if: tax_reform > tax_reform_progress and tax_reform >= 0.6
+subtitle: +1 month [? if tax_reform_progress >= tax_reform: We dont know to to further reform taxation. ?] [? if tax_reform == 0.6 : We physically cannot reform the tax system with our current technology?]
+on-arrival: tax_reform -= 0.1; month_actions +=1
+
+@investigate
+title: Investigate the root causes of why taxation is blah blah blah
+choose-if: tax_reform_progress == tax_reform and tax_reform_progress >= 0.6
+subtitle: +1 month [? if tax_reform_progress >= tax_reform: We dont know to to further reform taxation. ?] [? if tax_reform == 0.6 : We physically cannot reform the tax system with our current technology?]
+on-arrival: tax_reform_progress -= 0.1; month_actions +=1

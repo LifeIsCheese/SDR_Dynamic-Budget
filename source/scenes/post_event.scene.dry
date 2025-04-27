@@ -379,12 +379,12 @@ if (Q.month_actions >= 1) {
         Q.s_interest = "Normal";
     }
     if (Q.interest_rates == -1) {
-        Q.inflation_growth = 0.125;
+        Q.inflation_growth = 0.15;
         Q.economic_growth += 0.2;
         Q.s_interest = "Low";
     }
     if (Q.interest_rates == -2) {
-        Q.inflation_growth = 0.175;
+        Q.inflation_growth = 0.2;
         Q.economic_growth += 0.3;
         Q.s_interest = "Very Low";
     }
@@ -456,7 +456,7 @@ if (Q.month_actions >= 1) {
         Q.hans_string = "Hateful";
     }
     /// Economic Goal calculation
-    Q.economic_goal = (Q.economic_base - ( (Q.lower_tax_rates / 4 / Q.inflation) + (Q.upper_tax_rates / 3 / Q.inflation) + (Q.tariffs / 6 / Q.inflation) )) + Q.inflation / 15;
+    Q.economic_goal = ( (Q.economic_base * Q.tax_reform ) - ( (Q.lower_tax_rates / 4 / Q.inflation) + (Q.upper_tax_rates / 3 / Q.inflation) + (Q.tariffs / 6 / Q.inflation) )) + Q.inflation / 15;
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
         Q.workers_spd += (Q.unemployed/8)/12;

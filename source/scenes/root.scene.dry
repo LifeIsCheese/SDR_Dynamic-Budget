@@ -234,6 +234,10 @@ Q.interest_rates = 1;
 Q.inflation_growth = 0.1;
 Q.s_interest = "Normal";
 
+//Tax evasuion
+Q.tax_reform = 1;
+Q.tax_reform_progress = 0.9
+
 //Added Plots
 Q.loyalty_decay = 0;
 Q.loyalty_decay_rate = 0;
