@@ -1,5 +1,5 @@
 title: Our plans have been uncovered!
-view-if: bruning_plot >=50 and (interior_police_loyalty < 0.7 and prussian_police_loyalty < 0.7 and assassination_partners == "Prussian") or (assassination_partners == "Police" and interior_police_loyalty < 0.7) or (interior_police_loyalty < 0.7 and prussian_police_loyalty < 0.7 and plot_strength == 20)
+view-if: year >= 1928 and bruning_plot >=50 and (interior_police_loyalty < 0.7 and prussian_police_loyalty < 0.7 and assassination_partners == "Prussian") or (assassination_partners == "Police" and interior_police_loyalty < 0.7) or (interior_police_loyalty < 0.7 and prussian_police_loyalty < 0.7 and plot_strength == 20)
 new-page: true
 max-visits: 1
 tags: event

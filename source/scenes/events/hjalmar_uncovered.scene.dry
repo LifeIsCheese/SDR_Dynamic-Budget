@@ -1,5 +1,5 @@
 title: Our plans have been uncovered!
-view-if: hjalmar_plot >=70 and (interior_police_loyalty < 0.55 and prussian_police_loyalty < 0.5 and assassination_partners == "Prussian") or (assassination_partners == "Police" and interior_police_loyalty < 0.55) or (interior_police_loyalty < 0.55 and prussian_police_loyalty < 0.5 and plot_strength == 20)
+view-if: year >= 1928 and hjalmar_plot >=70 and (interior_police_loyalty < 0.55 and prussian_police_loyalty < 0.5 and assassination_partners == "Prussian") or (assassination_partners == "Police" and interior_police_loyalty < 0.55) or (interior_police_loyalty < 0.55 and prussian_police_loyalty < 0.5 and plot_strength == 20)
 new-page: true
 max-visits: 1
 tags: event
