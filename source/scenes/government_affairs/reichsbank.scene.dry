@@ -43,7 +43,7 @@ view-if: reichsbank_a == 1
 title: Perhaps he needs an, "incentive"
 subtitle: -1 resources
 choose-if: resources > 0
-on-arrival: hans_opinion +=1; resources -=1; barmat +=1
+on-arrival: hans_opinion +=1; resources -=1; barmat +=1 if barmat <= 2
 
 By transferring our funds in Hans Luther's wallet, he may think more highly of us.
 
@@ -52,6 +52,6 @@ view-if: reichsbank_a == 0
 title: Perhaps he needs an, "incentive"
 subtitle: -1 resources
 choose-if: resources > 0
-on-arrival: resources -=1; barmat +=1
+on-arrival: resources -=1; barmat +=1 if barmat <= 2
 
 By transferring our funds in Hjalmar's wallet, he may think more highly of us.  (He did not)
