@@ -120,7 +120,7 @@ Tax evasion has been a critical problem in Germany for over a millennia. We can 
 
 - @reform_tax
 - @investigate
-- @root: Do not change taxes.
+- @root
 - @easy_discard
 
 @reform_tax
