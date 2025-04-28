@@ -236,7 +236,11 @@ Q.s_interest = "Normal";
 
 //Tax evasuion
 Q.tax_reform = 1;
-Q.tax_reform_progress = 0.9
+Q.tax_reform_progress = 1;
+
+//Target
+Q.director = 0;
+Q.director_s = "None";
 
 //Added Plots
 Q.loyalty_decay = 0;
