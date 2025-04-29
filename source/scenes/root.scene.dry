@@ -244,7 +244,7 @@ Q.director_type = 0;
 Q.director_pointer = 0;
 // length is 6
 Q.director_a = ['Derrick Rosa', 'Rudi Althaus', 'Kreszentia Friedrich', 'Herrick Lang', 'Maximilian Stroker', Ivana Humpel];
-Q.director_s = Q.director_a[Q.director_pointer];
+
 
 
 //Added Plots
