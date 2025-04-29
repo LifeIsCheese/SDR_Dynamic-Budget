@@ -240,7 +240,8 @@ Q.tax_reform_progress = 1;
 
 //Target
 Q.director = 0;
-Q.director_s = "None";
+Q.director_a = ["testing", "testing1", "testing2", "please work"];
+Q.director_s = Q.director_a[0];
 
 //Added Plots
 Q.loyalty_decay = 0;

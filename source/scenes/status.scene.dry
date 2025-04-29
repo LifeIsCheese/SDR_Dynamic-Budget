@@ -257,7 +257,7 @@ Spy network strength: [+ s_spy_network +].
 = Profile
 
 <script src="new_shit.js"></script>
-Hjalmar Schacht
+[+ plot_target +]
 
 <img class="face-status" src="img/d_rose.jpg">
 
@@ -277,7 +277,7 @@ Politics: Far right:
 
 = Informants
 
-Informant 1: Comprimised: 
+Director: [+ director_s +] 
 <button class = "status_button" onclick ="bhundred()">B 100 Plot</button>
 <button class = "status_button" onclick ="hhundred()">H 100 Plot</button>
 
