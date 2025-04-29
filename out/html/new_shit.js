@@ -25,6 +25,3 @@ function hfifty () {
 function hhundred () {
     dendryUI.dendryEngine.state.qualities.hjalmar_plot = 100;
  }
-function new_hire () {
-   dendryUI.dendryEngine.state.qualities.director_pointer = Math.floor( Math.random() * 7);
-}
