@@ -261,17 +261,16 @@ Spy network strength: [+ s_spy_network +].
 
 <img class="face-status" src="img/d_rose.jpg">
 
+Is that Derrick Rose!
 = Status
 
 Mood: Suspious: 
 <button class = "status_button" onclick ="bdeath()">Kill Bruning</button>
 <button class = "status_button" onclick ="hdeath()">Kill Hjalmar</button>
-
-Body: Healthy: 
+ 
 <button class = "status_button" onclick ="bfail()">B Failure</button>
 <button class = "status_button" onclick ="hfail()">H Failure</button>
-
-Politics: Far right: 
+ 
 <button class = "status_button" onclick ="bfifty()">B 50 Plot</button>
 <button class = "status_button" onclick ="hfifty()">H 50 Plot</button>
 
@@ -283,12 +282,11 @@ new_hire();
 window.changeTab('status.Targets', 'Targets')
 ">New Hire</button>
 
-Informant 2: Suspect
+Informant 2: no code
 
-Informant 3: Clear
+Informant 3: no code
 
 = Effects
 
-Reichsbank can be influenced
-
-RFB banned
+[? if plot_target == "hjalmar" : Reichsbank can be influenced. RFB banned. Z max relations (secret oooh) ?].
+[? if plot_target == "bruning" : Joseph Wirth and Joos! RFB banned and SA. Republican relations, and support ?].
