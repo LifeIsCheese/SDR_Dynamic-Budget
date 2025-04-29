@@ -243,7 +243,7 @@ Q.director_type = 0;
 // 1 is purge and rush, 2 is 
 Q.director_pointer = 0;
 // length is 6
-Q.director_a = ['Derrick Rosa', 'Rudi Althaus', 'Kreszentia Friedrich', 'Herrick Lang', 'Maximilian Stroker', Ivana Humpel];
+Q.director_a = ['Derrick Rosa', 'Rudi Althaus', 'Kreszentia Friedrich', 'Herrick Lang', 'Maximilian Stroker', 'Ivana Humpel'];
 
 
 
