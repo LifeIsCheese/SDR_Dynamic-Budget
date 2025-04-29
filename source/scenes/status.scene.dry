@@ -278,7 +278,10 @@ Politics: Far right:
 = Informants
 
 Director: [+ director_s +]
-<button class = "status_button" onclick ="new_hire()">New Hire</button>
+<button class = "status_button" onclick ="
+new_hire();
+location.reload();
+">New Hire</button>
 
 Informant 2: Suspect
 
