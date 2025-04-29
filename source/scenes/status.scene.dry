@@ -256,7 +256,7 @@ Spy network strength: [+ s_spy_network +].
 
 = Profile
 
-<script src="new_shit.js"></script>
+<script src="new_shit.js" defer></script>
 [+ plot_target +]
 
 <img class="face-status" src="img/d_rose.jpg">
