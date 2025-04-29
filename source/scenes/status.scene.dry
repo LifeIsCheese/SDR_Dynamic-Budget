@@ -280,7 +280,7 @@ Politics: Far right:
 Director: [+ director_s +]
 <button class = "status_button" onclick ="
 new_hire();
-location.reload();
+window.changeTab('status.Targets', 'Targets')
 ">New Hire</button>
 
 Informant 2: Suspect
