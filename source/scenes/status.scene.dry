@@ -278,8 +278,7 @@ Politics: Far right:
 = Informants
 
 Director: [+ director_s +] 
-<button class = "status_button" onclick ="bhundred()">B 100 Plot</button>
-<button class = "status_button" onclick ="hhundred()">H 100 Plot</button>
+<button class = "status_button" onclick ="new_hire()">New Hire</button>
 
 Informant 2: Suspect
 

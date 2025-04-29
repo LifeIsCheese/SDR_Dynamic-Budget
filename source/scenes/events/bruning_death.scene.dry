@@ -3,7 +3,7 @@ view-if: bruning_plot == "successful"
 new-page: true
 max-visits: 1
 tags: event
-on-arrival: judicial_reform = 2; rfb_banned = 1; sa_ban = 1; z_relation +=20; ddp_relation +=15; dvp_relation +=15; workers_dnvp -=15; workers_ddp +=4; workers_dvp +=1; workers_z += 4; workers_spd += 6; time_to_election = 3; z_party_leader = "Joos"; chancellor = "Wirth" if chancellor_party == "Z"
+on-arrival: judicial_reform = 2; rfb_banned = 1; sa_ban = 1; z_relation +=20; ddp_relation +=15; dvp_relation +=15; workers_dnvp -=15; workers_ddp +=4; workers_dvp +=1; workers_z += 4; workers_spd += 6; time_to_election = 3; z_party_leader = "Joos"; chancellor = "Wirth" if chancellor_party == "Z"; plot_target = "None"; plot_strength = 0
 call: set_next_election_time
 
 = The Ivory Tower Collapses
