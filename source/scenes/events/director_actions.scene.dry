@@ -6,7 +6,7 @@ view-if: director_actions == 1
 
 - @purge: Purge
 - @rush: Rush
-- @root:
+- @root: 42
 
 @purge
 view-if: director_type == 1
