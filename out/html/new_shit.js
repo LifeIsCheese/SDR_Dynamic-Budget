@@ -30,3 +30,9 @@ function hhundred () {
    dendryUI.dendryEngine.state.qualities.director_type = 1;
    dendryUI.dendryEngine.state.qualities.director_s = dendryUI.dendryEngine.state.qualities.director_a[dendryUI.dendryEngine.state.qualities.director_pointer];
 }
+function targetH () {
+   dendryUI.dendryEngine.state.qualities.plot_target = "hjalmar";
+}
+function targetB () {
+   dendryUI.dendryEngine.state.qualities.plot_target = "bruning";
+}

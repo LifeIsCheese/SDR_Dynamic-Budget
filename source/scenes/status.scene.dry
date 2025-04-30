@@ -264,7 +264,7 @@ Spy network strength: [+ s_spy_network +].
 Is that Derrick Rose?
 = Status
 
-Mood: Suspious: 
+Cheats: 
 <button class = "status_button" onclick ="bdeath()">Kill Bruning</button>
 <button class = "status_button" onclick ="hdeath()">Kill Hjalmar</button>
  
@@ -273,6 +273,9 @@ Mood: Suspious:
  
 <button class = "status_button" onclick ="bfifty()">B 50 Plot</button>
 <button class = "status_button" onclick ="hfifty()">H 50 Plot</button>
+
+<button class = "status_button" onclick ="targetH()">H plot target</button>
+<button class = "status_button" onclick ="targetB()">B plot target</button>
 
 = Informants
 
