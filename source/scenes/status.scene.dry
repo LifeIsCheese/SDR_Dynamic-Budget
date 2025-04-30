@@ -259,7 +259,7 @@ Spy network strength: [+ s_spy_network +].
 <script src="new_shit.js" defer></script>
 [+ plot_target +]
 
-<img class="face-status" src="img/d_rose.jpg">
+[? if plot_target != "None" : <img class="face-status" src="img/d_rose.jpg"> ?] 
 
 Is that Derrick Rose?
 = Status
@@ -276,11 +276,11 @@ Mood: Suspious:
 
 = Informants
 
-Director: [? if plot_target != "None" : [+ director_s +] ?]
+Director: [? if plot_target != "None" : [+ director_s +]. ?] [? if plot_target == "None" : None. ?]
 
 [? if plot_target != "None" : <button class = "status_button" onclick ="new_hire();window.changeTab('status.Targets', 'Targets')">New Hire</button> ?]
 
-Informant 2: no code
+Informant  [+ director_a[director_pointer + 1]  +] : no code
 
 Informant 3: no code
 
