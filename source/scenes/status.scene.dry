@@ -261,7 +261,7 @@ Spy network strength: [+ s_spy_network +].
 
 <img class="face-status" src="img/d_rose.jpg">
 
-Is that Derrick Rose!
+Is that Derrick Rose?
 = Status
 
 Mood: Suspious: 
@@ -276,11 +276,9 @@ Mood: Suspious:
 
 = Informants
 
-Director: [+ director_s +]
-<button class = "status_button" onclick ="
-new_hire();
-window.changeTab('status.Targets', 'Targets')
-">New Hire</button>
+Director: [? if plot_target != "None" : [+ director_s +] ?]
+
+[? if plot_target != "None" : <button class = "status_button" onclick ="new_hire();window.changeTab('status.Targets', 'Targets')">New Hire</button> ?]
 
 Informant 2: no code
 
