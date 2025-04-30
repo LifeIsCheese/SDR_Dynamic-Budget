@@ -37,3 +37,6 @@ function targetH () {
 function targetB () {
    dendryUI.dendryEngine.state.qualities.plot_target = "bruning";
 }
+function director_actions () {
+   dendryUI.dendryEngine.state.qualities.director_actions = 1;
+}
