@@ -280,9 +280,9 @@ Director: [? if plot_target != "None" : [+ director_s +]. ?] [? if plot_target =
 
 [? if plot_target != "None" : <button class = "status_button" onclick ="new_hire();window.changeTab('status.Targets', 'Targets')">New Hire</button> ?]
 
-Informant  [+ director_a[director_pointer + 1]  +] : no code
+Informant  [+ informant_name_s_1 +] : no code
 
-Informant 3: no code
+Informant 3 [+ informant_name_s_2 +] : no code
 
 = Effects
 
