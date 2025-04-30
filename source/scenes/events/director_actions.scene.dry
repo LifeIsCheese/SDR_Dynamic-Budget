@@ -6,7 +6,7 @@ view-if: director_actions == 1
 
 - @purge
 - @rush
-- @root
+- @leave
 
 @purge
 view-if: director_type == 1
@@ -14,5 +14,6 @@ subtitle: Increases loyalty, decreases loyalty decay, sets back operation by 3 m
 choose-if: investigate_far_right >= 1 and hjalmar_plot <= 0 and resources > 1 or budget > 0
 on-arrival: interior_police_loyalty += 0.1; prussian_police_loyalty += 0.1; loyalty_decay -= 0.01 if loyalty_decay > 0; hjalmar_plot -= 3 if plot_target == "hjalmar"; bruning_plot -= 3 if plot_target == "bruning"
 
-@root
+@leave
 on-arrival: director_actions = 0
+go-to: root
