@@ -281,7 +281,7 @@ Cheats:
 
 Director: [? if plot_target != "None" : [+ director_s +]. ?] [? if plot_target == "None" : None. ?]
 
-[? if plot_target != "None" : <button class = "status_button" onclick ="new_hire()">New Hire</button> ?]
+[? if plot_target != "None" : <button title = "-1 resource" class = "status_button" onclick ="new_hire()">New Hire</button> ?]
 [? if plot_target != "None" : <button class = "status_button" onclick ="director_actions()">Director Actions</button> ?]
 
 = Effects
