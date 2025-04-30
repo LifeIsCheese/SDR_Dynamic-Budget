@@ -4,9 +4,9 @@ view-if: director_actions == 1
 
 = Director actions
 
-- @purge
-- @rush
-- @root
+- @purge: Purge
+- @rush: Rush
+- @root:
 
 @purge
 view-if: director_type == 1
