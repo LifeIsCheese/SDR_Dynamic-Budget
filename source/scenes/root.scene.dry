@@ -248,8 +248,6 @@ Q.director_a = [
     'Derrick Rosa', 'Rudi Althaus', 'Friedrich Kreszentia', 'Herrick Lang', 'Maximilian Stroker', 'Ivan Humpel', 'Mon Gropen', 'Christoph König', 'Horst Stark', 'Meinrad Forst', 'Werther Baier', 'Adler Mayer'
 
 ];
-Q.informant_name_s_1 = 'Bob';
-Q.informant_name_s_2 = 'Billy';
 Q.director_actions = 0;
 
 //Added Plots
