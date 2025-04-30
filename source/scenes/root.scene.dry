@@ -250,6 +250,7 @@ Q.director_a = [
 ];
 Q.informant_name_s_1 = 'Bob';
 Q.informant_name_s_2 = 'Billy';
+Q.director_actions = 0;
 
 //Added Plots
 Q.loyalty_decay = 0;
