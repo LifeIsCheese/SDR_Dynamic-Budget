@@ -1,6 +1,6 @@
 title: Director Actions
 new-page: true
-is-special: true
+tags: event
 view-if: director_actions == 1 and year > 1925
 
 = Director actions
