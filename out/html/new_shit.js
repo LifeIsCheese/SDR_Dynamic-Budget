@@ -33,9 +33,11 @@ function hhundred () {
 }
 function targetH () {
    dendryUI.dendryEngine.state.qualities.plot_target = "hjalmar";
+   window.changeTab('status.Targets', 'Targets');
 }
 function targetB () {
    dendryUI.dendryEngine.state.qualities.plot_target = "bruning";
+   window.changeTab('status.Targets', 'Targets');
 }
 function director_actions () {
    dendryUI.dendryEngine.state.qualities.director_actions = 1;

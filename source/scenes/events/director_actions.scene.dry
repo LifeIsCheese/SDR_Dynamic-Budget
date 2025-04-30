@@ -1,5 +1,6 @@
-title: Status
+title: Director Actions
 new-page: true
+is-special: true
 view-if: director_actions == 1 and year > 1925
 
 = Director actions
