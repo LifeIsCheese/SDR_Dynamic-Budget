@@ -1,6 +1,6 @@
 var dendry = dendryUI.dendryEngine.state.qualities;
 function bdeath () {
-    dendryUI.dendryEngine.state.qualities.bruning_plot = "successful";
+    dendry.bruning_plot = "successful";
  }
 
 function bfail () {
