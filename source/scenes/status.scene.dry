@@ -289,7 +289,7 @@ Director: [? if plot_target != "None" : [+ director_s +]. ?] [? if plot_target =
 = Director Actions
 
 [? if director_actions_timer == 0 : <button class = "status_button" onclick ="purge()">Purge</button> ?].
-[? if director_actions_timer == 0 : Increases loyalty, decreases loyalty decay, sets back operation by 3 months ?]. [? if director_actions_timer > 0 : This is on cooldown, please wait [director_actions_timer] ?].
+[? if director_actions_timer == 0 : Increases loyalty, decreases loyalty decay, sets back operation by 3 months ?]. [? if director_actions_timer > 0 : This is on cooldown, please wait [+ director_actions_timer +] ?].
 
 [? if director_actions_timer == 0 : <button class = "status_button" onclick ="rush()">Rush</button> ?].
-[? if director_actions_timer == 0 : Increases operation by 3 months, Increases loyalty decay and decreases loyalty ?]. [? if director_actions_timer > 0 : This is on cooldown, please wait [director_actions_timer] ?].
+[? if director_actions_timer == 0 : Increases operation by 3 months, Increases loyalty decay and decreases loyalty ?]. [? if director_actions_timer > 0 : This is on cooldown, please wait [+ director_actions_timer +] ?].
