@@ -206,5 +206,5 @@
     window.dendryUI.loadSettings();
     window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
   };
-
+  document.getElementById("Actions").style.display="none";
 }());
