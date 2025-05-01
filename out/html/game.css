@@ -285,6 +285,20 @@ blockquote + blockquote.attribution {
   background-color: var(--hover-color);
   border: 2px solid var(--htext-color);
 }
+.status_button_wide {
+  font-family: "Minion Pro", Geor gia, serif;
+  width: 200px
+  color: var(--text-color);
+  background-color: var(--header-color);
+  border: 2px solid var(--active-color);
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 4px;
+}
+.status_button_wide:hover {
+  background-color: var(--hover-color);
+  border: 2px solid var(--htext-color);
+}
 
 
 .overlay {
