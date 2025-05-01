@@ -20,8 +20,6 @@ if (Q.economic_goal) {
 
 = Status
 
-kediv32
-
 [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]

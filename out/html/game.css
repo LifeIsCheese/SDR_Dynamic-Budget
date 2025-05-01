@@ -15,7 +15,7 @@
   --bg-color: #130101;
   --mainbg-color: #200d0d;
   --header-color: #3a1b1e;
-  --text-color: #e4c69b;
+  --text-color: #ececec;
   --htext-color: #f8c4c4;
   --active-color: #442024;
   --hover-color: #6a2f35;
@@ -288,7 +288,7 @@ blockquote + blockquote.attribution {
 .status_button_wide {
   font-family: "Minion Pro", Geor gia, serif;
   width: 220px;
-  color: var(--text-color);
+  color: var(--htext-color);
   background-color: var(--header-color);
   border: 2px solid var(--active-color);
   outline: none;
