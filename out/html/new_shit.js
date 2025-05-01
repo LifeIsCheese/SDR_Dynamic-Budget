@@ -1,3 +1,4 @@
+document.getElementById("Actions").style.display="none";
 function bdeath () {
     dendryUI.dendryEngine.state.qualities.bruning_plot = "successful";
  }
