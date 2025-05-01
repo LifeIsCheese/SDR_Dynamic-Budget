@@ -396,7 +396,7 @@ if (Q.month_actions >= 1) {
         Q.bruning_plot += Q.plot_strength;
     }
     ///tax reform
-    Q.tax_reform_progress = 1 - (science_bonus / 10);
+    Q.tax_reform_progress = 1 - (Q.science_bonus / 10);
     /// Loyalty decay
     Q.loyalty_decay_rate = (Q.loyalty_decay - (Q.spy_network / 300));
     if (Q.loyalty_decay_rate >= 0){
