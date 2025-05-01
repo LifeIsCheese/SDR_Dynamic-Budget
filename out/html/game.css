@@ -287,7 +287,7 @@ blockquote + blockquote.attribution {
 }
 .status_button_wide {
   font-family: "Minion Pro", Geor gia, serif;
-  width: 200px
+  width: 200px;
   color: var(--text-color);
   background-color: var(--header-color);
   border: 2px solid var(--active-color);
