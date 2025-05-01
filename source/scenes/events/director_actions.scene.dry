@@ -1,7 +1,5 @@
 title: Director Actions
-subtitle: Yababdbadoo
 new-page: true
-tags: event
 priority: 1
 view-if: director_actions == 1 and year > 1925
 
