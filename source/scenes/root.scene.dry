@@ -248,7 +248,6 @@ Q.director_a = [
     'Derrick Rosa', 'Rudi Althaus', 'Friedrich Kreszentia', 'Herrick Lang', 'Maximilian Stroker', 'Ivan Humpel', 'Mon Gropen', 'Christoph König', 'Horst Stark', 'Meinrad Forst', 'Werther Baier', 'Adler Mayer'
 
 ];
-Q.director_actions = 0;
 
 //Added Plots
 Q.loyalty_decay = 0;
@@ -537,7 +536,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'iron_front', 'media', 'enemies',
             'party_organizations', 'rally', 'reichsbanner',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
-            'party_disunity', 'weimar_plan',
+            'party_disunity', 'weimar_plan', 'director_actions',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
@@ -624,6 +623,9 @@ Q.nazi_peak_timer = 0;
 Q.nazi_reform_timer = 0;
 Q.laissez_faire_timer = 0;
 Q.presidential_timer = 0;
+
+// epic timers
+Q.director_actions_timer = 0;
 
 // all the initial advisors are centrists.
 Q.wels_advisor = 1; // Otto Wels

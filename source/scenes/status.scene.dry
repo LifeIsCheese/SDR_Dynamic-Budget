@@ -296,5 +296,5 @@ Director: [? if plot_target != "None" : [+ director_s +]. ?] [? if plot_target =
 <button class = "status_button" onclick ="purge()">Purge</button>
 Increases loyalty, decreases loyalty decay, sets back operation by 3 months.
 
-<button class = "status_button" onclick ="bfail()">Rush</button>
+<button class = "status_button" onclick ="rush()">Rush</button>
 Increases operation by 3 months, Increases loyalty decay and decreases loyalty
