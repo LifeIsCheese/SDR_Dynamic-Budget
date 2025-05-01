@@ -59,6 +59,8 @@ function purge () {
       }
    }
    d.director_actions_timer = 3;
+   d.month_actions += 1;
+   window.changeTab('status.Actions', 'Actions')
 
 }
 function rush () {
@@ -75,5 +77,7 @@ function rush () {
       }
    }
    d.director_actions_timer = 3;
+   d.month_actions += 1;
+   window.changeTab('status.Actions', 'Actions')
 
 }

@@ -232,16 +232,6 @@ Catholics: SPD: [+ catholics_spd_display +]%, [? if sapd_formed == 1 : SAPD: [+ 
 
 <span style="color:rgb(0, 26, 255);">**Capital strike likelihood**</span>: [? if investigate_corruption >= 1 and capital_strike_progress >= 1 : [+ capital_strike_progress +]0%, ?] [? if investigate_corruption == 0 : We don't have any information on big businesses. ?] [? if capital_strike_progress == 0 and investigate_corruption >= 1 : Businesses aren't doing anything. ?]
 
-= Plots
-
-Partners: [+ assassination_partners_string +]
-
-Plot power: [+ plot_strength +]%
-
-Death of <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span>: [+ hjalmar_plot +][? if hjalmar_plot != "successful" or hjalmar_plot != "failed": % ?]
-
-Death of <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span>: [+ bruning_plot +][? if bruning_plot != "successful": % ?]
-
 = The police
 
 Current interior police loyalty: [+ interior_police_loyalty : loyalty +].
@@ -257,12 +247,17 @@ Spy network strength: [+ s_spy_network +].
 = Profile
 
 <script src="new_shit.js" defer></script>
-[+ plot_target +]
+[? if plot_target == "hjalmar" : <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span> ?] [? if plot_target == "bruning" : <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span> ?]
 
 [? if plot_target != "None" : <img class="face-status" src="img/d_rose.jpg"> ?] 
 
-Is that Derrick Rose?
 = Status
+
+Partners: [+ assassination_partners_string +]
+
+Plot power: [+ plot_strength +]%
+
+[? if plot_target == "hjalmar" : Death of <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span>: [+ hjalmar_plot +][? if hjalmar_plot != "successful" or hjalmar_plot != "failed": % ?]  ?] [? if plot_target == "bruning" : Death of <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span>: [+ bruning_plot +][? if bruning_plot != "successful" or bruning_plot != "failed": % ?] ?]
 
 Cheats: 
 <button class = "status_button" onclick ="bdeath()">Kill Bruning</button>
@@ -294,7 +289,7 @@ Director: [? if plot_target != "None" : [+ director_s +]. ?] [? if plot_target =
 = Director Actions
 
 [? if director_actions_timer == 0 : <button class = "status_button" onclick ="purge()">Purge</button> ?].
-[? if director_actions_timer == 0 : Increases loyalty, decreases loyalty decay, sets back operation by 3 months ?]. [? if director_actions_timer > 0 : This is on cooldown ?]
+[? if director_actions_timer == 0 : Increases loyalty, decreases loyalty decay, sets back operation by 3 months ?]. [? if director_actions_timer > 0 : This is on cooldown, please wait [director_actions_timer] ?].
 
-<button class = "status_button" onclick ="rush()">Rush</button>
-Increases operation by 3 months, Increases loyalty decay and decreases loyalty
+[? if director_actions_timer == 0 : <button class = "status_button" onclick ="rush()">Rush</button> ?].
+[? if director_actions_timer == 0 : Increases operation by 3 months, Increases loyalty decay and decreases loyalty ?]. [? if director_actions_timer > 0 : This is on cooldown, please wait [director_actions_timer] ?].
