@@ -47,4 +47,5 @@ function director_actions () {
 }
 function purge () {
    dendry.loyalty_decay += 0.01;
+
 }
