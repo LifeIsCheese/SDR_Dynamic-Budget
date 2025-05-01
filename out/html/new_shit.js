@@ -1,5 +1,4 @@
-var loyalty_decay = 0;
-var loyalty_decay = dendryUI.dendryEngine.state.qualities.loyalty_decay;
+var dendry = dendryUI.dendryEngine.state.qualities;
 function bdeath () {
     dendryUI.dendryEngine.state.qualities.bruning_plot = "successful";
  }
@@ -47,5 +46,5 @@ function director_actions () {
    window.changeTab('status.Actions', 'Actions')
 }
 function purge () {
-   loyalty_decay += 0.01;
+   dendry.loyalty_decay += 0.01;
 }
