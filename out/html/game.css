@@ -15,8 +15,8 @@
   --bg-color: #130101;
   --mainbg-color: #200d0d;
   --header-color: #3a1b1e;
-  --text-color: #d8d8d8;
-  --htext-color: #ffffff;
+  --text-color: #fff3b2;
+  --htext-color: #fffd86;
   --active-color: #442024;
   --hover-color: #6a2f35;
 }
@@ -287,7 +287,7 @@ blockquote + blockquote.attribution {
 }
 .status_button_wide {
   font-family: "Minion Pro", Geor gia, serif;
-  width: 200px;
+  width: 220px;
   color: var(--text-color);
   background-color: var(--header-color);
   border: 2px solid var(--active-color);
