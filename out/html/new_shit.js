@@ -58,6 +58,7 @@ function purge () {
          d.bruning_plot -= (d.plot_strength * 3);
       }
    }
+   d.director_actions_timer = 3;
 
 }
 function rush () {
@@ -70,8 +71,9 @@ function rush () {
          d.hjalmar_plot += (d.plot_strength * 3);
       }
       if (d.plot_target == "bruning") {
-         d.bruning_plot ++= (d.plot_strength * 3);
+         d.bruning_plot += (d.plot_strength * 3);
       }
    }
+   d.director_actions_timer = 3;
 
 }
