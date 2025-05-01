@@ -20,7 +20,7 @@ if (Q.economic_goal) {
 
 = Status
 
-kediv
+kediv32
 
 [+ month : month +] [+ year +]
 
@@ -293,7 +293,7 @@ Director: [? if plot_target != "None" : [+ director_s +]. ?] [? if plot_target =
 
 = Director Actions
 
-<button class = "status_button" onclick ="bfail()">Purge</button>
+<button class = "status_button" onclick ="purge()">Purge</button>
 Increases loyalty, decreases loyalty decay, sets back operation by 3 months.
 
 <button class = "status_button" onclick ="bfail()">Rush</button>

@@ -44,3 +44,7 @@ function director_actions () {
    dendryUI.dendryEngine.state.qualities.director_actions = 1;
    window.changeTab('status.Actions', 'Actions')
 }
+function purge () {
+   loyalty_decay = dendryUI.dendryEngine.state.qualities.loyalty_decay;
+   loyalty_decay += 0.01;
+}
