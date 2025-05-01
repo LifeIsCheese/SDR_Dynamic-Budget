@@ -1,51 +1,77 @@
-var dendry = dendryUI.dendryEngine.state.qualities;
+var d = dendryUI.dendryEngine.state.qualities;
 function bdeath () {
-    dendry.bruning_plot = "successful";
+    d.bruning_plot = "successful";
  }
 
 function bfail () {
-    dendryUI.dendryEngine.state.qualities.bruning_plot = "failed";
+   d.bruning_plot = "failed";
  }
 function bfifty () {
-    dendryUI.dendryEngine.state.qualities.bruning_plot = 50;
+   d.bruning_plot = 50;
  }
 function bhundred () {
-    dendryUI.dendryEngine.state.qualities.bruning_plot = 100;
+   d.bruning_plot = 100;
  }
 
  function hdeath () {
-    dendryUI.dendryEngine.state.qualities.hjalmar_plot = "successful";
+   d.hjalmar_plot = "successful";
  }
 
 function hfail () {
-    dendryUI.dendryEngine.state.qualities.hjalmar_plot = "failed";
+   d.hjalmar_plot = "failed";
  }
 function hfifty () {
-    dendryUI.dendryEngine.state.qualities.hjalmar_plot = 50;
+   d.hjalmar_plot = 50;
  }
 function hhundred () {
-    dendryUI.dendryEngine.state.qualities.hjalmar_plot = 100;
+   d.hjalmar_plot = 100;
  }
  function new_hire () {
-   dendryUI.dendryEngine.state.qualities.director_pointer = Math.floor( Math.random() * dendryUI.dendryEngine.state.qualities.director_a.length);
-   dendryUI.dendryEngine.state.qualities.director_type = 1;
-   dendryUI.dendryEngine.state.qualities.director_s = dendryUI.dendryEngine.state.qualities.director_a[dendryUI.dendryEngine.state.qualities.director_pointer];
-   dendryUI.dendryEngine.state.qualities.resources -= 1;
+   d.director_pointer = Math.floor( Math.random() * d.director_a.length);
+   d.director_type = 1;
+   d.director_s = d.director_a[d.director_pointer];
+   d.resources -= 1;
    window.changeTab('status.Targets', 'Targets')
 }
 function targetH () {
-   dendryUI.dendryEngine.state.qualities.plot_target = "hjalmar";
+   d.plot_target = "hjalmar";
    window.changeTab('status.Targets', 'Targets');
 }
 function targetB () {
-   dendryUI.dendryEngine.state.qualities.plot_target = "bruning";
+   d.plot_target = "bruning";
    window.changeTab('status.Targets', 'Targets');
 }
 function director_actions () {
-   dendryUI.dendryEngine.state.qualities.director_actions = 1;
+   d.director_actions = 1;
    window.changeTab('status.Actions', 'Actions')
 }
 function purge () {
-   dendry.loyalty_decay += 0.01;
+
+   if (d.loyalty_decay > 0) {
+      d.loyalty_decay -= 0.01;
+      d.interior_police_loyalty += 0.1;
+      d.prussian_police_loyalty += 0.1;
+      if (d.plot_target == "hjalmar") {
+         d.hjalmar_plot -= (d.plot_strength * 3);
+      }
+      if (d.plot_target == "bruning") {
+         d.bruning_plot -= (d.plot_strength * 3);
+      }
+   }
+
+}
+function rush () {
+   
+   if (d.loyalty_decay < 0.04) {
+      d.loyalty_decay += 0.01;
+      d.interior_police_loyalty -= 0.1;
+      d.prussian_police_loyalty -= 0.1;
+      if (d.plot_target == "hjalmar") {
+         d.hjalmar_plot += (d.plot_strength * 3);
+      }
+      if (d.plot_target == "bruning") {
+         d.bruning_plot ++= (d.plot_strength * 3);
+      }
+   }
 
 }
