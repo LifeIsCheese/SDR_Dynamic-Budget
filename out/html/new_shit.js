@@ -42,4 +42,5 @@ function targetB () {
 }
 function director_actions () {
    dendryUI.dendryEngine.state.qualities.director_actions = 1;
+   window.changeTab('status.Actions', 'Actions')
 }

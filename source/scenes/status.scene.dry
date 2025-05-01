@@ -20,7 +20,7 @@ if (Q.economic_goal) {
 
 = Status
 
-
+kediv
 
 [+ month : month +] [+ year +]
 
@@ -288,3 +288,13 @@ Director: [? if plot_target != "None" : [+ director_s +]. ?] [? if plot_target =
 
 [? if plot_target == "hjalmar" : Reichsbank can be influenced. RFB banned. Z max relations (secret oooh) ?].
 [? if plot_target == "bruning" : Joseph Wirth and Joos! RFB banned and SA. Republican relations, and support ?].
+
+@Actions
+
+= Director Actions
+
+<button class = "status_button" onclick ="bfail()">Purge</button>
+Increases loyalty, decreases loyalty decay, sets back operation by 3 months.
+
+<button class = "status_button" onclick ="bfail()">Rush</button>
+Increases operation by 3 months, Increases loyalty decay and decreases loyalty
