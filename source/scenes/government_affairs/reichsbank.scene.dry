@@ -15,10 +15,14 @@ card-image: img/Reichsbank.jpg
 
 [? if hjalmar_plot == "successful": Hans Luther opinion: [+ hans_string +]. [? if hans_opinion <= 2 : We can persuade him by talking to him directly. ?] ?]
 
+Reichsbank reserve requirement: 40%
+
 - @raise_interest_rates
 - @lower_interest_rates
 - @bribe: Maybe 1 million Reichsmarks can change his mind.
 - @troll: Maybe 1 million Reichsmarks can change his mind.
+- @reform_bond: Reform the Young Plan bonds.
+- @issue_bond: Issue bonds.
 - @root: No, we're going to our own thing.
 - @easy_discard
 
@@ -39,8 +43,8 @@ on-arrival: inflation += 1.5 if inflation <= 0; inflation += 1 if inflation > 0;
 Decreasing interest rates stimulates economic growth, but increases inflation. [? if inflation >= 5: Hans luther reluctanctly agrees, but thinks less of us because he thinks inflation is too high?]
 
 @bribe
-view-if: reichsbank_a == 1
-title: Perhaps he needs an, "incentive"
+view-if: reichsbank_a == 1 and hans_opinion <= 2
+title: With hans being uncooperative, perhaps he needs an "incentive".
 subtitle: -1 resources
 choose-if: resources > 0
 on-arrival: hans_opinion +=1; resources -=1; barmat +=1 if barmat <= 2
@@ -54,4 +58,18 @@ subtitle: -1 resources
 choose-if: resources > 0
 on-arrival: resources -=1; barmat +=1 if barmat <= 2
 
-By transferring our funds in Hjalmar's wallet, he may think more highly of us.  (He did not)
+@reform_bond
+view-if: reparations_paused == 1 and bond_reform == 0;
+subtitle: [? if z_relation < 54.9 and z_party_leader != "Joos" and in_spd_majority != 1  : The Center is hesistant to allow this. ?] [? if in_grand_coalition and dvp_relation < 54.9 : The DVP would not support this. ?]
+choose-if: (z_relation >= 54.9 and z_party_leader == "Joos") and (in_grand_coalition and dvp_relation >= 54.9)
+on-arrival: bond_reform = 1
+
+Originally set up as a way to reduce burden on our reparations, we can reform this to work more like actual bonds. A sort of, Reichsbond.
+
+@issue_bond
+view-if: bond_reform == 1;
+subtitle: +1 budget, -1 budget by the end of year. - 1 budget at the end of next year
+choose-if: hans_opinion > 2
+on-arrival: budget +=1
+
+Free money for now.
