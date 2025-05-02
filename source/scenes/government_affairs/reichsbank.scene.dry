@@ -59,7 +59,7 @@ choose-if: resources > 0
 on-arrival: resources -=1; barmat +=1 if barmat <= 2
 
 @reform_bond
-view-if: reparations_paused == 1 and bond_reform == 0;
+view-if: reparations_paused == 1 and bond_reform == 0
 subtitle: [? if z_relation < 54.9 and z_party_leader != "Joos" and in_spd_majority != 1  : The Center is hesistant to allow this. ?] [? if in_grand_coalition and dvp_relation < 54.9 : The DVP would not support this. ?]
 choose-if: (z_relation >= 54.9 and z_party_leader == "Joos") and (in_grand_coalition and dvp_relation >= 54.9)
 on-arrival: bond_reform = 1
@@ -67,7 +67,7 @@ on-arrival: bond_reform = 1
 Originally set up as a way to reduce burden on our reparations, we can reform this to work more like actual bonds. A sort of, Reichsbond.
 
 @issue_bond
-view-if: bond_reform == 1;
+view-if: bond_reform == 1
 subtitle: +1 budget, -1 budget by the end of year. - 1 budget at the end of next year
 choose-if: hans_opinion > 2
 on-arrival: budget +=1
