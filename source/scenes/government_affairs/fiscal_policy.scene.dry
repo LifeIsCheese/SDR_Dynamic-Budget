@@ -124,7 +124,7 @@ on-arrival: tax_reform -= 0.1; month_actions +=1
 @issue_bond_menu
 view-if: bond_reform == 1
 
-By issuing bonds we can bolster economic growth, without deficit spending.
+By issuing bonds we can bolster economic growth, or other things.
 
 - @issue_bond_1: Issue a small number of bonds.
 - @issue_bond_2: Issue a sizeable number of bonds.
@@ -134,25 +134,25 @@ By issuing bonds we can bolster economic growth, without deficit spending.
 subtitle: +1 budget, with interest
 choose-if: hans_opinion > 2
 on-arrival: budget +=1; {!
-list_debt_date.push(3); list_debt_amount.push(1)
+list_debt_date.push(4); list_debt_amount.push(1)
 !}
 
-We have to pay this back at 5.5% interest rate per year, for 35 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
+We have to pay this back at 30% interest rate per year, for 4 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
 
 @issue_bond_2
 subtitle: +3 budget, with interest
 choose-if: hans_opinion > 2
 on-arrival: budget +=2; {!
-list_debt_date.push(3); list_debt_amount.push(2)
+list_debt_date.push(4); list_debt_amount.push(2)
 !}
 
-We have to pay this back at 5.5% interest rate per year, for 35 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
+We have to pay this back at 30% interest rate per year, for 4 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
 
 @issue_bond_3
 subtitle: +3 budget, with interest
 choose-if: hans_opinion > 2
 on-arrival: budget +=3; {!
-list_debt_date.push(3); list_debt_amount.push(3)
+list_debt_date.push(4); list_debt_amount.push(3)
 !}
 
-We have to pay this back at 5.5% interest rate per year, for 35 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
+We have to pay this back at 30% interest rate per year, for 4 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
