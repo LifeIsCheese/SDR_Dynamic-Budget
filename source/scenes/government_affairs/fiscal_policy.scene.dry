@@ -133,20 +133,20 @@ By issuing bonds we can bolster economic growth, without deficit spending.
 @issue_bond_1
 subtitle: +1 budget, with interest
 choose-if: hans_opinion > 2
-on-arrival: budget +=1
+on-arrival: budget +=1; list_debt_date.push(3); list_debt_amount.push(1)
 
 We have to pay this back at 5.5% interest rate per year, for 35 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
 
 @issue_bond_2
 subtitle: +3 budget, with interest
 choose-if: hans_opinion > 2
-on-arrival: budget +=2
+on-arrival: budget +=2; list_debt_date.push(3); list_debt_amount.push(2)
 
 We have to pay this back at 5.5% interest rate per year, for 35 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
 
 @issue_bond_3
 subtitle: +3 budget, with interest
 choose-if: hans_opinion > 2
-on-arrival: budget +=3
+on-arrival: budget +=3; list_debt_date.push(3); list_debt_amount.push(3)
 
 We have to pay this back at 5.5% interest rate per year, for 35 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
