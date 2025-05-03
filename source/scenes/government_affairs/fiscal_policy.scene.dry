@@ -137,6 +137,13 @@ on-arrival: budget +=1
 
 We have to pay this back at 5.5% interest rate per year, for 35 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
 
+@issue_bond_2
+subtitle: +3 budget, with interest
+choose-if: hans_opinion > 2
+on-arrival: budget +=2
+
+We have to pay this back at 5.5% interest rate per year, for 35 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
+
 @issue_bond_3
 subtitle: +3 budget, with interest
 choose-if: hans_opinion > 2
