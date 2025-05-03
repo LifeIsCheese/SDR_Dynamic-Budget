@@ -470,10 +470,12 @@ if (Q.month_actions >= 1) {
     /// word is bond
     Q.counter = 0;
 Q.bond_debt = 0;
-for (i in list_debt_amount) {
-  if (list_debt_date[counter] > 0) {
-    bond_debt += (list_debt_amount[counter] * 0.1)
+for (i in Q.list_debt_amount) {
+  if (Q.list_debt_date[Q.counter] > 0) {
+    Q.bond_debt += (Q.list_debt_amount[Q.counter] * 0.1)
   }
+  Q.counter +=1
+}
     ///string but director
     Q.director_s = Q.director_a[Q.director_pointer];
         /// Economic Goal calculation
