@@ -237,6 +237,10 @@ Q.s_interest = "Normal";
 //Reichsbank
 Q.reparations_paused = 0;
 Q.bond_reform = 0;
+Q.list_debt_amount = [];
+Q.list_debt_date = [];
+Q.counter = 0;
+Q.bond_debt = 0;
 
 //Tax evasuion
 Q.tax_reform = 1;
