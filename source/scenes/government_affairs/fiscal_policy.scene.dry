@@ -24,7 +24,8 @@ Lower-income tax rates: [+ lower_tax_rates : taxation +]
 - @raise_overall: Increase overall taxes.
 - @cut_overall: Cut overall taxes.
 - @cut_overall_wtb: Cut overall taxes.
-- @reform_menu: Reform taxation
+- @reform_tax:
+- @issue_bond_menu: Issue bonds
 - @regressive
 - @tariffs
 - @root: Do not change the tax system.
@@ -114,16 +115,31 @@ Lowering tariffs helps workers and the urban poor by reducing prices for basic n
 
 Farmers are hurt by this policy, as cheap imported grain leads to ruin for some small producers. In general, cheap imports are detrimental for small-scale industries aimed at the domestic market.
 
-@reform_menu
-
-Tax evasion has been a critical problem in Germany for over a millennia. We can *try* our best to change this by either, making it harder to do tax evasion or making it more efficient.
-
-- @reform_tax
-- @root
-- @easy_discard
-
 @reform_tax
-title: Reform the tax system.
+title: Reform the tax system. Making it more efficient
 choose-if: tax_reform > tax_reform_progress and tax_reform >= 0.6
 subtitle: +1 month [? if tax_reform_progress >= tax_reform: We dont know to to further reform taxation. ?] [? if tax_reform == 0.6 : We physically cannot reform the tax system with our current technology?]
 on-arrival: tax_reform -= 0.1; month_actions +=1
+
+@issue_bond_menu
+view-if: bond_reform == 1
+
+By issuing bonds we can bolster economic growth, without deficit spending.
+
+- @issue_bond_1: Issue a small number of bonds.
+- @issue_bond_2: Issue a sizeable number of bonds.
+- @issue_bond_3: Issue a large number of bonds
+
+@issue_bond_1
+subtitle: +1 budget, with interest
+choose-if: hans_opinion > 2
+on-arrival: budget +=1
+
+We have to pay this back at 5.5% interest rate per year, for 35 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
+
+@issue_bond_3
+subtitle: +3 budget, with interest
+choose-if: hans_opinion > 2
+on-arrival: budget +=3
+
+We have to pay this back at 5.5% interest rate per year, for 35 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
