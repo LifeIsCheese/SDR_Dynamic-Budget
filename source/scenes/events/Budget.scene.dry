@@ -1,5 +1,5 @@
 title: Budget for the year
-subtitle: As the year begins, we have recieved our annual budget.
+subtitle: As the year begins, we have recieved our annual budget. [? if bond_debt > 0 : We also have to pay back our bond debt. ?]
 new-page: true
 tags: event
 priority: 2
@@ -62,5 +62,22 @@ for (i in Q.list_debt_amount) {
 }
 console.log(Q.bond_debt)
 !}
+
+- @pay_back: Payback our debts, as usaual.
+- @default: Let's do our own thing. (Default on our debt)
+
+@pay_back
+view-if: bond_debt > 0
+on-arrival: budget -= bond_debt;
+
+With us paying back our bond debt, it improves confidence in our economy
+
+@default
+view-if: bond_debt > 0 and bond_debt > budget
+on-arrival: economic_growth *= 0.5; inflation *= 0.8; {!
+Q.list_debt_date.length = 0; Q.list_debt_amount.length = 0
+!}
+
+WIP
 
 [? if economic_growth < 3 and economic_growth > inflation: Due to our low economic growth our finances hasn't improved. ?] [? if inflation > economic_growth: Due to our inflation being higher than our economic growth, our finances hasn't improved. ?] [? if economic_growth >= 3 and economic_growth > inflation and economic_growth < 7: With the economy steadily growing, the fruits of our growth pour into our coffers. ?] [? if economic_growth >= 7 and economic_growth > inflation and economic_growth < 12: With the economy experiencing high levels of growth, that leads to us getting the benefits. ?] [? if economic_growth >= 12 and economic_growth > inflation: The economy is booming, largley due to our involvement. Not only does this mean more budget for us, but it heavily increases our popularity and reputation among the country. ?] [? if economic_growth < 0: The recession forces us to have a deficit in our spending. ?] [? if economic_growth >= economic_goal and economic_goal >= inflation: Hans luther's opinion of us has grown. ?]
