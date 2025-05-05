@@ -134,7 +134,7 @@ By issuing bonds we can bolster economic growth, or other things.
 subtitle: +1 budget, with interest
 choose-if: hans_opinion > 2
 on-arrival: budget +=1; {!
-list_debt_date.push(4); list_debt_amount.push(1)
+Q.list_debt_date.push(4); Q.list_debt_amount.push(1)
 !}
 
 We have to pay this back at 30% interest rate per year, for 4 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
@@ -143,7 +143,7 @@ We have to pay this back at 30% interest rate per year, for 4 years. if we go in
 subtitle: +3 budget, with interest
 choose-if: hans_opinion > 2
 on-arrival: budget +=2; {!
-list_debt_date.push(4); list_debt_amount.push(2)
+Q.list_debt_date.push(4); Q.list_debt_amount.push(2)
 !}
 
 We have to pay this back at 30% interest rate per year, for 4 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
@@ -152,7 +152,7 @@ We have to pay this back at 30% interest rate per year, for 4 years. if we go in
 subtitle: +3 budget, with interest
 choose-if: hans_opinion > 2
 on-arrival: budget +=3; {!
-list_debt_date.push(4); list_debt_amount.push(3)
+Q.list_debt_date.push(4); Q.list_debt_amount.push(3)
 !}
 
 We have to pay this back at 30% interest rate per year, for 4 years. if we go into debt in this, we *can* have the option to default, this is not recommended.
