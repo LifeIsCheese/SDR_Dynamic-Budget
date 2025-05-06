@@ -11,7 +11,9 @@ const disableDarkmode = () => {
   localStorage.setItem('darkmode', null)
 }
 
-if(darkmode === "active") enableDarkmode()
+if(darkmode === "active") enableDarkmode(); window.dendryUI.disable_bg = true;
+document.body.style.backgroundImage = 'none';
+window.dendryUI.saveSettings();
 
 themeSwitch.addEventListener("click", () => {
   darkmode = localStorage.getItem('darkmode')

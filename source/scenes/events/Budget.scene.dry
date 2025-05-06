@@ -90,7 +90,7 @@ Q.list_debt_date = [];
 Q.bond_debt = 0;
 Q.bond_need_to_pay = 0;
 Q.bond_payed = 0;
-Q.default = 0;
+Q.default = 1;
 !}
 
 fuck.
@@ -104,7 +104,7 @@ Q.list_debt_date = [];
 Q.bond_debt = 0;
 Q.bond_need_to_pay = 0;
 Q.bond_payed = 0;
-Q.defualt = 0;
+Q.default = 1;
 !}
 
 fuck.
