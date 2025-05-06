@@ -16,6 +16,10 @@ Q.economic_goal_2 = '0';
 if (Q.economic_goal) {
     Q.economic_goal_2 = Q.economic_goal.toFixed(1);
 }
+Q.bond_debt_2 = '0';
+if (Q.bond_debt) {
+    Q.bond_debt_2 = Q.bond_debt_2.toFixed(1);
+}
 !}
 
 = Status

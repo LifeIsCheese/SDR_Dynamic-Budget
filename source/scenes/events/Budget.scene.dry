@@ -53,7 +53,7 @@ Q.bond_debt = 0;
 for (i in Q.list_debt_amount) {
   if (Q.list_debt_date[Q.counter] > 0) {
     Q.list_debt_date[Q.counter] -= 1
-    Q.bond_debt += (Q.list_debt_amount[Q.counter] * 0.1)
+    Q.bond_debt += (Q.list_debt_amount[Q.counter] * 0.3)
   }
     console.log(Q.list_debt_date[Q.counter])
   console.log(Q.list_debt_amount[Q.counter])
