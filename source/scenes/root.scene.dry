@@ -241,6 +241,7 @@ Q.list_debt_amount = [];
 Q.list_debt_date = [];
 Q.counter = 0;
 Q.bond_debt = 0;
+Q.defualt = 0;
 
 //Tax evasuion
 Q.tax_reform = 1;
@@ -544,7 +545,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'iron_front', 'media', 'enemies',
             'party_organizations', 'rally', 'reichsbanner',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
-            'party_disunity', 'weimar_plan', 'director_actions',
+            'party_disunity', 'weimar_plan', 'director_actions', 'bond'
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
@@ -634,6 +635,7 @@ Q.presidential_timer = 0;
 
 // epic timers
 Q.director_actions_timer = 0;
+Q.bond_timer = 0;
 
 // all the initial advisors are centrists.
 Q.wels_advisor = 1; // Otto Wels
