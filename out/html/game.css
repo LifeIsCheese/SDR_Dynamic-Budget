@@ -226,29 +226,12 @@ blockquote + blockquote.attribution {
 /* darkmode switch */
 
 #theme-switch{
-  height: 40px;
-  width: 40px;
-  padding: 0;
-  border-radius: 50%;
-  background-color: var(--mainbg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50px;
-  right: 10px;
-}
-#theme-switch svg{
-  fill: var(--active-color);
-}
-#theme-switch svg:last-child{
-  display: none;
-}
-.darkmode #theme-switch svg:first-child{
-  display: none;
-}
-.darkmode #theme-switch svg:last-child{
-  display: block;
+  text-align: left;
+  float: left;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  padding-left: 1em;
+  background-color: var(--header-color);
 }
 
 /* tabs */
