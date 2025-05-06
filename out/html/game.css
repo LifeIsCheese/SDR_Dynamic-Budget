@@ -226,8 +226,8 @@ blockquote + blockquote.attribution {
 /* darkmode switch */
 
 #theme-switch{
-  height: 50px;
-  width: 50px;
+  height: 20px;
+  width: 20px;
   padding: 0;
   border-radius: 50%;
   background-color: var(--mainbg-color);
@@ -236,7 +236,7 @@ blockquote + blockquote.attribution {
   align-items: center;
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
 }
 #theme-switch svg{
   fill: var(--active-color);
