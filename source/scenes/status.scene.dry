@@ -85,6 +85,10 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 <span style="color:rgb(131, 65, 65);">**Bond debt**</span>: [+ bond_debt +]
 
+Amount payed: [+ bond_payed +]
+
+Amount borrowed: [+ bond_need_to_pay +]
+
 # = Public Opinion
 
 @politics

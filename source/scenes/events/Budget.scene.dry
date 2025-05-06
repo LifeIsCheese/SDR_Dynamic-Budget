@@ -73,15 +73,43 @@ Too low thinkin' we local, come on homie, we major.
 
 @pay_back
 view-if: bond_debt > 0
-on-arrival: budget -= bond_debt;
+on-arrival: budget -= bond_debt; bond_payed += bond_debt
 
 With us paying back our bond debt, it improves confidence in our economy
 
 @default
-view-if: bond_debt > 0 and bond_debt > budget
-on-arrival: economic_growth *= 0.5; inflation *= 0.8; {!
-Q.list_debt_date.length = 0; Q.list_debt_amount.length = 0
+
+-@sure: Are we sure about this
+-@sure_dumb: We dont even owe much money, why are we defaulting?
+-@nah: Hahaha just joking.
+
+@sure
+on-arrival: workers_spd -= (bond_need_to_pay - bond_payed) * 7; new_middle_spd -= (bond_need_to_pay - bond_payed) * 7; old_middle_spd -= (bond_need_to_pay - bond_payed) * 7; rural_spd -= (bond_need_to_pay - bond_payed) * 7; economic_growth /= bond_need_to_pay; economic_growth -=1; coalition_dissent += 100 if spd_in_government; {!
+Q.list_debt_amount = [];
+Q.list_debt_date = [];
+Q.bond_debt = 0;
+Q.bond_need_to_pay = 0;
+Q.bond_payed = 0;
+Q.default = 0;
 !}
 
-WIP
+fuck.
 
+@sure_dumb
+view-if: (bond_need_to_pay - bond_payed) < 2
+subtitle: This will lose trust in the economy, despite us not owing much
+on-arrival: workers_spd -= (bond_need_to_pay - bond_payed) * 7; new_middle_spd -= (bond_need_to_pay - bond_payed) * 7; old_middle_spd -= (bond_need_to_pay - bond_payed) * 7; rural_spd -= (bond_need_to_pay - bond_payed) * 7; economic_growth /= bond_need_to_pay; coalition_dissent += 2 if spd_in_government; {!
+Q.list_debt_amount = [];
+Q.list_debt_date = [];
+Q.bond_debt = 0;
+Q.bond_need_to_pay = 0;
+Q.bond_payed = 0;
+Q.defualt = 0;
+!}
+
+fuck.
+
+@nah
+subtitle: Real funny Hilderfing.
+
+Actually nevermind.
