@@ -22,7 +22,7 @@ The people and the press are clamoring for action to fix this housing crisis.
 title: Lower interest rates.
 subtitle: (Heavily increases inflation) [? if interest_rates <= -2 : Interest rates are too low. ?]
 choose-if: interest_rates > -2
-on-arrival: interest_rates -=3; left_dissent += 2; labor_dissent += 2; center_dissent += 2; inflation +=4
+on-arrival: interest_rates -=3; left_dissent += 2; labor_dissent += 2; center_dissent += 2; inflation +=4; housing_crisis = 1
 
 This is merely a bandage fix, with the majority of our party are clamoring for further reform.
 
@@ -53,6 +53,6 @@ on-arrival: budget -=2; new_middle_spd += 8*(1-dissent); old_middle_spd += 4*(1-
 Millions of Reichsmarks pour into further construction of public and co-operative housing.
 
 @nothing
-on-arrival: workers_spd -= 2; old_middle_spd -= 8; new_middle_spd -= 8; rural_spd -= 2; unemployed_spd -= 2; pro_republic -= 5; old_middle_nsdap += 8; new_middle_nsdap += 8; rural_nsdap += 2; socialism -= 2
+on-arrival: workers_spd -= 2; old_middle_spd -= 8; new_middle_spd -= 8; rural_spd -= 2; unemployed_spd -= 2; pro_republic -= 5; old_middle_nsdap += 8; new_middle_nsdap += 8; rural_nsdap += 2; socialism -= 2; housing_crisis = 1
 
 There is nothing we can do.
