@@ -7,6 +7,7 @@
   --htext-color: #900;
   --active-color: #cecece;
   --hover-color: #ececec;
+  --bg-bg-transparent: #0e0505;
 
 
 }
@@ -19,6 +20,7 @@
   --htext-color: #f8c4c4;
   --active-color: #442024;
   --hover-color: #6a2f35;
+  --bg-bg-transparent: #0e0505c7;
 }
 body {
   font-family: "Minion Pro", Georgia, serif;
@@ -315,7 +317,7 @@ blockquote + blockquote.attribution {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #0e0505;
+    background-color: var(--bg-bg-transparent);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
