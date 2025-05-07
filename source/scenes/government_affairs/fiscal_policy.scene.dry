@@ -133,7 +133,7 @@ Originally set up as a way to reduce burden on our reparations, we can reform th
 @issue_bond_menu
 subtitle: [? if default == 1 : No one would buy our bonds due to distrust. ?]
 view-if: bond_reform == 1
-choose-if: default == 0:
+choose-if: default == 0
 
 By issuing bonds we can bolster economic growth, or other things.
 
