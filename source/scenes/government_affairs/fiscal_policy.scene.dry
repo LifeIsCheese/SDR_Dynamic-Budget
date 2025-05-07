@@ -131,7 +131,7 @@ on-arrival: bond_reform = 1
 Originally set up as a way to reduce burden on our reparations, we can reform this to work more like actual bonds. A sort of, Reichsbond.
 
 @issue_bond_menu
-subtitle [? if default == 1 : No one would buy our bonds due to distrust. ?]
+subtitle: [? if default == 1 : No one would buy our bonds due to distrust. ?]
 view-if: bond_reform == 1
 choose-if: default == 0:
 
