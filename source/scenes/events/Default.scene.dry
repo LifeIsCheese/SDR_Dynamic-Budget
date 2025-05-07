@@ -3,12 +3,12 @@ view-if: year >= 1928 and default == 1
 new-page: true
 max-visits: 1
 tags: event
-on-arrival: foreign_investment = 0; hans_opinion = 0;
+on-arrival: foreign_investment = 0; hans_opinion = 0; interest_rates -= 1 if inflation > 3 and inflation < 7 and interest_rates != -2; interest_rates += 1 if inflation > 7 and interest_rates !=2
 
 = Isolation.
 *Excerpt from the Kreuzzeitung*
 
 It has come to our attention that the socialist government of the SPD, has defaulted on their bond debt. Not only does this serve as a testament to the faliures of the weimar republic, but also the faliures of socialist economics.
-Hans luther has closed the Reichsbank from any SPD influence, and we expect it to stay like that. Not only that, Luther has significantly reduced interest rates in order bring back trust in the economy.
+Hans luther has closed the Reichsbank from any SPD influence, and we expect it to stay like that. Not only that, [? if interest_rates == 1 : Luther has increased interest rates in order bring back trust in the economy. ?] [? if interest_rates == 0 : Luther has decreased interest rates in order bring back trust in the economy. ?]
 
 May God be with us.
