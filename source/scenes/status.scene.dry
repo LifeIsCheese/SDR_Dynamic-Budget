@@ -316,8 +316,8 @@ Focus: [? if plot_target != "None" and director_type == 1 : Operations ?] [? if 
 
 [? if director_actions_timer == 0 and director_type == 2 : <button class = "status_button_wide" onclick ="train_spies()">Train Spies</button> ?]
 
-[? if director_actions_timer == 0 and director_type == 2 : Increases spy network strength. ?] [? if director_actions_timer > 0 and director_type == 3 : Sorry but [+ director_s +] is busy, please wait [+ director_actions_timer +] months. ?]
+[? if director_actions_timer == 0 and director_type == 2 : Increases spy network strength. ?] [? if director_actions_timer > 0 and director_type == 2 : Sorry but [+ director_s +] is busy, please wait [+ director_actions_timer +] months. ?]
 
 [? if director_actions_timer == 0 and director_type == 2 : <button class = "status_button_wide" onclick ="train_police()">Train Police</button> ?]
 
-[? if director_actions_timer == 0 and director_type == 2 : Train loyal Prussian police officers. ?] [? if director_actions_timer > 0 and director_type == 1 : Sorry but [+ director_s +] is busy, please wait [+ director_actions_timer +] months. ?]
+[? if director_actions_timer == 0 and director_type == 2 : Train loyal Prussian police officers. ?] [? if director_actions_timer > 0 and director_type == 2 : Sorry but [+ director_s +] is busy, please wait [+ director_actions_timer +] months. ?]
