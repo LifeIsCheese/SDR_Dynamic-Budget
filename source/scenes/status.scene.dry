@@ -239,8 +239,8 @@ if (Q.capital_strike_progress) {
     Q.capital_strike_progress_2 = capital_strike_progress.toFixed(1);
 }
 !}
-= The Right
 
+= The Right
 
 (Investigate to unlock intel)
 
