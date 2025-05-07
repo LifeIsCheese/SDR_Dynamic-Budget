@@ -27,7 +27,7 @@ function hhundred () {
    d.hjalmar_plot = 100;
  }
  function new_hire () {
-   if (d.resources < 1) {
+   if (d.resources > 1) {
       d.director_pointer = Math.floor( Math.random() * d.director_a.length);
       d.director_type = Math.floor( Math.random() * 2) + 1;
       d.director_s = d.director_a[d.director_pointer];
