@@ -27,11 +27,15 @@ function hhundred () {
    d.hjalmar_plot = 100;
  }
  function new_hire () {
-   d.director_pointer = Math.floor( Math.random() * d.director_a.length);
-   d.director_type = 1;
-   d.director_s = d.director_a[d.director_pointer];
-   d.resources -= 1;
-   window.changeTab('status.Targets', 'Targets')
+   if (d.resources < 1) {
+      d.director_pointer = Math.floor( Math.random() * d.director_a.length);
+      d.director_type = 1;
+      d.director_s = d.director_a[d.director_pointer];
+      d.resources -= 1;
+      window.changeTab('status.Targets', 'Targets');
+   } else {
+      alert('Broke');
+   }
 }
 function targetH () {
    d.plot_target = "hjalmar";
