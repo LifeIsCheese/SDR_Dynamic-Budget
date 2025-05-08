@@ -644,6 +644,9 @@ Q.presidential_timer = 0;
 Q.director_actions_timer = 0;
 Q.bond_timer = 0;
 
+//whaha
+Q.end_disabled = 1
+
 // all the initial advisors are centrists.
 Q.wels_advisor = 1; // Otto Wels
 Q.muller_advisor = 1; // Hermann Müller

@@ -20,24 +20,26 @@ if (Q.economic_growth >= Q.economic_goal && Q.economic_growth > Q.inflation) {
     if (Q.default == 0) {
         Q.hans_opinion = 3;
     }
+    Q.workers_spd += (Q.workers_other * 0.02); Q.rural_spd += (Q.workers_other * 0.02); Q.new_middle_ddp += (Q.workers_other * 0.02); Q.old_middle_dvp += (Q.workers_other * 0.02); Q.catholics_z += (Q.workers_other * 0.02);
+    Q.workers_other *= 0.9; Q.rural_other *= 0.9; Q.new_middle_other *=0.9; Q.old_middle_other *= 0.9; Q.catholics_other *= 0.9;
 }
 if (Q.economic_growth >= Q.economic_goal * 2 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
     if (Q.default == 0) {
         Q.hans_opinion = 4;
     }
+        Q.workers_spd += (Q.workers_other * 0.02); Q.rural_spd += (Q.workers_other * 0.02); Q.new_middle_spd += (Q.workers_other * 0.02); Q.old_middle_dvp += (Q.workers_other * 0.02); Q.catholics_z += (Q.workers_other * 0.02);
+    Q.workers_other *= 0.9; Q.rural_other *= 0.9; Q.new_middle_other *=0.9; Q.old_middle_other *= 0.9; Q.catholics_other *= 0.9;
 }
 if (Q.economic_growth >= Q.economic_goal * 3 && Q.economic_growth > Q.inflation) {
     Q.budget += 1;
-    Q.workers_spd += 6*(1-dissent);
-    Q.new_middle_spd += 6*(1-dissent);
-    Q.old_middle_spd += 5*(1-dissent);
-    Q.rural_spd += 5*(1-dissent);
     if (Q.default == 0) {
         Q.hans_opinion = 5;
     } else {
         Q.hans_opinion = 3;
     }
+            Q.workers_spd += (Q.workers_other * 0.02); Q.rural_spd += (Q.workers_other * 0.02); Q.new_middle_spd += (Q.workers_other * 0.02); Q.old_middle_spd += (Q.workers_other * 0.02); Q.catholics_z += (Q.workers_other * 0.02);
+    Q.workers_other *= 0.9; Q.rural_other *= 0.9; Q.new_middle_other *=0.9; Q.old_middle_other *= 0.9; Q.catholics_other *= 0.9;
 }
 if (Q.economic_growth < 0) {
         if (Q.budget > 0) {
@@ -95,7 +97,7 @@ view-if: bond_debt > 0
 @sure
 view-if: (bond_need_to_pay - bond_payed) >= 2
 subtitle: May God help us.
-on-arrival: workers_spd -= (bond_need_to_pay - bond_payed) * 7; new_middle_spd -= (bond_need_to_pay - bond_payed) * 7; old_middle_spd -= (bond_need_to_pay - bond_payed) * 7; rural_spd -= (bond_need_to_pay - bond_payed) * 7; economic_growth /= bond_need_to_pay; economic_growth -=1; coalition_dissent += 100 if spd_in_government; {!
+on-arrival: workers_spd -= (bond_need_to_pay - bond_payed) * 7; new_middle_spd -= (bond_need_to_pay - bond_payed) * 7; old_middle_spd -= (bond_need_to_pay - bond_payed) * 7; rural_spd -= (bond_need_to_pay - bond_payed) * 7; economic_growth /= bond_need_to_pay; economic_growth -= (bond_need_to_pay / 10); coalition_dissent += 100 if spd_in_government; {!
 Q.list_debt_amount = [];
 Q.list_debt_date = [];
 Q.bond_debt = 0;
