@@ -3,7 +3,7 @@ view-if: bruning_event == 1
 new-page: true
 max-visits: 1
 call: set_next_election_time
-on-arrival: capital_strike_progress = 14; coup_progress = 9; plot_target = "none"; plot_strength = 0; z_relation = 0; ddp_relation = 0; dvp_relation = 0; chancellor = "Brüning"; chancellor_party = "Z"; reformist_dissent += 60
+on-arrival: capital_strike_progress = 14; coup_progress = 9; plot_target = "none"; plot_strength = 0; z_relation = 0; ddp_relation = 0; dvp_relation = 0; chancellor = "Brüning"; chancellor_party = "Z"; reformist_dissent += 60; time_to_election = 3
 tags: event
 
 = They found out
