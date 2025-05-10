@@ -256,7 +256,7 @@ Q.director_pointer = 0;
 // length is 6
 Q.director_a = [
     
-    'Derrick Rosa', 'Rudi Althaus', 'Friedrich Kreszentia', 'Herrick Lang', 'Maximilian Stroker', 'Ivan Humpel', 'Mon Gropen', 'Christoph König', 'Horst Stark', 'Meinrad Forst', 'Werther Baier', 'Adler Mayer'
+    'Derrick Rosa', 'Rudi Althaus', 'Friedrich Kreszentia', 'Herrick Lang', 'Maximilian Stroker', 'Ivan Humpel', 'Mon Gropen', 'Christoph König', 'Horst Stark', 'Meinrad Forst', 'Werther Baier', 'Adler Mayer', 'Kanye West', 'Raban Baumann', 'Reto Klein', 'You'
 
 ];
 
@@ -785,7 +785,7 @@ For other, non-difficulty related tweaks.
 - @disable_normalize: Disable experimental support changes.
 - @enable_hyperinflation: Enable hyperinflation (janky)
 - @disable_hyperinflation: Disable hyperinflation
-- @1930: Begin the game in 1930. (WIP)
+- @1930: Begin the game in 1930.
 - @1928: Begin the game in 1928.
 - @menu: Back.
 

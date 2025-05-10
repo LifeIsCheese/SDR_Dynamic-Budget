@@ -29,8 +29,11 @@ function hhundred () {
  function new_hire () {
    if (d.resources > 1) {
       d.director_pointer = Math.floor( Math.random() * d.director_a.length);
-      d.director_type = Math.floor( Math.random() * 2) + 1;
       d.director_s = d.director_a[d.director_pointer];
+      d.director_type = Math.floor( Math.random() * 2) + 1;
+      if (d.director_s == "Kanye West") {
+         d.director_type = -1;
+      }
       d.resources -= 1;
       window.changeTab('status.Targets', 'Targets');
    } else {
@@ -100,6 +103,12 @@ function train_police () {
    d.prussian_police_strength += 10;
    d.prussian_police_loyalty += 0.05;
    d.director_actions_timer = 12;
+   d.month_actions += 1;
+   window.changeTab('status.Actions', 'Actions')
+}
+
+function joke () {
+   d.coup_progress = 10;
    d.month_actions += 1;
    window.changeTab('status.Actions', 'Actions')
 }
