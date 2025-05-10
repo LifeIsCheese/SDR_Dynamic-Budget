@@ -10,3 +10,10 @@ on-arrival: workers_spd -= 10; workers_nsdap +=5; workers_dnvp +=5; new_middle_s
 Our countless bribes haven't gone unnoticed, and have been leaked to the public!
 
 Although the main reason for our bribes hasn't been uncovered, this is still bad news for us.
+
+- @spies: Spies
+
+@spies
+subtitle: We can use your vast network of spies to smother the information, reducing it's effect.
+choose-if: spy_network >= 6
+on-arrival: workers_spd += 6; workers_nsdap -=2; workers_dnvp -=2; new_middle_spd -=2; new_middle_dvp -=3; z_relation += 5; ddp_relation += 5; dvp_relation +=5; kpd_relation +=5
