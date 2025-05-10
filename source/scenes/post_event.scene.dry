@@ -470,6 +470,7 @@ if (Q.month_actions >= 1) {
     /// word is bond
     Q.counter = 0;
 Q.bond_debt = 0;
+Q.bond_need_to_pay = 0;
 for (i in Q.list_debt_amount) {
   if (Q.list_debt_date[Q.counter] > 0) {
     Q.bond_debt += (Q.list_debt_amount[Q.counter] * 0.1)

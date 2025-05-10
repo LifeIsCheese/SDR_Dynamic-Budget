@@ -83,11 +83,7 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 <span style="color:rgb(110, 65, 131);">**Foreign investment**</span>: +[+ foreign_investment +]% to <span style="color:rgb(95, 131, 65);">**growth**</span>
 
-<span style="color:rgb(131, 65, 65);">**Bond debt**</span>: [+ bond_debt +]
-
-Amount payed: [+ bond_payed +]
-
-Amount borrowed: [+ bond_need_to_pay +]
+[? if bond_debt > 0 : <span style="color:rgb(131, 65, 65);">**Bond debt**</span>: [+ bond_debt +] ?]
 
 # = Public Opinion
 
@@ -265,7 +261,7 @@ Spy network strength: [+ s_spy_network +].
 <script src="new_shit.js" defer></script>
 [? if plot_target == "hjalmar" : <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span> ?] [? if plot_target == "bruning" : <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span> ?]
 
-[? if plot_target != "None" : <img class="face-status" src="img/d_rose.jpg"> ?] 
+[? if plot_target == "hjalmar" : <img class="face-status" src="img/portraits/SchachtHjalmar.jpg"> ?] [? if plot_target == "bruning" : <img class="face-status" src="img/portraits/BrüningHeinrich.jpg"> ?]
 
 = Status
 
@@ -274,19 +270,6 @@ Partners: [+ assassination_partners_string +]
 Plot power: [+ plot_strength +]%
 
 [? if plot_target == "hjalmar" : Death of <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span>: [+ hjalmar_plot +][? if hjalmar_plot != "successful" or hjalmar_plot != "failed": % ?]  ?] [? if plot_target == "bruning" : Death of <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span>: [+ bruning_plot +][? if bruning_plot != "successful" or bruning_plot != "failed": % ?] ?]
-
-Cheats: 
-<button class = "status_button" onclick ="bdeath()">Kill Bruning</button>
-<button class = "status_button" onclick ="hdeath()">Kill Hjalmar</button>
- 
-<button class = "status_button" onclick ="bfail()">B Failure</button>
-<button class = "status_button" onclick ="hfail()">H Failure</button>
- 
-<button class = "status_button" onclick ="bfifty()">B 50 Plot</button>
-<button class = "status_button" onclick ="hfifty()">H 50 Plot</button>
-
-<button class = "status_button" onclick ="targetH()">H plot target</button>
-<button class = "status_button" onclick ="targetB()">B plot target</button>
 
 = Informants
 
