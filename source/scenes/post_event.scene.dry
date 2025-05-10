@@ -478,6 +478,12 @@ for (i in Q.list_debt_amount) {
   }
   Q.counter +=1
 }
+/// Hiding Targets
+if (Q.plot_target == "None") {
+    document.getElementById("Targets").style.display="none";
+} else {
+    document.getElementById("Targets").style.display="block";
+}
     ///string but director
     Q.director_s = Q.director_a[Q.director_pointer];
         /// Economic Goal calculation
