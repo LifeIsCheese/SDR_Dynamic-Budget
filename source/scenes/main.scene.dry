@@ -39,13 +39,15 @@ max-cards: 4
 
 [? if year = 1928 and month = 2 : The current bourgeois-right government has fallen. The next elections are slated for May of this year. ?]
 
-<h1><span style="color:rgb(182, 45, 45);">**Bal**</span><span style="color:rgb(255, 242, 67);">**a**</span><span style="color:var(--Z-color);">**nce**</span> <span style="color:rgb(92, 0, 0);">**Of**</span> <span style="color:rgb(0, 26, 255);">**Po**</span><span style="color:rgb(100, 78, 17);">**wer**</span></h1>
+<h1>Balance of Power</h1>
 
-Republic: [+ weimar_strength +]
+The Republic: [+ weimar_strength +]%
 
-Left: [+ kpd_strength +]
+The Left: [+ kpd_strength +]%
 
-Right: [+ far_right_strength +]
+The Right: [+ far_right_strength +]%
+
+[? if director_actions_timer == 0 : <button class = "status_button_wide" onclick ="train_police()">Train Police</button> ?] [? if director_actions_timer == 0 : <button class = "status_button_wide" onclick ="train_spies()">Train Spies</button> ?]
 
 - @party
 - @govt
