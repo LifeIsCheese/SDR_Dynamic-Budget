@@ -468,15 +468,15 @@ if (Q.month_actions >= 1) {
         Q.assassination_partners_string = "Interior + Prussian police + Reichsbanner";
     }
     /// word is bond
-    Q.counter = 0;
+Q.counter = 0;
 Q.bond_debt = 0;
 Q.bond_need_to_pay = 0;
 for (i in Q.list_debt_amount) {
   if (Q.list_debt_date[Q.counter] > 0) {
-    Q.bond_debt += (Q.list_debt_amount[Q.counter] * 0.1)
-    Q.bond_need_to_pay += (Q.list_debt_amount[Q.counter])
+    Q.bond_debt += (Q.list_debt_amount[Q.counter] * 0.3);
+    Q.bond_need_to_pay += (Q.list_debt_amount[Q.counter]);
   }
-  Q.counter +=1
+  Q.counter +=1;
 }
 /// Hiding Targets
 if (Q.plot_target == "None") {

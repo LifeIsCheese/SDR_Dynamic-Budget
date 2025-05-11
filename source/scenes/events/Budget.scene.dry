@@ -62,12 +62,10 @@ Q.counter = 0;
 Q.bond_debt = 0;
 for (i in Q.list_debt_amount) {
   if (Q.list_debt_date[Q.counter] > 0) {
-    Q.list_debt_date[Q.counter] -= 1
-    Q.bond_debt += (Q.list_debt_amount[Q.counter] * 0.3)
+    Q.list_debt_date[Q.counter] -= 1;
+    Q.bond_debt += (Q.list_debt_amount[Q.counter] * 0.3);
   }
-    console.log(Q.list_debt_date[Q.counter])
-  console.log(Q.list_debt_amount[Q.counter])
-  Q.counter +=1
+  Q.counter +=1;
   
 }
 console.log(Q.bond_debt)
@@ -83,7 +81,7 @@ Too low thinkin' we local, come on homie, we major.
 
 @pay_back
 view-if: bond_debt > 0
-on-arrival: budget -= bond_debt; bond_payed += bond_debt
+on-arrival: budget -= bond_debt; bond_payed += bond_debt; bond_payed = 0 if bond_debt <=0
 
 With us paying back our bond debt, it improves confidence in our economy
 

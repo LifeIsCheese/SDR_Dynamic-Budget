@@ -15,6 +15,7 @@ The people and the press are clamoring for action to reduce inflation.
 - @welfare: Reduce welfare and social spending.
 - @price_controls: Impose price and wage controls.
 - @bank: Surely the Reichsbank has a plan this time?
+- @bank_hans: Surely the Reichsbank has a plan this time?
 - @nothing: Realistically, there is nothing we can do.
 
 @taxes
@@ -33,9 +34,23 @@ on-arrival: capital_strike_progress += 3; inflation -= 3; hyperinflation = 0; co
 Price controls are very unpopular with the bourgeoisie and their representatives, as well as rural producers, while wage controls hurt organized workers. However, the policies do stem the tide of inflation, at least somewhat.
 
 @bank
+hjalmar_plot != "successful"
 on-arrival: capital_strike_progress += 2
 
 Unfortunately, but perhaps expectedly, the Reichsbank is refusing to help the government, claiming that our socialist policies are solely to blame. Reichsbank president Hjalmar Schacht is all but calling for the fall of the government.
+
+@bank
+view-if: hjalmar_plot == "successful"
+on-arrival: capital_strike_progress -= 1
+
+With Hans Luther as president, the Reichsbank is tentatively reaching out to the government for solutions to fix the high inflation.
+
+- @interest_rates: The Reichsbank suggests heavily increasing interest_rates will fix the inflation.
+- @reject: We reject this proposal.
+
+@interest_rates:
+subtitle: Increasing interest rates during high inflation might exacerbate the problem.
+on-arrival: inflation -= 1.5 if inflation <= 0; inflation -= 1 if inflation > 0; inflation -= 2 if inflation >= 4; inflation -= 2 if inflation >= 8; unemployed += inflation; workers_spd -= 1; unemployed_spd -= 1; rural_spd -= 1*(1-dissent); old_middle_spd -= 3*(1-dissent); new_middle_spd -= 4; interest_rates = 2; economic_growth -= 0.5 if economic_growth <= 0; economic_growth -= 1 if economic_growth > 0; economic_growth -= 1 if economic_growth >= 3; economic_growth -= 2 if economic_growth >= 8; month_actions +=1; hans_opinion -=1 if economic_growth < 3; hyperinflation -= 0.2
 
 @nothing
 on-arrival: capital_strike_progress += 1
