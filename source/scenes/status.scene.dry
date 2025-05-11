@@ -277,7 +277,7 @@ Plot power: [+ plot_strength +]%
 
 Director: [+ director_s +].
 
-Focus: [? if director_type == 1 : Operations ?] [? if director_type == 2 : Training. ?] [? if director_type == -1 : Gooning. ?]
+Focus: [? if director_type == 1 or director_type == 3 : Operations ?] [? if director_type == 2 : Training. ?] [? if director_type == -1 : Gooning. ?]
 
 [? if plot_target != "None" : <button title = "-1 resource" class = "status_button" onclick ="new_hire()">New Hire</button> ?]
 [? if plot_target != "None" : <button class = "status_button" onclick ="director_actions()">Director Actions</button> ?]
@@ -315,10 +315,10 @@ Focus: [? if director_type == 1 : Operations ?] [? if director_type == 2 : Train
 
 [? if director_actions_timer == 0 and director_type == -1 : yeah. ?] [? if director_actions_timer > 0 and director_type == -1 : Sorry but [+ director_s +] is busy, please wait [+ director_actions_timer +] months. ?]
 //ahh
-[? if director_actions_timer == 0 and director_type == 3 : <button class = "status_button_wide" onclick ="joke()">Use AI</button> ?]
+[? if director_actions_timer == 0 and director_type == 3 : <button class = "status_button_wide" onclick ="rush2()">Hasten</button> ?]
 
-[? if director_actions_timer == 0 and director_type == 3 : yeah. ?] [? if director_actions_timer > 0 and director_type == -1 : Sorry but [+ director_s +] is busy, please wait [+ director_actions_timer +] months. ?]
+[? if director_actions_timer == 0 and director_type == 3 : Doubles the plot power, but significantly decreases loyalty and increases loyalty decay.?] [? if director_actions_timer > 0 and director_type == 3 : Sorry but [+ director_s +] is busy, please wait [+ director_actions_timer +] months. ?]
 
-[? if director_actions_timer == 0 and director_type == 3 : <button class = "status_button_wide" onclick ="joke()">Goon</button> ?]
+[? if director_actions_timer == 0 and director_type == 3 : <button class = "status_button_wide" onclick ="purge2()">discipline</button> ?]
 
-[? if director_actions_timer == 0 and director_type == 3 : yeah. ?] [? if director_actions_timer > 0 and director_type == -1 : Sorry but [+ director_s +] is busy, please wait [+ director_actions_timer +] months. ?]
+[? if director_actions_timer == 0 and director_type == 3 : Halves the plot power, but significantly increasesloyalty and reduces loyalty decay. ?] [? if director_actions_timer > 0 and director_type == 3 : Sorry but [+ director_s +] is busy, please wait [+ director_actions_timer +] months. ?]
