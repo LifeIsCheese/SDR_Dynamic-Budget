@@ -16,6 +16,14 @@ max-cards: 3
 
 [? if year = 1928 and month = 2 : The current bourgeois-right government has fallen. The next elections are slated for May of this year. ?]
 
+Balance of Power
+
+<h1> Balance of Power </h1>
+
+The republic: Reichsbanner, iron front?, Prussia depending on loyalty
+The Left: RFB
+The right: SA, DS, reichswehr depending on loyalty
+
 - @party
 - @govt
 - #advisor
