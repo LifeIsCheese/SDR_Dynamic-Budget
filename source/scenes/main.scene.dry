@@ -39,13 +39,13 @@ max-cards: 4
 
 [? if year = 1928 and month = 2 : The current bourgeois-right government has fallen. The next elections are slated for May of this year. ?]
 
-<h1>Balance of Power</h1>
+<h1><span style="color:rgb(182, 45, 45);">**Bal**</span><span style="color:rgb(255, 242, 67);">**a**</span><span style="color:var(--Z-color);">**nce**</span> <span style="color:rgb(92, 0, 0);">**KPD**</span>;">**of**</span> <span style="color:rgb(0, 26, 255);">**Po**</span><span style="color:rgb(100, 78, 17);">**wer**</span></h1>
 
-Republic:
+Republic: [+ weimar_strength +]
 
-Left:
+Left: [+ kpd_strength +]
 
-Right
+Right: [+ far_right_strength +]
 
 - @party
 - @govt

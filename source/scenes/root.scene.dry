@@ -292,6 +292,11 @@ Q.housing_crisis = 0;
 Q.high_inflation = 0;
 Q.stagflation = 0;
 
+//Bruning Death
+Q.weimar_strength = 0;
+Q.kpd_strength = 0;
+Q.far_right_strength = 0;
+
 Q.strife = 0;
 
 //Testing maybe idk
