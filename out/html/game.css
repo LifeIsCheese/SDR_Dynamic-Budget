@@ -8,6 +8,7 @@
   --active-color: #cecece;
   --hover-color: #ececec;
   --bg-bg-transparent: #d6d6d6;
+  --Z-color: #000000;
 
 
 }
@@ -21,6 +22,7 @@
   --active-color: #442024;
   --hover-color: #6a2f35;
   --bg-bg-transparent: #0e0505dc;
+  --Z-color: #ffffff;
 }
 body {
   font-family: "Minion Pro", Georgia, serif;
