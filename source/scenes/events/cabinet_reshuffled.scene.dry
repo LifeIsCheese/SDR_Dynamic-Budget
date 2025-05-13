@@ -195,6 +195,12 @@ on-arrival: spd_in_government = 0; spd_toleration = 0; minority_government = 1; 
 
 Due to our own constitutional reforms, we cannot bring [+ chancellor +] down. We will have to prepare for the next election to get our chance.
 
+@wirth_resign_hindenburg
+on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
+
+Unable to bear the stress of keeping the coalition together, Wirth has announced his intentions to resign as chancellor.
+
+[+ president +] appoints Brüning from the Center Party as replacement, who immediately reforms the government.
 
 - @menu: Brüning sacks our ministers.
 - @menu_bd: Wirth is forced to sacks ou ministers.
