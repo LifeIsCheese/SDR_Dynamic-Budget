@@ -17,7 +17,7 @@ something about oh wow yay
 @repbulican_unity
 subtitle: Heavily increase membership. -1 resource
 choose-if: resources > 0
-on-arrival: rb_strength += 500; weimar_dissent -= 2; coalition_dissent -= 1; resources -=1
+on-arrival: rb_strength += 500; weimar_dissent -= 2; coalition_dissent -= 2; resources -=1; z_relation += 10; ddp_relation +=10; dvp_relation +=5
 
 We start using our media empure, in combination with the Center and the Democratic Party to heavily advertise the Reichsbanner.
 
@@ -25,7 +25,7 @@ We start using our media empure, in combination with the Center and the Democrat
 @increase_militancy
 subtitle: -1 budget
 choose-if: budget > 0
-on-arrival: rb_militancy +=0.15; weimar_dissent -= 2; budget -=1; rb_strength += 200
+on-arrival: rb_militancy +=0.15; weimar_dissent -= 2; budget -=1; rb_strength += 200; coalition_dissent -= 1
 
 Heading to the other parties' requests, we increase the Reichsbanner's military training.
 
