@@ -189,5 +189,12 @@ The vote succeeds, and their government has resigned. Chancellor Wirth remains a
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
+@minority_bruning
+view-if: constructive_vonc and ((right_coalition < 50 or right_coalition_failed or year >= 1929 or (year >= 1928 and month >= 8)) and bourgeois_coalition < 50)
+on-arrival: spd_in_government = 0; spd_toleration = 0; minority_government = 1; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = ddp_name; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"
+
+Due to our own constitutional reforms, we cannot bring [+ chancellor +] down. We will have to prepare for the next election to get our chance.
+
+
 - @menu: Brüning sacks our ministers.
 - @menu_bd: Wirth is forced to sacks ou ministers.
