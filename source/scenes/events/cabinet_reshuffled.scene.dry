@@ -61,12 +61,6 @@ go-to: election_1928.right_coalition_2
 view-if: bourgeois_coalition >= 50
 go-to: election_1928.let_it_form
 
-@minority_bruning
-view-if: constructive_vonc and ((right_coalition < 50 or right_coalition_failed or year >= 1929 or month >= 8) and bourgeois_coalition < 50)
-on-arrival: spd_in_government = 0; spd_toleration = 0; minority_government = 1; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = ddp_name; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"
-
-Due to our own constitutional reforms, we cannot bring Brüning down. We will have to prepare for the next election to get our chance.
-
 @breitscheid_vonc
 view-if: constructive_vonc and ((right_coalition < 50 or right_coalition_failed or year >= 1929 or month >= 8) and bourgeois_coalition < 50) and (left_coalition >= 50 or kpd_relation >= 50)
 choose-if: left_coalition >= 50 and kpd_relation >= 50
