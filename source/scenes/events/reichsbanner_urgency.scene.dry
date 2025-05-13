@@ -25,7 +25,7 @@ We start using our media empure, in combination with the Center and the Democrat
 @increase_militancy
 subtitle: -1 budget
 choose-if: budget > 0
-on-arrival: rb_militancy +=0.1; weimar_dissent -= 2; budget -=1
+on-arrival: rb_militancy +=0.15; weimar_dissent -= 2; budget -=1; rb_strength += 200
 
 Heading to the other parties' requests, we increase the Reichsbanner's military training.
 
