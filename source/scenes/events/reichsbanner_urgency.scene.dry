@@ -1,0 +1,37 @@
+title: Reichsbanner Urgency
+subtitle: Due to increased violence in the streets, suprisingly the repbulican parties are calmoring for its militarization.
+view-if: (far_right_strength > weimar_strength or kpd_strength > weimar_strength)  and bruning_plot == "successful" and rb_urgency == 0
+max-visits: 5
+on-arrival: rb_urgency_timer = 4
+new-page: true
+tags: event
+
+= Reichsbanner Urgency
+
+something about oh wow yay
+
+- @repbulican_unity: Use this further broaden the the Reichsbanner membership.
+- @increase_militancy: We *reluctantly* increase the Reichsbanner's militancy.
+- @no: Why would we do this?
+
+@repbulican_unity
+subtitle: Heavily increase membership. -1 resource
+choose-if: resources > 0
+on-arrival: rb_strength += 500; weimar_dissent -= 2; coalition_dissent -= 1; resources -=1
+
+We start using our media empure, in combination with the Center and the Democratic Party to heavily advertise the Reichsbanner.
+
+
+@increase_militancy
+subtitle: -1 budget
+choose-if: budget > 0
+on-arrival: rb_militancy +=0.1; weimar_dissent -= 2; budget -=1
+
+Heading to the other parties' requests, we increase the Reichsbanner's military training.
+
+
+@no
+subtitle: Perhaps we don't have the funds.
+on-arrival: z_relation -= 10; ddp_relation -=10; dvp_relation -=5; center_dissent += 10; labor_dissent +=10; left_dissent += 15; reformist_dissent +=10
+
+There are outcries from both within our party and out. But our coffers are strained and this is our only option. [? if budget > 0 our resources > 0 : Despite our surplus. ?]

@@ -575,7 +575,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'sa_ban', 'sh_ban', 'papen_chancellor',
             'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin', 'abysinnia', 'nazi_peak',
-            'nazi_reform', 'understanding_enemy', 'laissez_faire', 'presidential'];
+            'nazi_reform', 'understanding_enemy', 'laissez_faire', 'presidential', 'rb_urgency'];
 Q.advisor_action_timer = 0;
 // party affairs timers
 Q.confronting_nazis_timer = 0;
@@ -649,7 +649,7 @@ Q.presidential_timer = 0;
 // epic timers
 Q.director_actions_timer = 0;
 Q.bond_timer = 0;
-
+Q.rb_urgency_timer = 0;
 //whaha
 Q.end_disabled = 1
 

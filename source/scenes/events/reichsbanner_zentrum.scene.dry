@@ -1,6 +1,6 @@
 title: Exodus from the Reichsbanner
 subtitle: Owing to its militarization, the Center Party and [+ ddp_name +] are leaving the Reichsbanner.
-view-if: rb_militancy >= 0.2 and not rb_exit and not rb_stay
+view-if: rb_militancy >= 0.2 and not rb_exit and not rb_stay and bruning_plot != "successful"
 on-arrival: weimar_dissent += 2 if weimar_plan_adopted
 new-page: true
 tags: event
@@ -27,7 +27,7 @@ Bowing to the other parties' demands, we reduce the Reichsbanner's military trai
 
 @keep_them
 unavailable-subtitle: They are unable to be convinced at this time.
-choose-if: (strife >= 5 or weimar_plan_adopted and strife >= 3) and (z_relation >= 50 or (z_party_leader == "Joos" and z_relation >= 30)) and ddp_relation >= 50
+choose-if: (strife >= 5 or weimar_plan_adopted and strife >= 3) and (z_relation >= 50 or (z_party_leader == "Joos" and z_relation >= 30)) and ddp_relation >= 50 or bruning_plot == "successful"
 on-arrival: rb_stay = 1; weimar_dissent -= 1
 
 Seeing the strife that has filled Germany's streets, the Center Party and [+ ddp_name +] seem to be convinced that it is necessary for the Reichsbanner to be militarized, and will not leave the organization.
