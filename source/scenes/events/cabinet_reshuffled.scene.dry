@@ -121,19 +121,19 @@ Due to large pressure from his party, [+ chancellor +] has been forced to announ
 
 What should we do?
 
-- @give_up_prussia: Due to Wirth's left leaning beliefs, the party sees this as unnecessary.
-- @austerity: Enact a moderate austerity plan.
+- @give_up_prussia_bd: Due to Wirth's left leaning beliefs, the party sees this as unnecessary.
+- @austerity_bd: Enact a moderate austerity plan.
 - @labor: Promise not to interfere in labour affairs.
-- @resources: Use our resources to reduce dissent within the coalition.
+- @resources_bd: Use our resources to reduce dissent within the coalition.
 - @menu_bd: Never mind. What are our options?
 
-@give_up_prussia
+@give_up_prussia_bd
 view-if: spd_prussia == 1
 on-arrival: coalition_dissent = 0; spd_prussia = 0; prussian_government = "I"; reformist_dissent += 15; centrist_dissent += 15; labor_dissent += 15; left_dissent += 10; workers_spd -= 5; rural_spd -= 5; 
 
 Fine. We no longer control the government of Prussia. The vote has been called off.
 
-@austerity
+@austerity_bd
 view-if: welfare >= 0
 on-arrival: coalition_dissent = 0; workers_spd -= 5; unemployed_spd -= 5; workers_kpd += 3; workers_nsdap += 2; unemployed_kpd += 2; unemployed_nsdap += 3; left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5; welfare -= 1; budget += 1; unemployed += 1.5; kpd_coalition_dissent += 1; kpd_relation -= 5 if in_popular_front
 
@@ -145,7 +145,7 @@ on-arrival: interfere_labour = 1; labor_dissent += 15; center_dissent += 10; lef
 
 Understandably, the workers and labor are angry with us, but this is necessary to keep democracy alive.
 
-@resources
+@resources_bd
 choose-if: resources >= 2
 unavailable-subtitle: We do not have enough resources.
 subtitle: -2 resources
