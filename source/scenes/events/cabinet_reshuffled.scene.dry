@@ -195,14 +195,6 @@ on-arrival: spd_in_government = 0; spd_toleration = 0; minority_government = 1; 
 
 Due to our own constitutional reforms, we cannot bring Brüning down. We will have to prepare for the next election to get our chance.
 
-@breitscheid_vonc
-view-if: constructive_vonc and ((right_coalition < 50 or right_coalition_failed or year >= 1929 or month >= 8) and bourgeois_coalition < 50) and (left_coalition >= 50 or kpd_relation >= 50)
-choose-if: left_coalition >= 50 and kpd_relation >= 50
-unavailable-subtitle: [? if left_coalition < 50 : We do not have a majority in favor of Breitscheid. ?][? if kpd_relation < 50 : The Communists are unwilling. ?]
-on-arrival: in_left_front = 1; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; chancellor_party = "SPD"; chancellor = "Breitscheid"; labor_minister_party = "SPD"; interior_minister_party = "SPD"; finance_minister_party = "SPD"; economic_minister_party = "SPD"; justice_minister_party = "SPD"; foreign_minister_party = "SPD"; agriculture_minister_party = "SPD"; reichswehr_minister_party = "SPD"
-
-We have succesfully passed a motion of no confidence to replace Brüning with Breitscheid. We are now ruling in a united front with the KPD.
-
 @sack_bruning
 view-if: constructive_vonc and president == "Braun" or president == "Schumacher" or president == "Juchacz"
 choose-if: presidential_powers != 1
