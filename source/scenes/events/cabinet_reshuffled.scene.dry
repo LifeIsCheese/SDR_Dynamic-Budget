@@ -189,14 +189,5 @@ The vote succeeds, and their government has resigned. Chancellor Wirth remains a
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
-@tolerate
-view-if: not constructive_vonc
-choose-if: (right_coalition < 50 or right_coalition_failed or year >= 1929 or month >= 8) and bourgeois_coalition < 50
-unavailable-subtitle: They don't need us.
-on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; workers_spd -= 3
-go-to: election_1928.toleration_bruning
-
-Many in the party are incredulous. We have just been expelled from government, and our reaction is to allow this government to govern?
-
 - @menu: Brüning sacks our ministers.
 - @menu_bd: Wirth is forced to sacks ou ministers.
