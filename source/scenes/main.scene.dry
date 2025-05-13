@@ -49,8 +49,6 @@ The Left: [+ kpd_strength +]%
 
 The Right: [+ far_right_strength +]%
 
-[? if director_actions_timer == 0 : <button class = "status_button_wide" onclick ="train_police()">Train Police</button> ?] [? if director_actions_timer == 0 : <button class = "status_button_wide" onclick ="train_spies()">Train Spies</button> ?]
-
 - @party
 - @govt
 - #advisor
