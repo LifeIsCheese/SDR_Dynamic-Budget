@@ -34,4 +34,4 @@ Heading to the other parties' requests, we increase the Reichsbanner's military 
 subtitle: Perhaps we don't have the funds.
 on-arrival: z_relation -= 10; ddp_relation -=10; dvp_relation -=5; center_dissent += 10; labor_dissent +=10; left_dissent += 15; reformist_dissent +=10
 
-There are outcries from both within our party and out. But our coffers are strained and this is our only option. [? if budget > 0 our resources > 0 : Despite our surplus. ?]
+There are outcries from both within our party and out. But our coffers are strained and this is our only option. [? if budget > 0 or resources > 0 : Despite our surplus. ?]
