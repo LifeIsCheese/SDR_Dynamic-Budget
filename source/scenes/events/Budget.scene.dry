@@ -3,7 +3,7 @@ subtitle: As the year begins, we have recieved our annual budget. [? if bond_deb
 new-page: true
 tags: event
 priority: 2
-view-if: year >= 1929 and month == 2 and spd_in_government
+view-if: year >= 1929 and month == 2
 on-arrival: older_republic = old_republic; old_republic = pro_republic; month_actions += 1;{!
 //1929 4.4 1930 0.5 1931 -1.1 1931 -6.4 1932 -7.8
 
@@ -84,13 +84,13 @@ Too low thinkin' we local, come on homie, we major.
 - @default: Let's do our own thing. (Default on our debt)
 
 @pay_back
-view-if: bond_debt > 0
+view-if: bond_debt > 0 and spd_in_government
 on-arrival: budget -= bond_debt; bond_payed += bond_debt
 
 With us paying back our bond debt, it improves confidence in our economy
 
 @default
-view-if: bond_debt > 0
+view-if: bond_debt > 0 and spd_in_government
 
 -@sure: Are we sure about this
 -@sure_dumb: We dont even owe much money, why are we defaulting?

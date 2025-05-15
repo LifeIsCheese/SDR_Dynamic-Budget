@@ -1,0 +1,4 @@
+title: Paying debt but its spd not in government, if they go in debt austerity and -10% overall
+view-if: year >= 1929 and month == 3
+on-arrival: budget -= bond_debt; bond_payed += bond_debt
+call: austerity_debt if budget < 0

@@ -1565,7 +1565,7 @@ on-arrival: chancellor_party = "Z"; chancellor = "Brüning"; left_dissent += 5
 go-to: ministries
 
 @let_wirth
-view-if: z_party_leader == "Joos" or bruning_plot != "successful"
+view-if: z_party_leader == "Joos" or bruning_plot == "successful"
 on-arrival: chancellor_party = "Z"; chancellor = "Wirth"
 go-to: ministries
 
