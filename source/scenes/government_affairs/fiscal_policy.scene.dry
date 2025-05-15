@@ -37,6 +37,9 @@ title: Change Tax.
 - @cut_overall: Cut overall taxes.
 - @cut_overall_wtb: Cut overall taxes.
 - @reform_tax:
+- @fiscal_menu: Change domestic taxes instead of tariffs.
+- @root: We are fine as it is.
+- @easy_discard
 
 
 @raise_progressive
@@ -146,6 +149,7 @@ By issuing bonds we can bolster economic growth, or other things.
 - @issue_bond_1: Issue a small number of bonds.
 - @issue_bond_2: Issue a sizeable number of bonds.
 - @issue_bond_3: Issue a large number of bonds
+- @fiscal_menu: Change domestic taxes instead of tariffs.
 - @root: We are fine as it is.
 - @easy_discard
 
