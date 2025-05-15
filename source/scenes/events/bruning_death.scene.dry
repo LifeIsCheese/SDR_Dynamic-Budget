@@ -5,6 +5,7 @@ max-visits: 1
 tags: event
 on-arrival: judicial_reform = 2; rfb_banned = 1; sa_ban = 1; z_relation +=20; ddp_relation +=15; dvp_relation +=15; workers_dnvp -=15; workers_ddp +=4; workers_dvp +=1; workers_z += 4; workers_spd += 6; time_to_election = 3; z_party_leader = "Joos"; chancellor = "Wirth" if chancellor_party == "Z"; plot_target = "None"; plot_strength = 0
 call: set_next_election_time
+audio: shuffle music/1930_1933/Warszawianka.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg
 
 = The Ivory Tower Collapses
 
