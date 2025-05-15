@@ -9,7 +9,7 @@ Q.bond_need_to_pay = 0;
 Q.bond_payed = 0;
 !}
 new-page: true
-//austerity magically clears debt because, infinite austerity does not sound fun.
+
 = Austerity
 
 The bourgeois government has enacted austerity in order to prevent a deficit in our treasury, they blame us for taking too much debt in the first place.
