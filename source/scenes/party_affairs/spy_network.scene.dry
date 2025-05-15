@@ -1,0 +1,94 @@
+title: Spy Network
+new-page: true
+is-card: true
+tags: govt_affairs
+frequency: 300
+view-if: spd_in_government != 1 secret_police_timer == 0 and plot_strength == 0 and investigate_far_right >= 1 or hunger_chancellor == 1
+on-arrival: secret_police_timer += 6; month_actions += 1
+card-image: img/portraits/secret_police.jpg
+
+
+= Secret Affairs
+
+
+Due to us being kicked out of government, we can only use our network of spies to carry out our operations.
+
+- @hjalmar: Begin plans on Hjalmar Schacht's assassination
+- @heinrich: Begin plans on Heinrich Brüning's assassination
+- @heinrich1: Convince Severing to kill Bruning
+- @heinrich2: Convince the reformists to kill Bruning
+- @spies_fund: Fund our spy network
+- @root: Perhaps another time
+- @easy_discard
+- @cancel_advisor_action
+
+@hjalmar
+view-if: hjalmar_plot != "successful" or hjalmar_plot != "failed"
+subtitle: [? if investigate_far_right < 1: Despite for our, distaste of Hjalmar Schacht. There is no reason for us to go after him. ?] [? if hjalmar_plot >= 1: We have already begun the plot. ?] [? if resources < 1 and budget < 0 : insufficient funds. ?]
+choose-if: investigate_far_right >= 1 and hjalmar_plot <= 0 and resources > 1 or budget > 0
+on-arrival: hjalmar_plot +=10; plot_target = "hjalmar"
+go-to: partners
+
+With the Reichsbank being controlled by a known reactionary who collaborated with the Nazis. The only way for us to push out our fiscal reforms is by his Death.
+
+Operation Reversed Scale has commenced.
+
+@heinrich1
+subtitle: [? if hunger_chancellor != 1: Why should we backstab our coalition partners and further risk destabilising the republic? ?]
+choose-if: hunger_chancellor == 1 and bruning_plot <= 0
+view-if: bruning_death_support == 0
+on-arrival: bruning_death_support +=1
+
+"Carl severing please kill Bruning", the left asks. "No", says Carl.
+
+"But if we do, we can ban the RFB and the SA", the left says. "Okay", says carl.
+
+@heinrich2
+subtitle: [? if hunger_chancellor != 1: Why should we backstab our coalition partners and further risk destabilising the republic? ?] [? if reformist_strength > left_strength : The reformists would never agree to this.?]
+choose-if: hunger_chancellor == 1 and bruning_plot <= 0 and left_strength > reformist_strength
+view-if: bruning_death_support == 1
+on-arrival: bruning_death_support +=1
+
+"We all know Bruning sucks, but we need him for the stability", says the reformists.
+
+"But he's basically hitler", says the left and labour.
+
+"You right, our fault", says the reformists.
+
+@heinrich
+subtitle: [? if hunger_chancellor != 1: Why should we backstab our coalition partners and further risk destabilising the republic? ?] [? if bruning_plot >= 1: We have already begun the plot. ?] [? if resources < 1 and budget < 0 : insufficient funds. ?]
+choose-if: hunger_chancellor == 1 and bruning_plot <= 0 and resources > 1 or budget > 0
+view-if: bruning_death_support >= 2
+on-arrival: bruning_plot +=10; plot_target = "bruning"; loyalty_decay = 0.03
+go-to: partners
+
+With the unpopularity of Bruning’s austerity measures, and the negotiations our radical wing to unite our party under his death, the plan has received cautious approval.
+
+Due to the nature of our operation, we need to have a strong network of <span style="color:rgb(0, 0, 0);">**spies**</span> to keep the police in check. If strong enough it will stop the decay of loyalty when planning.
+
+The order is given, and with the unpopularity of Bruning’s austerity measures, no one should bat an eye towards his sudden death. At least… if no one leaks the plans prematurely.
+
+Operation Ivory Tower has commenced.
+    
+@spies_fund
+subtitle: [? if spy_network < 10 : -2 resources, reduces loyalty decay ?] [? if spy_network >= 9 : If we pour in too much funds into our spies, it may attract unwanted attention. ?]
+choose-if: spy_network < 10 and resources > 1
+on-arrival: resources -=2; spy_network +=3
+
+By funding our spy network, we can rely on them to serve as a watchdog, during our operations.
+
+@partners
+title: To further increase the progression of our plot, we must choose who to work with...
+
+We can only work with our spies.
+
+- @spies: Let's keep it small.
+
+@spies
+subtitle: [? if spy_network < 10 : -2 resources Least riskiest iption, but slowest?] [? if spy_network >= 9 : If we pour in too much funds into our spies, it may attract unwanted attention. 0 resources. ?]
+choose-if: resources > 1
+on-arrival: spy_network +=3 if spy_network < 10; plot_strength = spy_network; resources -=2 if spy_network < 10; assassination_partners = "Spies"; resources +=1; {!
+new_hire()
+!}
+
+Use our own network of <span style="color:rgb(0, 0, 0);">**spies**</span> to carry this out instead. This is the slowest option, but perhaps with more funding we can change that.
