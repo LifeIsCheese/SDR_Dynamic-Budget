@@ -1,6 +1,6 @@
 title: Reichsbanner Urgency
 subtitle: Due to increased violence in the streets, suprisingly the repbulican parties are calmoring for its militarization.
-view-if: (far_right_strength > weimar_strength or kpd_strength > weimar_strength)  and bruning_plot == "successful" and rb_urgency == 0
+view-if: (far_right_strength > weimar_strength or kpd_strength > weimar_strength)  and bruning_plot == "successful" and rb_urgency_timer == 0
 max-visits: 5
 on-arrival: rb_urgency_timer = 4
 new-page: true
