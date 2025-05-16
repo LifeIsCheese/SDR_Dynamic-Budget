@@ -1,37 +1,24 @@
 title: Fighting the Paramilitaries
-subtitle: Due to increased violence in the streets, suprisingly the repbulican parties are calmoring for its militarization.
-view-if: bruning_plot == "successful"
+view-if: bruning_plot == "successful" and paramilitaries_timer == 0;
 frequency: 100
 new-page: true
 is-card: true
+on-arrival: paramilitaries_timer = 3; month_actions +=1
 tags: govt_affairs
 
 = Reichsbanner Urgency
 
-something about oh wow yay
+Due to increased violence in the streets, suprisingly the repbulican parties are calmoring for its militarization.
 
-- @repbulican_unity: Use this further broaden the the Reichsbanner membership.
-- @increase_militancy: We *reluctantly* increase the Reichsbanner's militancy.
-- @no: Why would we do this?
+- @plot_menu: We can kill key figures to stunt the growth of our enemies.
+- @defense_menu: We can work on fighting the far left and right.
 
-@repbulican_unity
-subtitle: Heavily increase membership. -1 resource
-choose-if: resources > 0
-on-arrival: rb_strength += 600; weimar_dissent -= 2; coalition_dissent -= 2; resources -=1; z_relation += 10; ddp_relation +=10; dvp_relation +=5
+@plot_menu
 
-We start using our media empure, in combination with the Center and the Democratic Party to heavily advertise the Reichsbanner.
+Willy Leow, thallman
 
+Rohm
 
-@increase_militancy
-subtitle: -1 budget
-choose-if: budget > 0
-on-arrival: rb_militancy +=0.15; weimar_dissent -= 2; budget -=1; rb_strength += 200; coalition_dissent -= 1
+@defense_menu
 
-Heading to the other parties' requests, we increase the Reichsbanner's military training.
-
-
-@no
-subtitle: Perhaps we don't have the funds.
-on-arrival: z_relation -= 10; ddp_relation -=10; dvp_relation -=5; center_dissent += 10; labor_dissent +=10; left_dissent += 15; reformist_dissent +=10
-
-There are outcries from both within our party and out. But our coffers are strained and this is our only option. [? if budget > 0 or resources > 0 : Despite our surplus. ?]
+shh 

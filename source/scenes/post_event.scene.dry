@@ -395,6 +395,9 @@ if (Q.month_actions >= 1) {
     if (Q.plot_target == "bruning") {
         Q.bruning_plot += Q.plot_strength;
     }
+    if (Q.plot_target == "rohm") {
+        Q.rohm_plot += Q.plot_strength;
+    }
     ///tax reform
     Q.tax_reform_progress = 1 - (Q.science_bonus / 10);
     /// Loyalty decay

@@ -268,8 +268,12 @@ Q.spy_network = 0;
 Q.s_spy_network = "None";
 Q.plot_strength = 0;
 Q.plot_target = "None";
+
+//plots
 Q.hjalmar_plot = 0;
 Q.bruning_plot = 0;
+Q.rohm_plot = 0;
+
 Q.hunger_chancellor = 0;
 Q.reichsbank_a = 0;
 Q.hans_opinion = 2;
@@ -577,7 +581,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'sa_ban', 'sh_ban', 'papen_chancellor',
             'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin', 'abysinnia', 'nazi_peak',
-            'nazi_reform', 'understanding_enemy', 'laissez_faire', 'presidential', 'rb_urgency', 'violence'];
+            'nazi_reform', 'understanding_enemy', 'laissez_faire', 'presidential', 'rb_urgency', 'violence', 'paramilitaries'];
 Q.advisor_action_timer = 0;
 // party affairs timers
 Q.confronting_nazis_timer = 0;
@@ -658,6 +662,7 @@ Q.end_disabled = 1
 
 //streets
 Q.violence_timer = 0;
+Q.paramilitaries_timer = 0;
 
 // all the initial advisors are centrists.
 Q.wels_advisor = 1; // Otto Wels
