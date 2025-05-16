@@ -3,7 +3,8 @@ subtitle: Due to increased violence in the streets, suprisingly the repbulican p
 view-if: bruning_plot == "successful"
 frequency: 100
 new-page: true
-tags: event
+is-card: true
+tags: govt_affairs
 
 = Reichsbanner Urgency
 
