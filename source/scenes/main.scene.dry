@@ -49,10 +49,11 @@ The Left: [+ kpd_strength +]%
 
 The Right: [+ far_right_strength +]%
 
-<h2>We have [+ violence_timer +] months to crush the paramilitaries</h2>
+<h1>We have [+ violence_timer +] months to crush the paramilitaries</h1>
 
 - @party
 - @govt
+- @test
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -71,3 +72,10 @@ card-image: img/reichstag_2.jpg
 is-deck: true
 
 - #govt_affairs
+
+@test
+title: test
+card-image: img/reichstag_2.jpg
+is-deck: true
+
+- @economic_policy
