@@ -1,4 +1,4 @@
-title: Our forces
+title: Our plots
 view-if: bruning_plot == "successful" and paramilitaries_timer == 0
 frequency: 100
 new-page: true
@@ -7,11 +7,11 @@ card-image: img/anti_paramillitary.jpg
 on-arrival: paramilitaries_timer = 2; month_actions +=1
 tags: fighting_paramilitaries
 
-= Our forces
+= Our plota
 
 We can kill key figures to stunt the growth of our enemies.
 
-- @rohm: we gotta
+- @rohm: we gotta kill rohm man
 
 @rohm
 on-arrival: sa_strength *= 0.5
