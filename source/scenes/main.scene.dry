@@ -53,7 +53,7 @@ The Right: [+ far_right_strength +]%
 
 - @party
 - @govt
-- @test
+- @paramilitaries
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -73,9 +73,9 @@ is-deck: true
 
 - #govt_affairs
 
-@test
-title: test
-card-image: img/reichstag_2.jpg
+@paramilitaries
+title: Fighting the Paramilitaries
+card-image: img/anti_paramillitary.jpg
 is-deck: true
 
-- @fundraising
+- @fighting_paramilitaries

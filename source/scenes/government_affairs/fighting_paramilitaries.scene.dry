@@ -1,8 +1,7 @@
-title: Reichsbanner Urgency
-subtitle: Due to the dire state of the Reichsbanner during this trying time, the democratic parties beg for it's militarization.
-view-if: weimar_strength < 30 and bruning_plot == "successful" and rb_urgency_timer == 0
-max-visits: 5
-on-arrival: rb_urgency_timer = 4
+title: Fighting the Paramilitaries
+subtitle: Due to increased violence in the streets, suprisingly the repbulican parties are calmoring for its militarization.
+view-if: bruning_plot == "successful"
+frequency: 100
 new-page: true
 tags: event
 
