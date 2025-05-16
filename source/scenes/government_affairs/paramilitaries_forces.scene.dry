@@ -1,0 +1,31 @@
+title: Our forces
+view-if: bruning_plot == "successful" and paramilitaries_timer == 0
+frequency: 100
+new-page: true
+is-card: true
+card-image: img/anti_paramillitary.jpg
+on-arrival: paramilitaries_timer = 2; month_actions +=1
+tags: fighting_paramilitaries
+
+= Our forces
+
+Due to increased violence in the streets, the repbulican parties are calmoring for further militarization.
+
+- @reichsbanner: fund reichsbanner
+- @loyalty: increase loyalty all around
+- @anti_decay: decrease loyalty decay
+
+@reichsbanner
+on-arrival: rb_strength +=100; rb_militancy +=0.05
+
+We fund the Reichsbanner.
+
+@loyalty
+on-arrival: prussian_police_loyalty += 0.1; reichswehr_loyalty += 0.1; interior_police_loyalty +=0.1
+
+wW increase loyalty of our police and armed forces.
+
+@anti_decay
+on-arrival: loyalty_decay -=0.01 if loyalty_decay > 0
+
+We single out dissident figures within our forces.
