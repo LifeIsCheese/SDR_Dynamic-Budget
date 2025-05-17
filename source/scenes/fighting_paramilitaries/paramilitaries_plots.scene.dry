@@ -73,7 +73,7 @@ With the liberals fully supporting the militarization of the Reichsbanner, we ca
 @spies
 subtitle: [? if spy_network < 10 : -2 resources Least riskiest iption, but slowest?] [? if spy_network >= 9 : If we pour in too much funds into our spies, it may attract unwanted attention. 0 resources. ?]
 choose-if: resources > 1
-on-arrival: spy_network +=3 if spy_network < 10; plot_strength = spy_network; resources -=2 if spy_network < 10; assassination_partners = "Spies"; resources +=1; {!
+on-arrival: spy_network +=3 if spy_network < 10; plot_strength = spy_network * 2; resources -=2 if spy_network < 10; assassination_partners = "Spies"; resources +=1; {!
 new_hire()
 !}
 

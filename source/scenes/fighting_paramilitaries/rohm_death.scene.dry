@@ -1,0 +1,9 @@
+title: Operation Kill Rohm
+view-if: rohm_plot == "successful"
+new-page: true
+max-visits: 1
+tags: event
+
+= Nice
+
+Nice, keeping the streets clean is def gonna be easier now.
