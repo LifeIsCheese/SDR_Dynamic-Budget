@@ -498,14 +498,14 @@ if (Q.plot_target == "None") {
     ///Far right ramp up
     if (Q.violence_timer > 0) {
         if (Q.rohm_plot != "successful") {
-            Q.sa_force *= 1.2;
-            Q.sh_force *= 1.2;
+            Q.sa_strength *= 1.2;
+            Q.sh_strength *= 1.2;
         }
-        Q.sa_force += (Q.violence_timer * 5);
+        Q.sa_strength += (Q.violence_timer * 5);
     }
     ///far left ramp up also add reichsbanner loyalty
     if (Q.violence_timer > 0) {
-        Q.rfb_force += (Q.violence_timer * ( (100 - Q.nationalism) / 8 ) );
+        Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 8 ) );
     }
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
