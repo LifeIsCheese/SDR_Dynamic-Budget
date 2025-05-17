@@ -1,5 +1,4 @@
 title: Reichsbanner Urgency
-subtitle: Due to the dire state of the Reichsbanner during this trying time, the democratic parties beg for it's militarization.
 view-if: weimar_strength < 30 and bruning_plot == "successful" and rb_urgency_timer == 0
 max-visits: 5
 on-arrival: rb_urgency_timer = 4
@@ -8,24 +7,24 @@ tags: event
 
 = Reichsbanner Urgency
 
-something about oh wow yay
+Due to the dire state of the Reichsbanner during this trying time, the democratic parties beg for it's militarization.
 
-- @repbulican_unity: Use this further broaden the the Reichsbanner membership.
-- @increase_militancy: We *reluctantly* increase the Reichsbanner's militancy.
+- @repbulican_unity: Further broaden the the Reichsbanner membership.
+- @increase_militancy: We can heavily increase the Reichsbanner's militancy.
 - @no: Why would we do this?
 
 @repbulican_unity
-subtitle: Heavily increase membership. -1 resource
-choose-if: resources > 0
-on-arrival: rb_strength += 600; weimar_dissent -= 2; coalition_dissent -= 2; resources -=1; z_relation += 10; ddp_relation +=10; dvp_relation +=5
+subtitle: Heavily increase membership. -2 resource
+choose-if: resources > 1
+on-arrival: rb_strength += 900; weimar_dissent -= 2; coalition_dissent -= 2; resources -=2; z_relation += 10; ddp_relation +=10; dvp_relation +=5
 
 We start using our media empure, in combination with the Center and the Democratic Party to heavily advertise the Reichsbanner.
 
 
 @increase_militancy
-subtitle: -1 budget
-choose-if: budget > 0
-on-arrival: rb_militancy +=0.15; weimar_dissent -= 2; budget -=1; rb_strength += 200; coalition_dissent -= 1
+subtitle: -2 budget
+choose-if: budget > 1
+on-arrival: rb_militancy +=0.3; weimar_dissent -= 2; budget -=2; rb_strength += 200; coalition_dissent -= 1
 
 Heading to the other parties' requests, we increase the Reichsbanner's military training.
 
@@ -34,4 +33,4 @@ Heading to the other parties' requests, we increase the Reichsbanner's military 
 subtitle: Perhaps we don't have the funds.
 on-arrival: z_relation -= 10; ddp_relation -=10; dvp_relation -=5; center_dissent += 10; labor_dissent +=10; left_dissent += 15; reformist_dissent +=10
 
-There are outcries from both within our party and out. But our coffers are strained and this is our only option. [? if budget > 0 or resources > 0 : Despite our surplus. ?]
+There are outcries from both within our party and out. But our coffers are strained and this is our only option. [? if budget > 1 or resources > 1 : Despite our surplus??? ?]
