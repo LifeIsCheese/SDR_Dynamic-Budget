@@ -495,6 +495,18 @@ if (Q.plot_target == "None") {
     Q.weimar_strength = Q.rb_force + (Q.prussia_force * Q.prussian_police_loyalty) + (Q.army_force * Q.reichswehr_loyalty);
     Q.kpd_strength = Q.rfb_force;
     Q.far_right_strength = Q.sa_force + Q.sh_force + (Q.prussia_force * (1 - Q.prussian_police_loyalty)) + (Q.army_force * (1 - Q.reichswehr_loyalty));
+    ///Far right ramp up
+    if (Q.violence_timer > 0) {
+        if (Q.rohm_plot != "successful") {
+            Q.sa_force *= 1.2;
+            Q.sh_force *= 1.2;
+        }
+        Q.sa_force += (Q.violence_timer * 5);
+    }
+    ///far left ramp up also add reichsbanner loyalty
+    if (Q.violence_timer > 0) {
+        Q.rfb_force += (Q.violence_timer * ( (100 - Q.nationalism) / 8 ) );
+    }
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
         Q.workers_spd += (Q.unemployed/8)/12;
