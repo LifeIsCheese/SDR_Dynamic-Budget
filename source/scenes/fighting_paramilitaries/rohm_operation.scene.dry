@@ -4,7 +4,7 @@ new-page: true
 max-visits: 1
 tags: event
 priority: 1
-view-if: year >= 1929 and rohm_plot >= 100
+view-if: rohm_plot >= 100
 
 = Plots and preparations
 
