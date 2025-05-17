@@ -362,7 +362,7 @@ if (Q.month_actions >= 1) {
     if (Q.interest_rates == 2) {
         Q.inflation_growth = 0.25;
         if (Q.inflation > Q.economic_growth) {
-            Q.inflation_growth = -0.4;
+            Q.inflation -= 0.2;
         }
         if (Q.economic_growth >= 1) {
             Q.economic_growth -= 0.1;
