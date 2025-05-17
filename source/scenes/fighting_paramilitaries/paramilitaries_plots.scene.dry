@@ -1,10 +1,10 @@
 title: Our plots
-view-if: bruning_plot == "successful" and paramilitaries_timer == 0
+view-if: bruning_plot == "successful" and paramilitaries_timer == 0 and plot_target == "None"
 frequency: 100
 new-page: true
 is-card: true
 card-image: img/anti_paramillitary.jpg
-on-arrival: paramilitaries_timer = 2; month_actions +=1
+on-arrival: paramilitaries_timer = 4; month_actions +=1
 tags: fighting_paramilitaries
 
 = Our plots

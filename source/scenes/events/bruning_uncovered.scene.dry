@@ -3,7 +3,7 @@ view-if: year >= 1928 and bruning_plot >=50 and (interior_police_loyalty < 0.7 a
 new-page: true
 max-visits: 1
 tags: event
-on-arrival: bruning_plot = "uncovered"; plot_strength = 0; plot_target = "none"; bruning_event = 1
+on-arrival: bruning_plot = "uncovered"; plot_strength = 0; plot_target = "None"; bruning_event = 1
 
 Otto Braun. A man who's name which once held much respect throughout most of Germany for promoting republican and democratic cooperation against the radical parties. Is now irreversibly tarnished.
 

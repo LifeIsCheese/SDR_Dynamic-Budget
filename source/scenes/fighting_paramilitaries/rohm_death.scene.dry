@@ -2,6 +2,7 @@ title: Operation Kill Rohm
 view-if: rohm_plot == "successful"
 new-page: true
 max-visits: 1
+on-arrival: plot_target = "None"
 tags: event
 
 = Nice
