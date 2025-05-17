@@ -83,7 +83,7 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 <span style="color:rgb(110, 65, 131);">**Foreign investment**</span>: +[+ foreign_investment +]% to <span style="color:rgb(95, 131, 65);">**growth**</span>
 
-[? if bond_debt > 0 : <span style="color:rgb(131, 65, 65);">**Bond debt**</span>: [+ bond_debt_2 +] 
+[? if bond_debt > 0 : <span style="color:rgb(131, 65, 65);">**Debt per Year**</span>: [+ bond_debt_2 +] 
 
 # = Public Opinion
 
@@ -254,7 +254,7 @@ Spy network strength: [+ s_spy_network +].
 
 = Plots
 
-[? if hjalmar_plot == "successful" : We have killed <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span>. ?] [? if bruning_plot == "successful" : We have killed <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span>  ?]
+[? if hjalmar_plot == "successful" : We have killed <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span>. ?] [? if bruning_plot == "successful" : We have killed <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span>  ?] [? if rohm_plot == "successful" : We have killed <span style="color:rgb(185, 138, 7);">**Ernst Röhm**</span>. ?] 
 
 @Targets
 

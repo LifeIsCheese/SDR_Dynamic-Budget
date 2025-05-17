@@ -33,3 +33,4 @@ We single out dissident figures within our forces.
 
 @militarize
 subtitle: -1 budget
+on-arrival: rb_militancy +=0.1; month_actions +=1; paramilitaries_timer = 2; budget -=1

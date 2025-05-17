@@ -1,5 +1,5 @@
 title: Injection of cash
-view-if: paramilitaries_timer == 0
+view-if: bruning_plot == "successful" and paramilitaries_timer == 0
 frequency: 100
 new-page: true
 is-card: true
