@@ -14,7 +14,7 @@ Due to increased violence in the streets, the repbulican parties are calmoring f
 - @militarize: militarize the reichsbanner
 - @loyalty: increase loyalty all around
 - @anti_decay: decrease loyalty decay
-- @nothing: We do nothing????
+- @defund: We defund????
 
 @reichsbanner
 subtitle: -1 resource
@@ -36,6 +36,8 @@ We single out dissident figures within our forces.
 subtitle: -1 budget
 on-arrival: rb_militancy +=0.1; month_actions +=1; paramilitaries_timer = 2; budget -=1
 
-@nothing
+@defund
 subtitle: Why?
 on-arrival: rb_dissent +=1
+
+Alright then., the Reichsbanner will remember this. 

@@ -43,7 +43,7 @@ max-cards: 4
 
 <h1>Balance of Power</h1>
 
-The Republic: [+ weimar_strength +]%, KPD influence in the Reichsbanner [+ rb_dissent +]
+The Republic: [+ weimar_strength +]%, Reichsbanner dissent [+ rb_dissent +]
 
 The Left: [+ kpd_strength +]%
 
