@@ -3,7 +3,7 @@ view-if: bruning_plot == "successful" and paramilitaries_timer == 0 and plot_tar
 frequency: 100
 new-page: true
 is-card: true
-card-image: /img/plots.jpg
+card-image: img/plots.jpg
 tags: fighting_paramilitaries
 
 = Our plots
