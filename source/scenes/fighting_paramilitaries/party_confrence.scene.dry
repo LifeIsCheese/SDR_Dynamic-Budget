@@ -1,0 +1,11 @@
+title: Party Conference
+view-if: spd_in_government != 1 and violence_timer < 21
+new-page: true
+max-visits: 1
+tags: event
+
+= Party Conference
+
+Despite [z_party_leader]'s and Braun's cooperation in rushing the extremists, we haven ot been able to get in government. This poses a problem for us, the left of the party calls for joining in with the communists, letting the Center and democratic parties fend for themselves. While the reformists still want to help them, for the sake of stability and democracy.
+
+WIP

@@ -1,10 +1,10 @@
-title: Operation Kill Rohm
+title: Operation Lavender
 view-if: rohm_plot == "successful"
 new-page: true
 max-visits: 1
 on-arrival: plot_target = "None"
 tags: event
 
-= Nice
+= Operation Lavender
 
-Nice, keeping the streets clean is def gonna be easier now.
+The police swarmed in Ernst Röhm's residence hoping to kill him, but what they did not expect was a yo

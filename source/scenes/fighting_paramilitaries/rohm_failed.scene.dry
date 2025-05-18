@@ -1,8 +1,7 @@
-title: Operation kill ROhm
+title: Operation Lavender
 view-if: rohm_plot == "failed"
 new-page: true
 max-visits: 1
-call: set_next_election_time
 on-arrival: plot_target = "None"; plot_strength = 0; z_relation -= 3; ddp_relation -=3; dvp_relation -=3
 tags: event
 
