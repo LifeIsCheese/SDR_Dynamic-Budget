@@ -1,0 +1,12 @@
+title: KPD influence
+view-if: left_strength > weimar_strength and bruning_plot == "successful" and violence_timer <= 18 and kpd_influence_timer == 0
+max-visits: 1
+on-arrival: rb_dissent +=1; kpd_influence_timer = 6
+new-page: true
+tags: event
+
+= The KPD's influence has grown.
+
+With violence spreading even further in the streets, and the left being weaker than us, or spies have tipped us off in their influence in Reichsbanner affairs.
+
+**Perhaps it would be good to keep an eye out for this**
