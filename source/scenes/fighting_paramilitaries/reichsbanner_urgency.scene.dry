@@ -31,6 +31,6 @@ Heading to the other parties' requests, we increase the Reichsbanner's military 
 
 @no
 subtitle: Perhaps we don't have the funds.
-on-arrival: z_relation -= 10; ddp_relation -=10; dvp_relation -=5; center_dissent += 10; labor_dissent +=10; left_dissent += 15; reformist_dissent +=10
+on-arrival: z_relation -= 10; ddp_relation -=10; dvp_relation -=5; center_dissent += 10; labor_dissent +=10; left_dissent += 15; reformist_dissent +=10; rb_dissent +=1
 
 There are outcries from both within our party and out. But our coffers are strained and this is our only option. [? if budget > 1 or resources > 1 : Despite our surplus??? ?]
