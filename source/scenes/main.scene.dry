@@ -74,6 +74,7 @@ is-deck: true
 - #govt_affairs
 
 @paramilitaries
+view-if: violence_timer > 0
 title: Fighting the Paramilitaries
 card-image: img/anti_paramillitary.jpg
 is-deck: true

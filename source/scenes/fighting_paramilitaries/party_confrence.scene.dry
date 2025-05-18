@@ -1,5 +1,5 @@
 title: Party Conference
-view-if: spd_in_government != 1 and violence_timer < 21 and bruning_plot == "successful"
+view-if: spd_in_government != 1 and violence_timer < 21 and bruning_plot == "successful" and violence_timer != 0
 new-page: true
 max-visits: 1
 tags: event
