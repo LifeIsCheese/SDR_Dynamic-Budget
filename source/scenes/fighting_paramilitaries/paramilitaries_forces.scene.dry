@@ -10,34 +10,43 @@ tags: fighting_paramilitaries
 
 Due to increased violence in the streets, the repbulican parties are calmoring for further militarization.
 
-- @reichsbanner: fund reichsbanner
-- @militarize: militarize the reichsbanner
-- @loyalty: increase loyalty all around
+- @reichsbanner: Fund reichsbanner
+- @reichsbanner_free: Recruit for the reichsbanner
+- @militarize: Militarize the reichsbanner
+- @loyalty: Increase loyalty all around
 - @anti_decay: decrease loyalty decay
 - @defund: We defund????
 
 @reichsbanner
 subtitle: -1 resource
-on-arrival: rb_strength +=200; rb_militancy +=0.05; month_actions +=1; paramilitaries_timer = 2; resources -=1
+choose-if: resources > 0
+on-arrival: rb_strength +=300; rb_militancy +=0.05; month_actions +=1; paramilitaries_timer = 2; resources -=1
 
 We fund the Reichsbanner.
+
+@reichsbanner_free
+on-arrival: rb_strength +=100; month_actions +=1; paramilitaries_timer = 2
+
+We can use our media empire to find new reichsbanner recruits. 
 
 @loyalty
 on-arrival: prussian_police_loyalty += 0.2; reichswehr_loyalty += 0.2; interior_police_loyalty +=0.2; month_actions +=1; paramilitaries_timer = 2
 
-We increase loyalty of our police and armed forces.
+We root out corrupt or extremist policemen, we can justify this to our coalition partners with the violence in the streets.
 
 @anti_decay
 on-arrival: loyalty_decay -=0.01 if loyalty_decay > 0; month_actions +=1; paramilitaries_timer = 2
 
-We single out dissident figures within our forces.
+We single out dissident figures within our forces, we can justify this to our coalition partners with the violence in the streets.
 
 @militarize
 subtitle: -1 budget
 on-arrival: rb_militancy +=0.1; month_actions +=1; paramilitaries_timer = 2; budget -=1
 
+The Reichsbanner now has munitions meant for millitary use, thankfully our coalition partners see this as necessary to save the republic.
+
 @defund
 subtitle: Why?
 on-arrival: rb_dissent +=1
 
-Alright then., the Reichsbanner will remember this. 
+Alright then. The Reichsbanner will remember this. 
