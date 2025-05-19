@@ -15,6 +15,8 @@ Despite [+ z_party_leader +]'s and Braun's cooperation in rushing the extremists
 subtitle: The left will be angry.
 on-arrival: left_dissent +=20
 
+The left is enraged at our decision, with some leaders even defecting to the KPD.
+
 @left
 subtitle:WIP
 choose-if: 1 == 0
