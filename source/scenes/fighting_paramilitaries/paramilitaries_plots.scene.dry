@@ -10,7 +10,7 @@ tags: fighting_paramilitaries
 
 <script src="new_shit.js"></script>
 
-We can kill key figures to stunt the growth of our enemies. Operation time has been sped up due to the nature ouf our situation.
+We can kill key figures to stunt the growth of our enemies. Operation time has been sped up due to the nature of our situation.
 
 - @rohm: Ernst Röhm.
 - @spies_fund: We can fund our spies.
@@ -18,10 +18,9 @@ We can kill key figures to stunt the growth of our enemies. Operation time has b
 - @easy_discard
 
 @rohm
-subtitle: By killing Ernst Röhm, we can effectively stunt the growth of the SA.
+subtitle: By killing Ernst Röhm, we can effectively stunt the growth of the SA. [? if budget <= 0 or resources <= 1 : Not enough funds. ?] [? if rohm_plot == "failed" : we have failed to kill Ernst Röhm ?]
 view-if: rohm_plot != "successful"
-unavailable-subtitle: We have failed to kill Ernst Röhm.
-choose-if: rohm_plot != "failed"
+choose-if: rohm_plot != "failed" and (budget > 0 or resources > 1)
 on-arrival: rohm_plot +=10; plot_target = "rohm"
 go-to: partners
 

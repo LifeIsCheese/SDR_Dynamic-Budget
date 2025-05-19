@@ -24,8 +24,8 @@ Due to us being kicked out of government, we can only use our network of spies t
 
 @hjalmar
 view-if: hjalmar_plot != "successful" or hjalmar_plot != "failed"
-subtitle: [? if investigate_far_right < 1: Despite for our, distaste of Hjalmar Schacht. There is no reason for us to go after him. ?] [? if hjalmar_plot >= 1: We have already begun the plot. ?] [? if resources < 1 and budget < 0 : insufficient funds. ?]
-choose-if: investigate_far_right >= 1 and hjalmar_plot <= 0 and resources > 1 or budget > 0
+subtitle: [? if investigate_far_right < 1: Despite for our, distaste of Hjalmar Schacht. There is no reason for us to go after him. ?] [? if hjalmar_plot >= 1: We have already begun the plot. ?] [? if resources < 1 : insufficient funds. ?]
+choose-if: investigate_far_right >= 1 and hjalmar_plot <= 0 and resources > 1
 on-arrival: hjalmar_plot +=10; plot_target = "hjalmar"
 go-to: partners
 
@@ -56,8 +56,8 @@ on-arrival: bruning_death_support +=1
 "You right, our fault", says the reformists.
 
 @heinrich
-subtitle: [? if hunger_chancellor != 1: Why should we backstab our coalition partners and further risk destabilising the republic? ?] [? if bruning_plot >= 1: We have already begun the plot. ?] [? if resources < 1 and budget < 0 : insufficient funds. ?]
-choose-if: hunger_chancellor == 1 and bruning_plot <= 0 and resources > 1 or budget > 0
+subtitle: [? if hunger_chancellor != 1: Why should we backstab our coalition partners and further risk destabilising the republic? ?] [? if bruning_plot >= 1: We have already begun the plot. ?] [? if resources < 1 : insufficient funds. ?]
+choose-if: hunger_chancellor == 1 and bruning_plot <= 0 and resources > 1
 view-if: bruning_death_support >= 2
 on-arrival: bruning_plot +=10; plot_target = "bruning"; loyalty_decay = 0.03
 go-to: partners

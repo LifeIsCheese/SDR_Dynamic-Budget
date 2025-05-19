@@ -1,5 +1,5 @@
 title: Injection of cash
-view-if: bruning_plot == "successful" and paramilitaries_timer == 0
+view-if: bruning_plot == "successful" and paramilitaries_timer == 0 and spd_in_government
 frequency: 100
 new-page: true
 is-card: true
@@ -8,7 +8,7 @@ tags: fighting_paramilitaries
 
 = Bonds
 
-We can issue bonds to fund our forces. This will be controversian, within our party and out, but perhaps it is needed.
+We can issue bonds to fund our forces. This will be controversial, within our party and out, but perhaps it is needed.
 
 - @issue_bond_1: Issue a small number of bonds.
 - @issue_bond_2: Issue a sizeable number of bonds.
