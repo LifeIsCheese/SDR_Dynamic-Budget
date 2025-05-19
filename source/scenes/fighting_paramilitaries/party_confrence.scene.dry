@@ -13,7 +13,7 @@ Despite [+ z_party_leader +]'s and Braun's cooperation in rushing the extremists
 
 @help
 subtitle: The left will be angry.
-on-arrrival: left_dissent +=20
+on-arrival: left_dissent +=20
 
 @left
 subtitle:WIP
