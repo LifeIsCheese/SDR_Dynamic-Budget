@@ -501,7 +501,8 @@ if (Q.plot_target == "None") {
             Q.sa_strength *= 1.2;
             Q.sh_strength *= 1.2;
         }
-        Q.sa_strength += (Q.violence_timer * 2);
+        Q.sa_strength += (Q.violence_timer / 4);
+Q.sh_strength += (Q.violence_timer / 4);
     }
     ///far left ramp up also add reichsbanner loyalty
     if (Q.violence_timer > 0) {
