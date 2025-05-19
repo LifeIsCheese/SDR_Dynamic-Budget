@@ -666,7 +666,7 @@ Q.rb_dissent = 0;
 Q.end_disabled = 1
 
 //streets
-Q.violence_timer = 0;
+Q.violence_timer = -1;
 Q.paramilitaries_timer = 0;
 
 // all the initial advisors are centrists.
