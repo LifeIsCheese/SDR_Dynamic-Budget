@@ -11,23 +11,32 @@ Due to the dire state of the Reichsbanner during this trying time, the democrati
 
 - @repbulican_unity: Further broaden the the Reichsbanner membership.
 - @increase_militancy: We can heavily increase the Reichsbanner's militancy.
+- @increase_militancy_r: We can heavily increase the Reichsbanner's militancy.
 - @no: Why would we do this?
 
 @repbulican_unity
 subtitle: Heavily increase membership. -2 resource
 choose-if: resources > 1
-on-arrival: rb_strength += 900; weimar_dissent -= 2; coalition_dissent -= 2; resources -=2; z_relation += 10; ddp_relation +=10; dvp_relation +=5
+on-arrival: rb_strength += 900; weimar_dissent -= 2; coalition_dissent -= 2; resources -=2; z_relation += 10; ddp_relation +=10; dvp_relation +=5; rb_militancy += 0.2
 
 We start using our media empure, in combination with the Center and the Democratic Party to heavily advertise the Reichsbanner.
 
 
 @increase_militancy
+view-if: spd_in_government
 subtitle: -2 budget
 choose-if: budget > 1
-on-arrival: rb_militancy +=0.3; weimar_dissent -= 2; budget -=2; rb_strength += 200; coalition_dissent -= 1
+on-arrival: rb_militancy +=0.4; weimar_dissent -= 2; budget -=2; rb_strength += 200; coalition_dissent -= 1
 
 Heading to the other parties' requests, we increase the Reichsbanner's military training.
 
+@increase_militancy_r
+subtitle: -2 budget
+view-if: spd_in_government != 1
+choose-if: budget > 1
+on-arrival: rb_militancy +=0.4; weimar_dissent -= 2; budget -=2; rb_strength += 200; coalition_dissent -= 1
+
+Heading to the other parties' requests, we increase the Reichsbanner's military training.
 
 @no
 subtitle: Perhaps we don't have the funds.

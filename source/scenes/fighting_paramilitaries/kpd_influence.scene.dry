@@ -1,6 +1,6 @@
 title: KPD influence
 view-if: kpd_strength < weimar_strength and bruning_plot == "successful" and violence_timer <= 18 and kpd_influence_timer == 0 and violence_timer != -1
-max-visits: 1
+max-visits: 4
 on-arrival: rb_dissent +=1; kpd_influence_timer = 6
 new-page: true
 tags: event
