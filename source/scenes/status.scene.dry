@@ -288,6 +288,7 @@ Focus: [? if director_type == 1 or director_type == 3 : Operations ?] [? if dire
 
 [? if plot_target == "hjalmar" : Reichsbank can be influenced. RFB banned. Z max relations (secret oooh) ?].
 [? if plot_target == "bruning" : Joseph Wirth and Joos! RFB banned and SA. Republican relations, and support ?].
+[? if plot_target == "rohm" : Hampered SA ?].
 
 @Actions
 
