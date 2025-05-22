@@ -451,6 +451,11 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
   object-fit: contain;
 }
 
+div.face-status-container {
+  display:flex;
+  justify-content:center;
+}
+
 .face-image {
   width: 140px;
   object-fit: cover;
