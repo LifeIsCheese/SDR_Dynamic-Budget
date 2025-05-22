@@ -260,10 +260,9 @@ Spy network strength: [+ s_spy_network +].
 
 @Targets
 
-= Profile
+= [? if plot_target == "hjalmar" : <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span> ?] [? if plot_target == "bruning" : <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span> ?] [? if plot_target == "rohm" : <span style="color:rgb(185, 138, 7);">**Ernst Röhm**</span> ?] 
 
 <script src="new_shit.js" defer></script>
-[? if plot_target == "hjalmar" : <span style="color:rgb(112, 87, 19);">**Hjalmar Schacht**</span> ?] [? if plot_target == "bruning" : <span style="color:rgb(19, 93, 112);">**Heinrich Brüning**</span> ?] [? if plot_target == "rohm" : <span style="color:rgb(185, 138, 7);">**Ernst Röhm**</span> ?] 
 
 [? if plot_target == "hjalmar" : <img class="face-status" src="img/portraits/SchachtHjalmar.jpg"> ?] [? if plot_target == "bruning" : <img class="face-status" src="img/portraits/BrüningHeinrich.jpg"> ?] [? if plot_target == "rohm" : <img class="face-status" src="img/portraits/rohm.jpg"> ?]
 
@@ -286,9 +285,9 @@ Focus: [? if director_type == 1 or director_type == 3 : Operations ?] [? if dire
 
 = Effects
 
-[? if plot_target == "hjalmar" : Reichsbank can be influenced. RFB banned. Z max relations (secret oooh) ?].
-[? if plot_target == "bruning" : Joseph Wirth and Joos! RFB banned and SA. Republican relations, and support ?].
-[? if plot_target == "rohm" : Hampered SA ?].
+[? if plot_target == "hjalmar" : Reichsbank can be influenced. RFB banned. Z max relations (secret oooh). ?]
+[? if plot_target == "bruning" : The Streets will burn, will the republic stand? ?]
+[? if plot_target == "rohm" : Hampered SA. ?]
 
 @Actions
 
