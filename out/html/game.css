@@ -444,8 +444,6 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 }
 .face-status {
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
   outline: 5px solid var(--active-color);
   height: 150px;
   object-fit: contain;
