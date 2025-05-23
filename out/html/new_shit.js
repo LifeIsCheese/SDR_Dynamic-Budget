@@ -105,3 +105,7 @@ function rush2 () {
    window.changeTab('status.Actions', 'Actions')
 
 }
+
+function bruning () {
+   d.bruning_plot = "successful"
+}
