@@ -17,6 +17,8 @@ Due to increased violence in the streets, the repbulican parties are calmoring f
 - @loyalty: Increase loyalty all around
 - @anti_decay: decrease loyalty decay
 - @defund: We defund????
+- @root: Perhaps another time
+- @easy_discard
 
 @reichsbanner
 subtitle: -1 resource
@@ -55,7 +57,7 @@ on-arrival: rb_militancy +=0.1; month_actions +=1; paramilitaries_timer = 2; res
 The Reichsbanner now has munitions meant for millitary use, thankfully our coalition partners see this as necessary to save the republic.
 
 @defund
-subtitle: Why?, +1 resource
-on-arrival: rb_dissent +=1; resources +=1
+subtitle: Why?, +3 resources
+on-arrival: rb_dissent +=1; resources +=3; rb_strength *= 0.9
 
 Alright then. The Reichsbanner will remember this. 

@@ -238,7 +238,10 @@ if (Q.capital_strike_progress) {
 
 = The Right
 
+<script src="new_shit.js" defer></script>
+
 <button class = "status_button" onclick ="bruning()">kill bruning</button>
+
 The streets will be lit on fire, can you handle it?
 
 <span style="color:rgb(54, 43, 12);">**Coup likelihood**</span>: [? if investigate_far_right >= 1 and coup_progress >= 1 : [+ coup_progress_2 +]0% ?] [? if investigate_far_right == 0 : We don't have any information on the right. ?] [? if coup_progress == 0 and investigate_far_right >= 1 : The right aren't doing anything. ?]

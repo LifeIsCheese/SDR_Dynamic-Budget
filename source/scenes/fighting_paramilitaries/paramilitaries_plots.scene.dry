@@ -28,9 +28,9 @@ go-to: partners
 Our coalition partners have agreed on this course of action.
 
 @leow
-subtitle: By killing Willy Leow, we can dissrupt the growth of the RFB. [? if budget <= 0 and spd_in_government: Not enough budget. ?] [? if rohm_plot == "failed" : we have failed to kill Ernst Röhm ?] [? if resources <= 1 : Not enough resources. ?]
+subtitle: By killing Willy Leow, we can dissrupt the growth of the RFB and destroy it's influence in the Reichsbanner. [? if budget <= 0 and spd_in_government: Not enough budget. ?] [? if rohm_plot == "failed" : we have failed to kill Ernst Röhm ?] [? if resources <= 1 : Not enough resources. ?]. Not done
 view-if: rohm_plot != "successful"
-choose-if: rohm_plot != "failed" and (budget > 0 or resources > 1)
+choose-if: 1 == 2
 on-arrival: rohm_plot +=10; plot_target = "rohm"
 go-to: partners
 
