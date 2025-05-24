@@ -398,6 +398,9 @@ if (Q.month_actions >= 1) {
     if (Q.plot_target == "rohm") {
         Q.rohm_plot += Q.plot_strength;
     }
+    if (Q.plot_target == "leow") {
+        Q.leow_plot += Q.plot_strength;
+    }
     ///tax reform
     Q.tax_reform_progress = 1 - (Q.science_bonus / 10);
     /// Loyalty decay
@@ -498,15 +501,20 @@ if (Q.plot_target == "None") {
     ///Far right ramp up
     if (Q.violence_timer > 0) {
         if (Q.rohm_plot != "successful") {
-            Q.sa_strength *= 1.2;
-            Q.sh_strength *= 1.2;
+            Q.sa_strength *= 1.1;
+            Q.sh_strength *= 1.1;
         }
-        Q.sa_strength += (Q.violence_timer / 4);
+        Q.sa_strength += (Q.violence_timer / 16);
+        Q.sh_strength += (Q.violence_timer / 16);
 Q.sh_strength += (Q.violence_timer / 4);
     }
-    ///far left ramp up also add reichsbanner loyalty
+    ///far left ramp up
     if (Q.violence_timer > 0) {
         Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 8 ) );
+        if (Q.leow_plot != "successful") {
+            Q.rfb_strength *= 1.2;
+            Q.rfb_strength *= 1.2;
+        }
     }
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
