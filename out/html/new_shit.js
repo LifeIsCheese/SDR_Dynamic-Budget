@@ -109,3 +109,7 @@ function rush2 () {
 function bruning () {
    d.bruning_plot = "successful"
 }
+
+function hjalmar () {
+   d.hjalmar_plot = "successful"
+}
