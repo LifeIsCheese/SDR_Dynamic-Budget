@@ -7,6 +7,7 @@
   --htext-color: #900;
   --active-color: #f3f3f3;
   --hover-color: #ececec;
+  --card-border-color: #bebebe;
   --bg-bg-transparent: #d6d6d6;
   --Z-color: #000000;
   --status-text-color: #000000;
@@ -22,6 +23,7 @@
   --htext-color: #f8c4c4;
   --active-color: #442024;
   --hover-color: #6a2f35;
+  --card-border-color: #6a2f35;
   --bg-bg-transparent: #0e0505dc;
   --Z-color: #ffffff;
   --status-text-color: #ffffff;
@@ -376,7 +378,7 @@ a.card {
   width: 120px;
   height: 150px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid var(--bg-color);
+  border: 10px solid var(--card-border-color);
   margin-bottom: 0.5em;
   position: relative;
 }
@@ -390,7 +392,7 @@ div.blank-card {
   width: 120px;
   height: 150px;
   background-color: var(--active-color);
-  border: 10px solid var(--bg-color);
+  border: 10px solid var(--card-border-color);
   margin-bottom: 0.5em;
 }
 
@@ -424,7 +426,7 @@ div.blank-card {
   z-index: 2;
   padding: 0.2em;
   border: 1px solid;
-  background-color: #eee;
+  background-color: var(--active-color);
   left: 105%;
 }
 
