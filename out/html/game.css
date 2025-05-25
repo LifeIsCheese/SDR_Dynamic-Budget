@@ -389,8 +389,8 @@ div.blank-card {
   display: inline-block;
   width: 120px;
   height: 150px;
-  background-color: var(--bg-color);
-  border: 10px solid var(--active-color);
+  background-color: var(--active-color);
+  border: 10px solid var(--bg-color);
   margin-bottom: 0.5em;
 }
 
