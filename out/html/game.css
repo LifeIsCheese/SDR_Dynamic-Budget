@@ -376,7 +376,7 @@ a.card {
   width: 120px;
   height: 150px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid var(--active-color);
+  border: 10px solid var(--bg-color);
   margin-bottom: 0.5em;
   position: relative;
 }
