@@ -255,7 +255,6 @@ blockquote + blockquote.attribution {
     outline: none;
     padding: 10px;
     color: var(--status-text-color);
-    width: 100%;
 }
 .tab_button.active {
     background-color: var(--active-color);
@@ -263,6 +262,8 @@ blockquote + blockquote.attribution {
 .tab_button:hover {
     background-color: var(--hover-color);
 }
+
+.tab_button_wide {width: 100%;}
 
 .status_button {
   font-family: "Minion Pro", Geor gia, serif;
