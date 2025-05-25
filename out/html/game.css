@@ -262,6 +262,24 @@ blockquote + blockquote.attribution {
 .tab_button:hover {
     background-color: var(--hover-color);
 }
+
+.tab_button_wide {
+    font-family: "Minion Pro", Geor gia, serif;
+    background-color: var(--header-color);
+    /*float: left;*/
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    color: var(--status-text-color);
+}
+.tab_button.active_wide {
+    background-color: var(--active-color);
+}
+.tab_button_wide:hover {
+    background-color: var(--hover-color);
+}
+
 .status_button {
   font-family: "Minion Pro", Geor gia, serif;
   color: var(--text-color);
