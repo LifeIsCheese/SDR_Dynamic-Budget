@@ -391,7 +391,7 @@ div.blank-card {
   display: inline-block;
   width: 120px;
   height: 150px;
-  background-color: var(--active-color);
+  background-color: var(--header-color);
   border: 10px solid var(--card-border-color);
   margin-bottom: 0.5em;
 }
