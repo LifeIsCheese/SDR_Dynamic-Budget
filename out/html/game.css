@@ -5,7 +5,7 @@
   --header-color: #cececee0;
   --text-color: #431;
   --htext-color: #900;
-  --active-color: #f1cfcf;
+  --active-color: #f3f3f3;
   --hover-color: #ececec;
   --bg-bg-transparent: #d6d6d6;
   --Z-color: #000000;
@@ -273,7 +273,7 @@ blockquote + blockquote.attribution {
     width: 100%;
     color: var(--status-text-color);
 }
-.tab_button.active_wide {
+.tab_button_wide.active {
     background-color: var(--active-color);
 }
 .tab_button_wide:hover {
