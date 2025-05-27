@@ -302,7 +302,7 @@ Q.weimar_strength = 0;
 Q.kpd_strength = 0;
 Q.far_right_strength = 0;
 Q.interfere_labour = 0;
-Q.military_weariness = 0;
+Q.military_weariness = 1;
 
 
 Q.strife = 0;
