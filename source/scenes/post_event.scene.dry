@@ -498,7 +498,7 @@ if (Q.plot_target == "None") {
     Q.weimar_strength = Q.rb_force + ( ( (Q.prussia_force * Q.prussian_police_loyalty) + (Q.army_force * Q.reichswehr_loyalty) ) / (Q.military_weariness * 10) ) 
     Q.kpd_strength = Q.rfb_force;
     Q.far_right_strength = Q.sa_force + Q.sh_force + ( ( (Q.prussia_force * (1 - Q.prussian_police_loyalty)) + (Q.army_force * (1 - Q.reichswehr_loyalty)) ) / (Q.military_weariness * 10) ) ;
-    Q.military_strength = ( ( Q.prussia_force + army_force) / (10 = Q.military_weariness) );
+    Q.military_strength = ( ( Q.prussia_force + Q.army_force) / ( (10 - Q.military_weariness) * 10 ) );
     ///Far right ramp up
     if (Q.violence_timer > 0) {
         if (Q.rohm_plot != "successful") {
