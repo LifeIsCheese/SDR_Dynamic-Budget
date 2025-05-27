@@ -1,0 +1,10 @@
+title: Military Coup!
+view-if: bruning_plot == "successful" and violence_timer != -1 and military_weariness >= 10 and violence_timer > 0
+new-page: true
+tags: event
+
+= Nothing done here rn, but im assuming millitary is strongest.
+
+Military tired of no one being strong enough to do anything, they coup now.
+
+- @game_over: Game over.

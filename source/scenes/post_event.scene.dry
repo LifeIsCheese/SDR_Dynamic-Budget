@@ -495,9 +495,9 @@ if (Q.plot_target == "None") {
         /// Economic Goal calculation
     Q.economic_goal = ( (Q.economic_base * Q.tax_reform ) - ( (Q.lower_tax_rates / 4 / Q.inflation) + (Q.upper_tax_rates / 3 / Q.inflation) + (Q.tariffs / 6 / Q.inflation) )) + Q.inflation / 15;
     ///Bruning death paramilitaries
-    Q.weimar_strength = Q.rb_force + (Q.prussia_force * Q.prussian_police_loyalty) + (Q.army_force * Q.reichswehr_loyalty);
+    Q.weimar_strength = Q.rb_force + ( ( (Q.prussia_force * Q.prussian_police_loyalty) + (Q.army_force * Q.reichswehr_loyalty) ) / (Q.military_weariness * 10) ) 
     Q.kpd_strength = Q.rfb_force;
-    Q.far_right_strength = Q.sa_force + Q.sh_force + (Q.prussia_force * (1 - Q.prussian_police_loyalty)) + (Q.army_force * (1 - Q.reichswehr_loyalty));
+    Q.far_right_strength = Q.sa_force + Q.sh_force + ( ( (Q.prussia_force * (1 - Q.prussian_police_loyalty)) + (Q.army_force * (1 - Q.reichswehr_loyalty)) ) / (Q.military_weariness * 10) ) ;
     ///Far right ramp up
     if (Q.violence_timer > 0) {
         if (Q.rohm_plot != "successful") {
@@ -516,6 +516,24 @@ if (Q.plot_target == "None") {
             Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 8 ) );
         }
     }
+    if (Q.violence_timer > 0) {
+
+        if (Q.far_right_strength < 50 or Q.weimar_strength < 50 or Q.kpd_strength < 50) {
+            Q.military_weariness += 1;
+        } else {
+            if (Q.military_weariness >= 1) {
+                Q.military_weariness -=1;
+            }
+        }
+
+    }
+
+    /// military ramp up
+
+    if (Q.military_weariness >=5) {
+        Q.reichswehr_strength += ( (24 - Q.violence_timer) * 5 ) * Q.military_weariness;
+    }
+
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
         Q.workers_spd += (Q.unemployed/8)/12;
