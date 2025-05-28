@@ -506,7 +506,7 @@ if (Q.plot_target == "None") {
 
     Q.far_right_strength = Q.sa_force + Q.sh_force +( Q.prussia_force * (1 - Q.prussian_police_loyalty) ) + ( ( Q.army_force * (1 - Q.reichswehr_loyalty)) * Q.military_available );
 
-    Q.military_strength = Q.army_force * military_available;
+    Q.military_strength = Q.army_force * Q.military_available;
     ///Far right ramp up
     if (Q.violence_timer > 0) {
         if (Q.rohm_plot != "successful") {
