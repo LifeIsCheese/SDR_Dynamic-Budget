@@ -540,7 +540,7 @@ Q.military_strength = Math.round((Q.military_strength / total_balance) * 100);
             Q.sa_strength += ( (Q.violence_timer * 2) );
             Q.sh_strength += ( (Q.violence_timer * 1.9) );
         } else {
-            Q.sa_strength += ( (Q.violence_timer * 1.2 ) * 0.9;
+            Q.sa_strength += (Q.violence_timer * 1.2 ) * 0.9;
             Q.sh_strength += (Q.violence_timer * 1.3);
         }
     }
