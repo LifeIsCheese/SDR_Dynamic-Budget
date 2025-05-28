@@ -537,19 +537,19 @@ Q.military_strength = Math.round((Q.military_strength / total_balance) * 100);
     ///Far right ramp up
     if (Q.violence_timer > 0) {
         if (Q.rohm_plot != "successful") {
-            Q.sa_strength += ( (Q.violence_timer / 16) ) * 1.3;
-            Q.sh_strength += ( (Q.violence_timer / 16) ) * 0.9;
+            Q.sa_strength += ( (Q.violence_timer / 8) ) * 1.3;
+            Q.sh_strength += ( (Q.violence_timer / 8) ) * 0.9;
         } else {
-            Q.sa_strength += ( (Q.violence_timer / 16) ) * 0.9;
-            Q.sh_strength += (Q.violence_timer / 16);
+            Q.sa_strength += ( (Q.violence_timer / 10) ) * 0.9;
+            Q.sh_strength += (Q.violence_timer / 10);
         }
     }
     ///far left ramp up
     if (Q.violence_timer > 0) {
         if (Q.leow_plot != "successful") {
-            Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 8 ) ) * 1.2;
+            Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 5 ) ) * 1.2;
         } else {
-            Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 8 ) );
+            Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 5 ) );
         }
     }
     if (Q.violence_timer > 0) {
@@ -567,7 +567,8 @@ Q.military_strength = Math.round((Q.military_strength / total_balance) * 100);
     /// military ramp up
 
 if (Q.military_weariness >= 50) {
-    Q.reichswehr_strength += (24 - Q.violence_timer) * (1 + ( Q.military_strength / 100 ));
+    Q.reichswehr_strength += (24 - Q.violence_timer) * (4 + ( Q.military_strength / 100 ));
+    Q.military_weariness += 5;
 }
 
     /// economy effects support
