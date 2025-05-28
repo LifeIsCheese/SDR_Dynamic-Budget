@@ -554,7 +554,7 @@ Q.military_strength = Math.round((Q.military_strength / total_balance) * 100);
     }
     if (Q.violence_timer > 0) {
 
-        if (Q.far_right_strength < 50 || Q.weimar_strength < 50 || Q.kpd_strength < 50) {
+        if (Q.far_right_strength < 50 && Q.weimar_strength < 50 && Q.kpd_strength < 50) {
             Q.military_weariness += 5;
         } else {
             if (Q.military_weariness > 5) {
@@ -566,7 +566,9 @@ Q.military_strength = Math.round((Q.military_strength / total_balance) * 100);
 
     /// military ramp up
 
-
+if (Q.military_weariness >= 50) {
+    Q.reichswehr_strength += (24 - Q.violence_timer) * (1 + ( Q.military_strength / 100 ));
+}
 
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
