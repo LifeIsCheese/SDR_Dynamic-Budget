@@ -526,6 +526,14 @@ Q.far_right_strength =
 
 Q.military_strength = Q.army_force * Q.military_available;
 
+const total_balance =
+    Q.kpd_strength + Q.weimar_strength + Q.military_strength + Q.far_right_strength;
+
+Q.kpd_strength = Math.round((Q.kpd_strength / total_balance) * 100);
+Q.weimar_strength = Math.round((Q.weimar_strength / total_balance) * 100);
+Q.far_right_strength = Math.round((Q.far_right_strength / total_balance) * 100);
+Q.military_strength = Math.round((Q.military_strength / total_balance) * 100);
+
     ///Far right ramp up
     if (Q.violence_timer > 0) {
         if (Q.rohm_plot != "successful") {
