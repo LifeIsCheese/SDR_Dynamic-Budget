@@ -1177,7 +1177,6 @@ if (Q.military_weariness >= 50) {
             Q.rural_dnvp += 1/12;
             Q.unemployed_nsdap += 3/12;
             Q.strife += 1/12;
-            Q.coup_progress += 2/12;
             Q.rb_strength -= Q.rb_strength*0.0008;
             Q.rfb_strength -= Q.rfb_strength*0.02;
             if (Q.month == 1) {
