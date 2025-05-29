@@ -1196,7 +1196,6 @@ if (Q.military_weariness >= 50) {
             Q.rb_strength -= Q.rb_strength*0.002;
             Q.rfb_strength -= Q.rfb_strength*0.08;
             Q.strife += 3/12;
-            Q.coup_progress += 4/12;
             if (Q.month == 1) {
                 Q.pro_republic -= Q.strife;
             }
@@ -1213,7 +1212,6 @@ if (Q.military_weariness >= 50) {
             Q.rb_strength -= Q.rb_strength*0.002;
             Q.rfb_strength -= Q.rfb_strength*0.06;
             Q.strife += 1/12;
-            Q.coup_progress += 4/12;
             if (Q.month == 1) {
                 Q.pro_republic -= Q.strife;
             }
