@@ -10,7 +10,7 @@ tags: fighting_paramilitaries
 
 <script src="new_shit.js"></script>
 
-We can kill key figures to stunt the growth of our enemies. Operation time has been sped up due to the nature of our situation.
+We can kill key figures to stunt the growth of our enemies.
 
 - @rohm: Ernst Röhm.
 - @leow: Willy Leow.
@@ -56,7 +56,7 @@ Who should we work with on this operation?
 @interior
 subtitle: -1 Budget. The progression rate of our operation will be slow but this is the most safest option, provided the internal security are loyal. [? if interior_police_loyalty < 0.55: The internal security are disloyal. ?]
 choose-if: budget > 0
-on-arrival: plot_strength = 10; assassination_partners = "Police"; resources +=1; month_actions +=1; paramilitaries_timer = 2; {!
+on-arrival: plot_strength = 5; assassination_partners = "Police"; resources +=1; month_actions +=1; paramilitaries_timer = 2; {!
 new_hire()
 !}
 
@@ -65,7 +65,7 @@ We brief the internal police on our plan, time will tell if it succedes.
 @prussia
 subtitle: -1 Budget. Though the extra manpower is nice, if any of the 2 are disloyal it will lead to disaster. [? if interior_police_loyalty < 0.55: The internal security are disloyal. ?] [? if prussian_police_loyalty < 0.5: The Prussian police still seem divided on this cause, but we do need the manpower. ?]
 choose-if: budget > 0
-on-arrival: plot_strength = 20; assassination_partners = "Prussian"; resources +=1; month_actions +=1; paramilitaries_timer = 2; {!
+on-arrival: plot_strength = 10; assassination_partners = "Prussian"; resources +=1; month_actions +=1; paramilitaries_timer = 2; {!
 new_hire()
 !}
 
@@ -75,7 +75,7 @@ By also working with the prussian police, as well as the internal police, we can
 @reichsbanner
 subtitle: -1 Budget. By getting the reichsbanner involved in this operation, we can brute force our way into killing [+ plot_target +]... [? if interior_police_loyalty < 0.55: The internal security are disloyal. ?]
 choose-if: budget > 0
-on-arrival: plot_strength = 40; assassination_partners = "Reichsbanner"; resources +=1; month_actions +=1; paramilitaries_timer = 2; {!
+on-arrival: plot_strength = 20; assassination_partners = "Reichsbanner"; resources +=1; month_actions +=1; paramilitaries_timer = 2; {!
 new_hire()
 !}
 
