@@ -543,7 +543,7 @@ Q.kpd_strength = Q.rfb_force;
 
 Q.far_right_strength = Q.sa_force + Q.sh_force + (Q.prussia_force * (1 - Q.prussian_police_loyalty)) + ( (Q.army_force * Q.military_available ) * (1 - Q.reichswehr_loyalty));
 
-Q.military_strength = Q.army_force * Q.military_available;
+Q.military_strength = Q.army_force * (1 - Q.military_available);
 
 ///const total_balance_bruning =
     ///Q.kpd_strength + Q.weimar_strength + Q.military_strength + Q.far_right_strength;
