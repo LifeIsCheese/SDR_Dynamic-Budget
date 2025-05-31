@@ -55,3 +55,5 @@ title: Perhaps he needs an, "incentive"
 subtitle: -1 resources
 choose-if: resources > 0
 on-arrival: resources -=1; barmat +=1 if barmat <= 2
+
+No it did not.

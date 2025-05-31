@@ -20,6 +20,10 @@ Q.bond_debt_2 = '0';
 if (Q.bond_debt) {
     Q.bond_debt_2 = Q.bond_debt.toFixed(1);
 }
+Q.budget = '0';
+if (Q.budget) {
+    Q.budget_2 = Q.budget.toFixed(1);
+}
 !}
 
 = Status
@@ -65,7 +69,7 @@ Reichstag composition:
 # 1928: 9, 1930: 10
 <span style="color:rgb(107, 107, 107);">**Others**</span>: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if spd_in_government = 1 : Budget: [+ budget_2 +] ?]
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
