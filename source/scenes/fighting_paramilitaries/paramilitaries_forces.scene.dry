@@ -33,13 +33,13 @@ What should we do?
 - @root: Perhaps another time
 - @easy_discard
 
-@horsing:
+@horsing
 subtitle: -1 budget, decreases Reichsbanner dissent and increases militarization.
 view-if: rb_leader != "karl holtermann"
 choose-if: budget > 0
 on-arrival: rb_dissent -= 1; budget -=1; rb_militancy += 0.1
 
-@holtermann:
+@holtermann
 subtitle: -1 resource, heavily increases base of Reichsbanner membership. [? if z_relation <= 39 : The Center would not consider this. ?]
 view-if: rb_leader == "karl holtermann"
 choose-if: resources > 0
