@@ -143,6 +143,14 @@ Q.army_force = Q.reichswehr_strength*Q.reichswehr_militancy;
 Q.prussia_force = Q.prussian_police_strength*Q.prussian_police_militancy;
 var total_force = (Q.sa_force+Q.sh_force+Q.rb_force+Q.rfb_force+Q.army_force+Q.prussia_force);
 
+Q.sa_force = Math.round((Q.sa_force/total_force)*100);
+Q.sh_force = Math.round((Q.sh_force/total_force)*100);
+Q.rb_force = Math.round((Q.rb_force/total_force)*100);
+Q.rfb_force = Math.round((Q.rfb_force/total_force)*100);
+Q.army_force = Math.round((Q.army_force/total_force)*100);
+Q.prussia_force = Math.round((Q.prussia_force/total_force)*100);
+
+
 // Loyalty forces
 Q.loyal_army = Q.army_force * Q.reichswehr_loyalty;
 Q.loyal_prussia = Q.prussia_force * Q.prussian_police_loyalty;

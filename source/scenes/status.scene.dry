@@ -131,19 +131,6 @@ if (Q.sh_strength) {
 if (Q.sa_strength) {
     Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 }
-/// space 
-if (Q.rb_force_pct) {
-    Q.rb_force_2 = Q.rb_force_pct.toFixed(1);
-}
-if (Q.rfb_force_pct) {
-    Q.rfb_force_2 = Q.rfb_force_pct.toFixed(1);
-}
-if (Q.sh_force_pct) {
-    Q.sh_force_2 = Q.sh_force_pct.toFixed(1);
-}
-if (Q.sa_force_pct) {
-    Q.sa_force_2 = Q.sa_force_pct.toFixed(1);
-}
 !}
 
 = Distribution of Power
