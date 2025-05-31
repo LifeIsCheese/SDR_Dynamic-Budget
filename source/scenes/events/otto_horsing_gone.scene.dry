@@ -1,0 +1,15 @@
+title: Otto Hörsing Expelled!
+subtitle: Due to a falling out with party colleagues, Hörsing has resigned from Reichsbanner!
+view-if: year = 1931 and month >= 9
+new-page: true
+on-arrival: rb_leader = "karl holtermann"
+max-visits: 1
+tags: event
+
+= Otto Hörsing Expelled!
+
+Ever since the Reichsbanner's inception, former leader Otto Hörsing has always clashed with leaders of the SPD and Center parties. Known as the the irascible and unpredictable Oberprasident of Prussian Saxony, it was the only a mtter of time before his antics reached a breaking point. He was an overly militant man, many in our party criticizing him by calling him authoritarian. Yet despite that, he cared deeply for the republic the values it stands for, but it was his passion that earned him his downfall.
+
+In his stead leaves Karl Höltermann, serving as a soldier in the western front, climbing the ranks into junior officer, he returned home emergning as a successful party-political journalist.
+
+This represents a turn from the militant forces of the reichsbanner, but increased cooperation between us.
