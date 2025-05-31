@@ -61,7 +61,7 @@ function train_spies () {
          d.spy_network += 3;
       }
 
-      d.plot_strength = d.spy_network
+       if (d.assassination_partners == "Spies") {d.plot_strength = d.spy_network};
       
    d.director_actions_timer = 12;
    d.month_actions += 1;
