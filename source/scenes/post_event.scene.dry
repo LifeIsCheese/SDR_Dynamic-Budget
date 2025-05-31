@@ -495,34 +495,6 @@ if (Q.plot_target == "None") {
     Q.economic_goal = ( (Q.economic_base * Q.tax_reform ) - ( (Q.lower_tax_rates / 4 / Q.inflation) + (Q.upper_tax_rates / 3 / Q.inflation) + (Q.tariffs / 6 / Q.inflation) )) + Q.inflation / 15;
     ///Bruning death paramilitaries
 
-Q.loyal_army = Q.army_force * Q.reichswehr_loyalty;
-Q.loyal_prussia = Q.prussia_force * Q.prussian_police_loyalty;
-
-// Military availability 
-Q.military_available = 1 - (Q.military_weariness / 100);
-
-// Coalition strengths
-Q.weimar_strength =
-  Q.rb_force +
-  Q.loyal_prussia + ( (Q.army_force * Q.military_available ) * Q.military_available);
-
-Q.kpd_strength = Q.rfb_force;
-
-Q.far_right_strength =
-  Q.sa_force +
-  Q.sh_force +
-  (Q.prussia_force * (1 - Q.prussian_police_loyalty)) + ( (Q.army_force * Q.military_available ) * (1 - Q.reichswehr_loyalty));
-
-Q.military_strength = Q.army_force * Q.military_available;
-
-///const total_balance_bruning =
-    ///Q.kpd_strength + Q.weimar_strength + Q.military_strength + Q.far_right_strength;
-
-///Q.kpd_strength = Math.round((Q.kpd_strength / total_balance) * 100);
-///Q.weimar_strength = Math.round((Q.weimar_strength / total_balance) * 100);
-///Q.far_right_strength = Math.round((Q.far_right_strength / total_balance) * 100);
-///Q.military_strength = Math.round((Q.military_strength / total_balance) * 100);
-
     ///Far right ramp up
     if (Q.violence_timer > 0) {
         if (Q.rohm_plot != "successful") {
@@ -559,6 +531,27 @@ if (Q.military_weariness >= 50) {
     Q.reichswehr_strength += (24 - Q.violence_timer) * (4 + ( Q.military_strength / 100 ));
     Q.military_weariness += 5;
 }
+
+
+// Military availability 
+Q.military_available = 1 - (Q.military_weariness / 100);
+
+// Coalition strengths
+Q.weimar_strength = Q.rb_force + Q.loyal_prussia + (Q.loyal_army * Q.military_available );
+
+Q.kpd_strength = Q.rfb_force;
+
+Q.far_right_strength = Q.sa_force + Q.sh_force + (Q.prussia_force * (1 - Q.prussian_police_loyalty)) + ( (Q.army_force * Q.military_available ) * (1 - Q.reichswehr_loyalty));
+
+Q.military_strength = Q.army_force * Q.military_available;
+
+///const total_balance_bruning =
+    ///Q.kpd_strength + Q.weimar_strength + Q.military_strength + Q.far_right_strength;
+
+///Q.kpd_strength = Math.round((Q.kpd_strength / total_balance) * 100);
+///Q.weimar_strength = Math.round((Q.weimar_strength / total_balance) * 100);
+///Q.far_right_strength = Math.round((Q.far_right_strength / total_balance) * 100);
+///Q.military_strength = Math.round((Q.military_strength / total_balance) * 100);
 
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {

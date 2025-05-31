@@ -119,33 +119,33 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 @paramilitaries
 on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
+if (Q.rb_strength_pct) {
+    Q.rb_strength_2 = Q.rb_strength_pct.toFixed(1);
 }
-if (Q.rfb_strength) {
-    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
+if (Q.rfb_strength_pct) {
+    Q.rfb_strength_2 = Q.rfb_strength_pct.toFixed(1);
 }
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
+if (Q.sh_strength_pct) {
+    Q.sh_strength_2 = Q.sh_strength_pct.toFixed(1);
 }
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
+if (Q.sa_strength_pct) {
+    Q.sa_strength_2 = Q.sa_strength_pct.toFixed(1);
 }
 !}
 
 = Distribution of Power
 
-SA: [+ sa_force_pct +]%
+SA: [+ sa_force_2 +]%
 
-Stalhelm: [+ sh_force_pct +]%
+Stalhelm: [+ sh_force_2 +]%
 
-Reichsbanner: [+ rb_force +]%
+Reichsbanner: [+ rb_force_2 +]%
 
-RFB: [+ rfb_force_pct +]%
+RFB: [+ rfb_force_pct_2 +]%
 
-Prussia: [+ prussia_force_pct +]%
+Prussia: [+ prussia_force_2 +]%
 
-Reichswehr: [+ army_force_pct +]%
+Reichswehr: [+ army_force_2 +]%
 
 = Paramilitaries
 
