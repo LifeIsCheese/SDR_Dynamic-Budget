@@ -43,7 +43,7 @@ max-cards: 4
 
 [? if violence_timer > 0 : Military Weariness: [+ military_weariness +]% ?] [? if violence_timer > 0 : The military: [+ military_strength +]% ?]
 
-[? if violence_timer > 0 : [? if military_available < 0.25 : The military is racked with ideological infighting. ?] [? if military_available >= 0.25 and military_available < 0.5 : The military is split. ?] [? if military_available >= 0.5 and military_available < 0.75 : The military has enforced discipline. ?] [? if military_available >= 0.75 : The military is coalescing and getting tired of the current deadlock. ?] ?]
+[? if violence_timer > 0 : [? if military_available < 0.25 : The military is coalescing and getting tired of the current deadlock. ?] [? if military_available >= 0.25 and military_available < 0.5 : The military has enforced discipline. ?] [? if military_available >= 0.5 and military_available < 0.75 : The military is split. ?] [? if military_available >= 0.75 : The military is racked with ideological infighting. ?] ?]
 
 [? if violence_timer > 0 : <h1>Balance of Power</h1> ?]
 
