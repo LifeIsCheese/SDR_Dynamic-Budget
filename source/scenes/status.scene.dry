@@ -148,17 +148,17 @@ if (Q.sa_force_pct) {
 
 = Distribution of Power
 
-SA: [+ sa_force_2 +]%
+SA: [+ sa_force +]%
 
-Stalhelm: [+ sh_force_2 +]%
+Stalhelm: [+ sh_force +]%
 
-Reichsbanner: [+ rb_force_2 +]%
+Reichsbanner: [+ rb_force +]%
 
-RFB: [+ rfb_force_2 +]%
+RFB: [+ rfb_force +]%
 
-Prussia: [+ prussia_force_2 +]%
+Prussia: [+ prussia_force +]%
 
-Reichswehr: [+ army_force_2 +]%
+Reichswehr: [+ army_force +]%
 
 = Paramilitaries
 
