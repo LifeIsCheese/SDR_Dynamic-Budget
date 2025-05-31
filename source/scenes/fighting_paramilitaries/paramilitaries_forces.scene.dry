@@ -10,15 +10,40 @@ tags: fighting_paramilitaries
 
 Due to increased violence in the streets, the repbulican parties are calmoring for further militarization.
 
-- @reichsbanner: Fund reichsbanner
+- @reichsbanner_menu: The Reichsbanner
+- @state_forces_menu: The army and police.
+- @root: Perhaps another time
+- @easy_discard
+
+@reichsbanner_menu
+
+The Reichsbanner is one of our most important tools for controling violence on the streets.
+
+Our leader, [+ rb_leader +] [? if rb_leader != "karl holtermann" : has always called for militarization, while usualy we would dispute this, we may need his expertise in this situation. ?] [? if rb_leader == "karl holtermann" : has always called for a broad democratic bullwark, focusing on increasing cooperation with our coalition partners. ?]
+
+What should we do?
+
+- @horsing: Build infastructure soley for Reichsbanner use.
+- @holtermann: Ask the Center for papal endorsement.
 - @reichsbanner_free: Recruit for the reichsbanner
-- @militarize_budget: Militarize the reichsbanner
+- @reichsbanner: Fund reichsbanner
 - @militarize: Militarize the reichsbanner
-- @loyalty: Increase loyalty all around
-- @anti_decay: decrease loyalty decay
+- @militarize_budget: Militarize the reichsbanner
 - @defund: We defund????
 - @root: Perhaps another time
 - @easy_discard
+
+@horsing:
+subtitle: -1 budget, decreases Reichsbanner dissent and increases militarization.
+view-if: rb_leader != "karl holtermann"
+choose-if: budget > 0
+on-arrival: rb_dissent -= 1; budget -=1; rb_militancy += 0.1
+
+@holtermann:
+subtitle: -1 resource, heavily increases base of Reichsbanner membership. [? if z_relation <= 39 : The Center would not consider this. ?]
+view-if: rb_leader == "karl holtermann"
+choose-if: resources > 0
+on-arrival: resources -=1; rb_strength *= 1.3
 
 @reichsbanner
 subtitle: -1 resource
@@ -31,16 +56,6 @@ We fund the Reichsbanner.
 on-arrival: rb_strength +=100; month_actions +=1; paramilitaries_timer = 2
 
 We can use our media empire to find new reichsbanner recruits. 
-
-@loyalty
-on-arrival: prussian_police_loyalty += 0.2; reichswehr_loyalty += 0.2; interior_police_loyalty +=0.2; month_actions +=1; paramilitaries_timer = 2
-
-We root out corrupt or extremist policemen, we can justify this to our coalition partners with the violence in the streets.
-
-@anti_decay
-on-arrival: loyalty_decay -=0.01 if loyalty_decay > 0; month_actions +=1; paramilitaries_timer = 2
-
-We single out dissident figures within our forces, we can justify this to our coalition partners with the violence in the streets.
 
 @militarize_budget
 subtitle: -1 budget [? if spd_in_government != 1 : We are not in government. ?]
@@ -61,3 +76,27 @@ subtitle: Why?, +3 resources
 on-arrival: rb_dissent +=1; resources +=3; rb_strength *= 0.9
 
 Alright then. The Reichsbanner will remember this. 
+
+@state_forces_menu
+
+With current state of the streets, many of the military and police are split along ideological lines. This could be a bad or good thing for us, depending on how we manage it.
+
+There also comes a risk of the military itself intervening if none of the sides manage to gain dominance over the streets.
+
+What should we do?
+
+- @loyalty: Increase loyalty all around
+- @anti_decay: decrease loyalty decay
+- @root: Perhaps another time
+- @easy_discard
+
+@loyalty
+on-arrival: prussian_police_loyalty += 0.2; reichswehr_loyalty += 0.2; interior_police_loyalty +=0.2; month_actions +=1; paramilitaries_timer = 2
+
+We root out corrupt or extremist policemen, we can justify this to our coalition partners with the violence in the streets.
+
+@anti_decay
+on-arrival: loyalty_decay -=0.01 if loyalty_decay > 0; month_actions +=1; paramilitaries_timer = 2
+
+We single out dissident figures within our forces, we can justify this to our coalition partners with the violence in the streets.
+
