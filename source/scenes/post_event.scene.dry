@@ -508,9 +508,9 @@ if (Q.plot_target == "None") {
     ///far left ramp up
     if (Q.violence_timer > 0) {
         if (Q.leow_plot != "successful") {
-            Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 5 ) ) * 1.2;
+            Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 7 ) );
         } else {
-            Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 5 ) );
+            Q.rfb_strength += (Q.violence_timer * ( (100 - Q.nationalism) / 9 ) );
         }
     }
     if (Q.violence_timer > 0) {
@@ -528,7 +528,7 @@ if (Q.plot_target == "None") {
     /// military ramp up
 
 if (Q.military_weariness >= 50) {
-    Q.reichswehr_strength += (24 - Q.violence_timer) * (4 + ( Q.military_strength / 100 ));
+    Q.reichswehr_strength += (24 - Q.violence_timer) * (10 + ( Q.military_strength / 100 ));
     Q.military_weariness += 5;
 }
 
