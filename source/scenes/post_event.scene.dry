@@ -485,11 +485,11 @@ Q.economic_goal = (Q.economic_base * Q.tax_reform) -
 // Far right ramp up
 if (Q.violence_timer > 0) {
     if (Q.rohm_plot !== "successful") {
-        Q.sa_strength += Q.violence_timer * 2;
-        Q.sh_strength += Q.violence_timer * 1.9;
+        Q.sa_strength += Q.violence_timer * 3;
+        Q.sh_strength += Q.violence_timer * 2.9;
     } else {
-        Q.sa_strength += Q.violence_timer * 1.2 * 0.9;
-        Q.sh_strength += Q.violence_timer * 1.3;
+        Q.sa_strength += Q.violence_timer * 2;
+        Q.sh_strength += Q.violence_timer * 2.1;
     }
 }
 

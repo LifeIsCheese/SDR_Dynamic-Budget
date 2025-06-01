@@ -306,6 +306,9 @@ Q.interfere_labour = 0;
 Q.military_weariness = 1;
 Q.military_available = 1;
 
+// ID's: 0 = nothing 1 = RFB militarization 2 = SA militarization 3 = SH militarization
+Q.violence_events = []
+
 //Reichsbanner +
 Q.rb_leader = "otto horsing";
 Q.strife = 0;
