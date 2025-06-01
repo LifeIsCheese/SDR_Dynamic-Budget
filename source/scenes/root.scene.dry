@@ -319,8 +319,8 @@ function shuffleArray(arr) {
 }
 
 Q.violence_events = shuffleArray(Q.violence_events);
-
 Q.violence_events_pointer = 0;
+Q.violence_events_id = 0;
 
 //Reichsbanner +
 Q.rb_leader = "otto horsing";

@@ -531,7 +531,8 @@ Q.military_strength = Math.round(Q.army_force * (1 - Q.military_available));
 /// violence
 
 if (Q.violence_timer > 0) {
-    Q.violence_events_pointer = 24 - Q.violence_timer
+    Q.violence_events_pointer = 24 - Q.violence_timer;
+    Q.violence_events_id = Q.violence_events[Q.violence_events_pointer];
 }
 
     /// economy effects support
