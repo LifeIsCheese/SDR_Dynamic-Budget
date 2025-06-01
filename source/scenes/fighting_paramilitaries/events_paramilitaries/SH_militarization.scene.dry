@@ -1,0 +1,10 @@
+title: SH militarization
+view-if: violence_timer > 0 and violence_events_id == 3
+on-arrival: sh_militancy += 0.1; military_weariness += 10
+new-page: true
+tags: event
+
+= Still, they cling on
+
+
+It seems the Stahlhelm has gotten military grade weapons! This is not surprising.
