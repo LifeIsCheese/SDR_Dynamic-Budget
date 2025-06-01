@@ -10,6 +10,8 @@ new-page: true
 
 This mod adds a variety of changes to the base game, mostly in the form of flavor and minor improvements.
 
+text above is old news, there are 2 paths you can take in this game, Social fasicist maxxing, or revisionist paradise.
+
 - @dynamic_budget: Budget + Economy
 - @interest_rates: Interest + Housing
 - @QOL: Stuff
