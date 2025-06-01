@@ -511,7 +511,6 @@ if (Q.violence_timer > 0) {
 // Military ramp up
 if (Q.military_weariness >= 50) {
     Q.reichswehr_strength += (24 - Q.violence_timer) * (10 + (Q.military_strength / 100));
-    Q.military_weariness += 5;
 }
 
 // Military availability 
