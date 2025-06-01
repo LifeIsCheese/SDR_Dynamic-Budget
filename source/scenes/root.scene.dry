@@ -307,7 +307,20 @@ Q.military_weariness = 1;
 Q.military_available = 1;
 
 // ID's: 0 = nothing 1 = RFB militarization 2 = SA militarization 3 = SH militarization
-Q.violence_events = []
+Q.violence_events = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 3, 0, 0];
+
+function shuffleArray(arr) {
+  const arrayCopy = [...arr]; // Make a copy of the array
+  for (let i = arrayCopy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arrayCopy[i], arrayCopy[j]] = [arrayCopy[j], arrayCopy[i]];
+  }
+  return arrayCopy;
+}
+
+Q.violence_events = shuffleArray(Q.violence_events);
+
+Q.violence_events_pointer = 0;
 
 //Reichsbanner +
 Q.rb_leader = "otto horsing";

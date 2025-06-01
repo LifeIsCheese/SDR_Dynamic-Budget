@@ -527,6 +527,13 @@ Q.far_right_strength = Math.round(
     ((Q.army_force * Q.military_available) * (1 - Q.reichswehr_loyalty))
 );
 Q.military_strength = Math.round(Q.army_force * (1 - Q.military_available));
+
+/// violence
+
+if (Q.violence_timer > 0) {
+    Q.violence_events_pointer = 24 - Q.violence_timer
+}
+
     /// economy effects support
     if (Q.unemployed >= 15 && !Q.spd_in_government) {
         Q.workers_spd += (Q.unemployed/8)/12;
