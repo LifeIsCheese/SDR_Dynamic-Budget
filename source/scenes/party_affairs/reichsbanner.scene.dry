@@ -30,9 +30,9 @@ unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed)
 subtitle: -[+ rb_militarization_cost +] resources
 on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength += 100; rb_militancy += 0.05; left_strength += 2; left_dissent -= 2; reformist_dissent += 5; spd_militancy += 0.05; workers_spd += 2*(1-dissent); unemployed_spd += 2*(1-dissent); z_relation -= 5 if historical_mode 
 
-Some in our party decry the increasing militarization of the Reichsbanner. They say it is emulating the right-wing nationalists or the communists, and risks alienating our allies in the centrist parties. On the other hand, more left-leaning radicals are being lured to our organizations, away from the communists.
+Some in our party decry the increasing militarization of the Reichsbanner. They say it is emulating the right-wing nationalists or the communists, and risks alienating our allies in the centrist parties. On the other hand, more left-leaning radicals are being lured to our organizations, away from the communists. [? if violence_timer > 0 : This is quickly put down due to the situation we are in. ?]
 
-[? if historical_mode : The Center Party decries the militarization of the Reichsbanner, and its members are leaving the republican organization. ?]
+[? if historical_mode and violence_timer <= 0 : The Center Party decries the militarization of the Reichsbanner, and its members are leaving the republican organization. ?]
 
 
 @militant_2
