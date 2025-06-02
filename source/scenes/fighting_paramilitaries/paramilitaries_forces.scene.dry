@@ -23,7 +23,7 @@ Our leader, [+ rb_leader +] [? if rb_leader != "karl holtermann" : has always ca
 
 What should we do?
 
-- @horsing: Build infastructure soley for Reichsbanner use.
+- @horsing: Build infrastructure solely for Reichsbanner use.
 - @holtermann: Ask the Center for papal endorsement.
 - @reichsbanner_free: Recruit for the reichsbanner
 - @reichsbanner: Fund reichsbanner
@@ -34,16 +34,16 @@ What should we do?
 - @easy_discard
 
 @horsing
-subtitle: -1 budget, decreases Reichsbanner dissent and increases militarization.
+subtitle: -1 budget, heavily decreases Reichsbanner dissent and increases militarization.
 view-if: rb_leader != "karl holtermann"
 choose-if: budget > 0
-on-arrival: rb_dissent -= 1; budget -=1; rb_militancy += 0.1
+on-arrival: rb_dissent = 0; budget -=1; rb_militancy += 0.1; month_actions +=1
 
 @holtermann
 subtitle: -1 resource, heavily increases base of Reichsbanner membership. [? if z_relation <= 39 : The Center would not consider this. ?]
 view-if: rb_leader == "karl holtermann"
 choose-if: resources > 0 and z_relation >= 40
-on-arrival: resources -=1; rb_strength *= 1.3
+on-arrival: resources -=1; rb_strength *= 1.3; month actions +=1
 
 @reichsbanner
 subtitle: -1 resource
@@ -62,14 +62,14 @@ subtitle: -1 budget [? if spd_in_government != 1 : We are not in government. ?]
 choose-if: budget > 0 and spd_in_government
 on-arrival: rb_militancy +=0.2; month_actions +=1; paramilitaries_timer = 2; budget -=1; rb_strength += 300
 
-The Reichsbanner now has munitions meant for millitary use, thankfully our coalition partners see this as necessary to save the republic.
+The Reichsbanner now has munitions meant for military use, thankfully our coalition partners see this as necessary to save the republic.
 
 @militarize
 subtitle: -3 resources 
 choose-if: resources > 2 
 on-arrival: rb_militancy +=0.1; month_actions +=1; paramilitaries_timer = 2; resource -=3; rb_strength += 150
 
-The Reichsbanner now has munitions meant for millitary use, thankfully our coalition partners see this as necessary to save the republic.
+The Reichsbanner now has munitions meant for military use, thankfully our coalition partners see this as necessary to save the republic.
 
 @defund
 subtitle: Why?, +3 resources
