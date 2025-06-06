@@ -43,7 +43,7 @@ on-arrival: rb_dissent = 0; budget -=1; rb_militancy += 0.1; month_actions +=1
 subtitle: -1 resource, heavily increases base of Reichsbanner membership. [? if z_relation <= 39 : The Center would not consider this. ?]
 view-if: rb_leader == "karl holtermann"
 choose-if: resources > 0 and z_relation >= 40
-on-arrival: resources -=1; rb_strength *= 1.3; month actions +=1
+on-arrival: resources -=1; rb_strength *= 1.3; month_actions +=1
 
 @reichsbanner
 subtitle: -1 resource
