@@ -1,119 +1,79 @@
 title: Post Event
 new-page: true
 on-arrival: {!
+
 Q.last_advisor_action = 0;
-// make sure no stat is below 0.
-for (var c of Q.classes) {
-    for (var party of Q.parties) {
-        if (Q[c+'_'+party] < 0) {
-            Q[c+'_'+party] = 0;
-        }
+// thing
+for (const c of Q.classes) {
+    for (const party of Q.parties) {
+        const key = c + '_' + party;
+        if (Q[key] < 0) Q[key] = 0;
     }
 }
-if (Q.pro_republic < 0) {
-    Q.pro_republic = 0;
-}
-if (Q.pro_republic >= 100) {
-    Q.pro_republic = 99;
-}
-if (Q.socialism < 0) {
-    Q.socialism = 0;
-}
-if (Q.socialism >= 100) {
-    Q.socialism = 99;
-}
-if (Q.nationalism < 0) {
-    Q.nationalism = 0;
-}
-if (Q.pro_republic >= 100) {
-    Q.nationalism = 99;
-}
-// re-calculate party support
-// calculate normalized class voting for the achievements
-for (var c of Q.classes) {
-    var class_votes = 0;
-    for (var party of Q.parties) {
-        if (Q[c+'_'+party] < 0) {
-            Q[c+'_'+party] = 0;
-        }
-        class_votes += Q[c+'_'+party];
+Q.pro_republic = Math.max(0, Math.min(Q.pro_republic, 99));
+Q.socialism = Math.max(0, Math.min(Q.socialism, 99));
+Q.nationalism = Math.max(0, Math.min(Q.nationalism, 99));
+
+// --- 2. Calculate normalized class voting (avoid repeated Math.round) ---
+for (const c of Q.classes) {
+    let class_votes = 0;
+    for (const party of Q.parties) class_votes += Q[c + '_' + party];
+    if (class_votes === 0) class_votes = 1; // Prevent division by zero
+    for (const party of Q.parties) {
+        const norm = 100 * Q[c + '_' + party] / class_votes;
+        Q[c + '_' + party + '_normalized'] = norm;
+        Q[c + '_' + party + '_display'] = Math.round(norm);
     }
-    for (var party of Q.parties) {
-        Q[c + '_' + party + '_normalized'] = 100*Q[c+'_'+party]/class_votes;
-        Q[c + '_' + party + '_display'] = Math.round(100*Q[c+'_'+party]/class_votes);
-    }
-    for (var party of Q.parties) {
-        if (class_votes >= 150) {
-            if (class_votes >= 200) {
-                Q[c+'_'+party] *= 0.99;
-                if (class_votes >= 250) {
-                    Q[c+'_'+party] *= 0.98;
-                    if (class_votes >= 300) {
-                        Q[c+'_'+party] *= 0.96;
-                    }
-                }
-            }
-            if (Q.year >= 1934) {
-                Q[c+'_'+party] *= 0.98;
-            }
-        }
+    // Decay logic only if class_votes is high
+    if (class_votes >= 150) {
+        let decay = 1;
+        if (class_votes >= 200) decay *= 0.99;
+        if (class_votes >= 250) decay *= 0.98;
+        if (class_votes >= 300) decay *= 0.96;
+        if (Q.year >= 1934) decay *= 0.98;
+        for (const party of Q.parties) Q[c + '_' + party] *= decay;
     }
 }
-// calculate support for each of the parties
-var total_support = 0; 
-for (var party of Q.parties) {
-    var party_support = 0;
-    for (var c of Q.classes) {
-        if (Q.old_demographics) { 
-            party_support += Q[c]*Q[c+'_'+party];
-        } else  { 
-            party_support += Q[c]*Q[c+'_'+party+'_normalized'];
-        } 
+
+// --- 3. Calculate party support (cache old_demographics) ---
+let total_support = 0;
+const useOld = !!Q.old_demographics;
+for (const party of Q.parties) {
+    let party_support = 0;
+    for (const c of Q.classes) {
+        party_support += Q[c] * (useOld ? Q[c + '_' + party] : Q[c + '_' + party + '_normalized']);
     }
     Q[party + '_support'] = party_support;
-    total_support += party_support; 
+    total_support += party_support;
 }
-// 2. normalize support (fraction)
-for (var party of Q.parties) {
-    Q[party+'_normalized'] = Q[party + '_support']/total_support;
-    Q[party+'_votes'] = Math.round(Q[party+'_normalized']*100);
-    Q[party+'_votes_display'] = Math.round(Q[party+'_normalized']*100);
-}
-
-
-// set faction strength/dissent to 0
-for (var c of Q.factions) {
-    if (Q[c+'_dissent'] < 0) {
-        Q[c+'_dissent'] = 0;
-    } else if (Q[c+'_dissent'] >= 100) {
-        Q[c+'_dissent'] = 99;
-    }
-    if (Q[c+'_strength'] < 0) {
-        Q[c+'_strength'] = 0;
-    }
+if (total_support === 0) total_support = 1; // Prevent division by zero
+for (const party of Q.parties) {
+    const norm = Q[party + '_support'] / total_support;
+    Q[party + '_normalized'] = norm;
+    const votes = Math.round(norm * 100);
+    Q[party + '_votes'] = votes;
+    Q[party + '_votes_display'] = votes;
 }
 
-if (Q.unemployed <= 1) {
-    Q.unemployed = 1;
-}
-if (Q.reichswehr_strength < 0) {
-    Q.reichswehr_strength = 0;
-}
-if (Q.rb_militancy < 0) {
-    Q.rb_militancy = 0;
+
+// --- 4. Clamp faction stats ---
+for (const c of Q.factions) {
+    Q[c + '_dissent'] = Math.max(0, Math.min(Q[c + '_dissent'], 99));
+    Q[c + '_strength'] = Math.max(0, Q[c + '_strength']);
 }
 
-// re-calculate dissent.
-var total_strength = Q.left_strength + Q.center_strength + Q.labor_strength + Q.reformist_strength + Q.neorevisionist_strength;
+Q.unemployed = Math.max(1, Q.unemployed);
+Q.reichswehr_strength = Math.max(0, Q.reichswehr_strength);
+Q.rb_militancy = Math.max(0, Q.rb_militancy);
 
-// normalize strength for the different factions
-Q.left_strength = 100*Q.left_strength/total_strength;
-Q.center_strength = 100*Q.center_strength/total_strength;
-Q.labor_strength = 100*Q.labor_strength/total_strength;
-Q.reformist_strength = 100*Q.reformist_strength/total_strength;
-Q.neorevisionist_strength = 100*Q.neorevisionist_strength/total_strength;
-
-var total_dissent = Q.left_strength*Q.left_dissent + Q.center_strength*Q.center_dissent + Q.labor_strength*Q.labor_dissent + Q.reformist_strength*Q.reformist_dissent + Q.neorevisionist_strength*Q.neorevisionist_dissent;
+// --- 6. Normalize faction strengths (skip if total_strength is 0) ---
+let total_strength = Q.left_strength + Q.center_strength + Q.labor_strength + Q.reformist_strength + Q.neorevisionist_strength;
+if (total_strength === 0) total_strength = 1;
+Q.left_strength = 100 * Q.left_strength / total_strength;
+Q.center_strength = 100 * Q.center_strength / total_strength;
+Q.labor_strength = 100 * Q.labor_strength / total_strength;
+Q.reformist_strength = 100 * Q.reformist_strength / total_strength;
+Q.neorevisionist_strength = 100 * Q.neorevisionist_strength / total_strength;
 
 if ((Q.z_relation >= 50 && Q.ddp_relation >= 40 && Q.nazi_urgency > 0 && Q.unemployed > 12) || (Q.z_relation >= 70 && Q.ddp_relation >= 50 && Q.unemployed > 10) || (Q.z_relation >= 40 && Q.ddp_relation >= 30 && Q.nazi_urgency > 1 && Q.unemployed > 20) || (Q.z_relation >= 40 && Q.ddp_relation >= 30 && Q.unemployed > 30)) {
     Q.weimar_willingness = 1;
@@ -125,29 +85,29 @@ if ((Q.spd_in_government == 1) || (Q.spd_toleration == 1)) {
     Q.dnvp_in_government = 0
 }
 
-Q.dissent = 0.01*total_dissent/total_strength;
-Q.dissent_percent = Q.dissent*100;
+const total_dissent =
+    Q.left_strength * Q.left_dissent +
+    Q.center_strength * Q.center_dissent +
+    Q.labor_strength * Q.labor_dissent +
+    Q.reformist_strength * Q.reformist_dissent +
+    Q.neorevisionist_strength * Q.neorevisionist_dissent;
+Q.dissent = Math.max(0, Math.min(0.01 * total_dissent / total_strength, 0.95));
+Q.dissent_percent = Q.dissent * 100;
 
-if (Q.dissent < 0) {
-    Q.dissent = 0;
-} else if (Q.dissent > 0.95) {
-    Q.dissent = 0.95;
-}
-
-Q.sa_force = Q.sa_strength*Q.sa_militancy;
-Q.sh_force = Q.sh_strength*Q.sh_militancy;
-Q.rb_force = Q.rb_strength*Q.rb_militancy;
-Q.rfb_force = Q.rfb_strength*Q.rfb_militancy;
-Q.army_force = Q.reichswehr_strength*Q.reichswehr_militancy;
-Q.prussia_force = Q.prussian_police_strength*Q.prussian_police_militancy;
-var total_force = (Q.sa_force+Q.sh_force+Q.rb_force+Q.rfb_force+Q.army_force+Q.prussia_force);
-
-Q.sa_force = Math.round((Q.sa_force/total_force)*100);
-Q.sh_force = Math.round((Q.sh_force/total_force)*100);
-Q.rb_force = Math.round((Q.rb_force/total_force)*100);
-Q.rfb_force = Math.round((Q.rfb_force/total_force)*100);
-Q.army_force = Math.round((Q.army_force/total_force)*100);
-Q.prussia_force = Math.round((Q.prussia_force/total_force)*100);
+// --- 8. Forces calculation (cache total_force) ---
+Q.sa_force = Q.sa_strength * Q.sa_militancy;
+Q.sh_force = Q.sh_strength * Q.sh_militancy;
+Q.rb_force = Q.rb_strength * Q.rb_militancy;
+Q.rfb_force = Q.rfb_strength * Q.rfb_militancy;
+Q.army_force = Q.reichswehr_strength * Q.reichswehr_militancy;
+Q.prussia_force = Q.prussian_police_strength * Q.prussian_police_militancy;
+const total_force = Q.sa_force + Q.sh_force + Q.rb_force + Q.rfb_force + Q.army_force + Q.prussia_force || 1;
+Q.sa_force = Math.round(Q.sa_force / total_force * 100);
+Q.sh_force = Math.round(Q.sh_force / total_force * 100);
+Q.rb_force = Math.round(Q.rb_force / total_force * 100);
+Q.rfb_force = Math.round(Q.rfb_force / total_force * 100);
+Q.army_force = Math.round(Q.army_force / total_force * 100);
+Q.prussia_force = Math.round(Q.prussia_force / total_force * 100);
 
 
 // Loyalty forces
@@ -170,6 +130,7 @@ if (Q.nazi_peak || Q.return_to_normalcy || Q.victory_republic || Q.nsdap_banned)
     Q.capital_nazi = 0;
 }
 
+// Proletariat calculations
 Q.proletariat = Q.workers + (Q.rural*Q.rural_prole) + (Q.new_middle*Q.middle_prole) + (Q.unemployed*Q.lumpenprole);
 Q.catholic_proletariat = 15;
 Q.urban_proletariat = ((Q.workers/Q.proletariat)*85);
@@ -177,12 +138,13 @@ Q.rural_proletariat = (((Q.rural*Q.rural_prole)/Q.proletariat)*85);
 Q.middle_proletariat = (((Q.new_middle*Q.middle_prole)/Q.proletariat)*85);
 Q.lumpenproletariat = (((Q.unemployed*Q.lumpenprole)/Q.proletariat)*85);
 for (var party of Q.parties) {
-    Q['proletariat_' + party + '_normalized'] = Q.urban_proletariat*(Q['workers_' + party + '_normalized']/100);
-    Q['proletariat_' + party + '_normalized'] += Q.rural_proletariat*(Q['rural_' + party + '_normalized']/100);
-    Q['proletariat_' + party + '_normalized'] += Q.middle_proletariat*(Q['new_middle_' + party + '_normalized']/100);
-    Q['proletariat_' + party + '_normalized'] += Q.catholic_proletariat*(Q['catholics_' + party + '_normalized']/100);
-    Q['proletariat_' + party + '_normalized'] += Q.lumpenproletariat*(Q['unemployed_' + party + '_normalized']/100);
-    Q['proletariat_' + party + '_normalized'] = Math.round(Q['proletariat_' + party + '_normalized']);
+    let norm = 0;
+    norm += Q.urban_proletariat * (Q['workers_' + party + '_normalized']/100);
+    norm += Q.rural_proletariat * (Q['rural_' + party + '_normalized']/100);
+    norm += Q.middle_proletariat * (Q['new_middle_' + party + '_normalized']/100);
+    norm += Q.catholic_proletariat * (Q['catholics_' + party + '_normalized']/100);
+    norm += Q.lumpenproletariat * (Q['unemployed_' + party + '_normalized']/100);
+    Q['proletariat_' + party + '_normalized'] = Math.round(norm);
 }
 
 // 1. update dates
