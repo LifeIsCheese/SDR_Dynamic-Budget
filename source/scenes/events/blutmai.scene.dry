@@ -2,7 +2,7 @@ title: May Day, 1929
 new-page: true
 subtitle: A Communist demonstration
 tags: event
-view-if: year = 1929 and month = 5 and in_right_coalition == 0
+view-if: year = 1929 and month = 5 and in_right_coalition == 0 and violence_timer <= 0
 max-visits: 1
 
 = May Day, 1929
