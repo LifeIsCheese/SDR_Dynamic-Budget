@@ -1,6 +1,6 @@
 title: Berlin in Flames
 view-if: violence_timer > 0 and violence_events_id == 4 and spd_bd_position != "support_kpd"
-on-arrival: military_weariness += 15; violence_events_id = 0
+on-arrival: military_weariness += 15; violence_events_id = 0; 
 new-page: true
 tags: event
 
@@ -19,12 +19,14 @@ The left of our party has criticized our paramilitary and police's actions, citi
 
 @left
 subtitle: -1 resource. To compensate for new police hires and damages.
-on-arrival: 
+unavailable-subtitle: We don't have enough resources.
+choose-if: resources > 0
+on-arrival: resources -=1
 
 We apologize to the affected civilians, providing them aid, and money to the dead of the families. Yet, we also purge any on the police responsible, and reprimanding Karl Zörgiebel. 
 
 @right
-on-arrival:
+on-arrival: left_dissent += 10
 
 We put the blame on the KPD and RFB, demanding that they compensate for the death of theses civilians. The left criticize our lack of compensation.
 

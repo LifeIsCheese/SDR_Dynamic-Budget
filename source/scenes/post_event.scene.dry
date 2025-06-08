@@ -516,6 +516,14 @@ if (Q.military_weariness >= 50) {
 // Military availability 
 Q.military_available = 1 - (Q.military_weariness / 100);
 
+//kpd relation manager
+
+if (Q.violence_timer > 0 && Q.spd_bd_position == "support_kpd") {
+    Q.kpd_relation += 10;
+} else {
+    Q.kpd_relation = 0;
+}
+
 // Coalition strengths
 Q.weimar_strength = Math.round(Q.rb_force + Q.loyal_prussia + (Q.loyal_army * Q.military_available));
 Q.kpd_strength = Math.round(Q.rfb_force);
