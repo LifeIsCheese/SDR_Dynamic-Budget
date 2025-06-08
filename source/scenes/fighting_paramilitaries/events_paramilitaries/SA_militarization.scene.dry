@@ -4,8 +4,6 @@ on-arrival: sa_militancy += 1; military_weariness += 10; violence_events_id = 0
 new-page: true
 tags: event
 
-= A Grand Heist
+= Growing Influence
 
-The RFB has stolen a vast quantity of military grade weapons from the Reichswehr, increasing their militancy!
-
-The military has started purging anybody with left leaning tendencies.
+It seems SA has gotten it's hands on a large amount of military grade weaponry! This was discovered during a large alteration with our republican forces being thoroughly beaten.

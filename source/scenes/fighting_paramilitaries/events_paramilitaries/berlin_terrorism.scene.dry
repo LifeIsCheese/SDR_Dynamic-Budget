@@ -1,0 +1,30 @@
+title: Berlin in Flames
+view-if: violence_timer > 0 and violence_events_id == 4 and spd_bd_position != "support_kpd"
+on-arrival: military_weariness += 15; violence_events_id = 0
+new-page: true
+tags: event
+
+= Berlin in Flames
+
+The RFB, taking advantage of the country's turmoil, called upon its workers and militia, the RFB. to seize major and critical parts of Berlin. We responded quickly, forcefully disbanding the workers, and putting down the insurrection. 
+
+At a great cost.
+
+From what we have gathered, 510 civilians were killed, around 10% were unaffiliated. With another ~2000 civilians injured. With are Reichsbanner members suffering 20 dead, and around 50 injured. With the RFB being unknown.
+
+The left of our party has criticized our paramilitary and police's actions, citing it's intense brutality and indiscriminate harshness. While the reformists [? if neorevisionism : and neorevisionists argue that it is the communists fault, not ours, that led to all the senseless deaths. ?]. What should we side with?
+
+- @left: The left are right, we were much too harsh
+- @right: The reformists are right, this is tragic, yet the blame lies on the communists, not us.
+
+@left
+subtitle: -1 resource. To compensate for new police hires and damages.
+on-arrival: 
+
+We apologize to the affected civilians, providing them aid, and money to the dead of the families. Yet, we also purge any on the police responsible, and reprimanding Karl Zörgiebel. 
+
+@right
+on-arrival:
+
+We put the blame on the KPD and RFB, demanding that they compensate for the death of theses civilians. The left criticize our lack of compensation.
+
