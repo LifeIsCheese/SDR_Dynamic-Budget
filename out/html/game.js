@@ -165,7 +165,7 @@ window.updateSidebarRight = function() {
         tabButtons[i].className = tabButtons[i].className.replace(' active', '');
       }
       tabButton.className += ' active';
-      if (isRight) {
+      if (dendryUI.dendryEngine.state.qualities.isRight) {
         window.statusTabRight = newTab;
         window.updateSidebarRight();
         } else {
@@ -223,5 +223,5 @@ window.updateSidebarRight = function() {
     window.statusTabRight = "status_right";
     window.updateSidebarRight();
   };
-  
+
 }());
