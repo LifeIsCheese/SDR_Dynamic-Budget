@@ -127,7 +127,6 @@ if ((Q.spd_in_government == 1) || (Q.spd_toleration == 1)) {
 
 Q.dissent = 0.01*total_dissent/total_strength;
 Q.dissent_percent = Q.dissent*100;
-console.log('new dissent: ' + Q.dissent);
 
 if (Q.dissent < 0) {
     Q.dissent = 0;
@@ -471,7 +470,11 @@ Q.list_debt_amount.forEach((amount, i) => {
 });
 
 // Hiding Targets
-document.getElementById("Targets").style.display = (Q.plot_target === "None") ? "none" : "block";
+
+if (typeof document !== "undefined") {
+    const targets = document.getElementById("Targets");
+    if (targets) targets.style.display = (Q.plot_target === "None") ? "none" : "block";
+}
 
 // Director string
 Q.director_s = Q.director_a[Q.director_pointer];
@@ -655,7 +658,6 @@ if (Q.violence_timer > 0) {
     Q.science_bonus = 0;
     if (Q.education_science) {
         Q.science_bonus += Q.education_science;
-        console.log(Q.science_bonus);
     }
     if (Q.science) {
         Q.science_bonus = 0;
