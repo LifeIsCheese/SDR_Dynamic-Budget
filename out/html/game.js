@@ -178,6 +178,7 @@ window.updateSidebarRight = function() {
 
   window.onDisplayContent = function() {
       window.updateSidebar();
+      window.updateSidebarRight();
   };
 
   /*
