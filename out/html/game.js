@@ -168,6 +168,8 @@ window.updateSidebarRight = function() {
       if (dendryUI.dendryEngine.state.qualities.isRight) {
         window.statusTabRight = newTab;
         window.updateSidebarRight();
+        window.statusTab = newTab;
+        window.updateSidebar();
         } else {
           window.statusTab = newTab;
           window.updateSidebar();
