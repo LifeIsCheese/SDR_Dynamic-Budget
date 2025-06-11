@@ -138,13 +138,27 @@
   };
 
   // TODO: have some code for tabbed sidebar browsing.
-  window.updateSidebar = function() {
-      $('#qualities').empty();
-      var scene = dendryUI.game.scenes[window.statusTab];
-      dendryUI.dendryEngine._runActions(scene.onArrival);
-      var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
-      $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
-  };
+window.updateSidebar = function() {
+    $('#qualities').empty();
+    var sceneKey = window.statusTab;
+    var section = null;
+    // Support section syntax like 'status.politics'
+    if (sceneKey.includes('.')) {
+        var parts = sceneKey.split('.');
+        sceneKey = parts[0];
+        section = parts[1];
+    }
+    var scene = dendryUI.game.scenes[sceneKey];
+    if (!scene) return;
+    dendryUI.dendryEngine._runActions(scene.onArrival);
+    var displayContent;
+    if (section && scene.content[section]) {
+        displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content[section], true);
+    } else {
+        displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
+    }
+    $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
+};
 
 window.updateSidebarRight = function() {
     $('#qualities_right').empty();
