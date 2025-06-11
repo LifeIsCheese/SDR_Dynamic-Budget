@@ -180,6 +180,7 @@ window.updateSidebarRight = function() {
         displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
     }
     $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
+}
 
   window.changeTab = function(newTab, tabId) {
       if (tabId == 'poll_tab' && dendryUI.dendryEngine.state.qualities.historical_mode) {
