@@ -308,6 +308,9 @@ Q.military_weariness = 1;
 Q.military_available = 1;
 Q.spd_bd_position = "in_government";
 
+side_bar = document.getElementById("stats_sidebar_right");
+targets.style.display = "none";
+
 // ID's: 0 = nothing 1 = RFB militarization 2 = SA militarization 3 = SH militarization 4 = Berlin terrorism
 Q.violence_events = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 4, 0, 0, 3, 0, 0];
 
