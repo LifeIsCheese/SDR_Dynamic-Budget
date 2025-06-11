@@ -228,6 +228,7 @@ Q.inflation = 2.9;
 Q.economic_growth = 3.4;
 Q.economic_goal = 3.6;
 Q.economic_base = 3.29;
+Q.budget_eligible = 1;
 
 //Added Interest reates
 Q.interest_rates = 1;
