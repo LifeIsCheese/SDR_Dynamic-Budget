@@ -147,6 +147,8 @@
   };
 
 window.updateSidebarRight = function() {
+    $('#qualities_right').empty();
+    var scene = dendryUI.game.scenes[window.statusTabRight];
     dendryUI.dendryEngine._runActions(scene.onArrival);
     var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
     $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
