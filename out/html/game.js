@@ -147,9 +147,11 @@
   };
 
 window.updateSidebarRight = function() {
-    
+    if (dendryEngine.state.qualities.isRight != 1) {
     var scene = dendryUI.game.scenes[window.statusTabRight];
     dendryUI.dendryEngine._runActions(scene.onArrival);
+    }
+    $('#qualities_right').empty();
     var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
     $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
 };
