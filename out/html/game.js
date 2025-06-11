@@ -148,13 +148,27 @@
 
 window.updateSidebarRight = function() {
     $('#qualities_right').empty();
-    var scene = dendryUI.game.scenes[window.statusTabRight];
+    var sceneKey = window.statusTabRight;
+    var section = null;
+    // Support section syntax like 'status_right.support'
+    if (sceneKey.includes('.')) {
+        var parts = sceneKey.split('.');
+        sceneKey = parts[0];
+        section = parts[1];
+    }
+    var scene = dendryUI.game.scenes[sceneKey];
+    if (!scene) return;
     dendryUI.dendryEngine._runActions(scene.onArrival);
-    var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
+    var displayContent;
+    if (section && scene.content[section]) {
+        displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content[section], true);
+    } else {
+        displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
+    }
     $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
 };
 
-  window.changeTab = function(newTab, tabId, whichSidebar) {
+window.changeTab = function(newTab, tabId, whichSidebar) {
     if (tabId == 'poll_tab' && dendryUI.dendryEngine.state.qualities.historical_mode) {
         window.alert('Polls are not available in historical mode.');
         return;
