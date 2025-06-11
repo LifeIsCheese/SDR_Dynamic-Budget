@@ -231,6 +231,18 @@ blockquote + blockquote.attribution {
   font-weight: normal;
 }
 
+.tools.left,
+.tools.right,
+#stats_sidebar,
+#stats_sidebar_right {
+  padding: 0.6em;
+  width: 14rem;
+  color: var(--text-color);
+  background-color: var(--mainbg-color);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
 /* darkmode switch */
 
 #theme-switch{
