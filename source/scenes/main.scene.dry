@@ -51,9 +51,11 @@ max-cards: 4
 
 [? if violence_timer > 0 : The Far Right: [+ far_right_strength +]% ?]
 
-[? if violence_timer > 0 : <h1>We have [+ violence_timer +] months to crush the paramilitaries</h1> ?]
-
 </div>
+
+1
+
+[? if violence_timer > 0 : <h1>We have [+ violence_timer +] months to crush the paramilitaries</h1> ?]
 
 - @party
 - @govt
