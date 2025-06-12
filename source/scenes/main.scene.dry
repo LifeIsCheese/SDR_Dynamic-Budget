@@ -46,16 +46,12 @@ max-cards: 4
 <div class = "face-status-container">
 
 [? if violence_timer > 0 : The Far Left: [+ kpd_strength +]% ?]
-<img class="face-status" src="img/portraits/Willy_Leow_1930.jpg"> 
 
 [? if violence_timer > 0 : The Republic: [+ weimar_strength +]% ?]
-<img class="face-status" src="img/portraits/BraunOtto.jpg"> 
 
 [? if violence_timer > 0 : The Far Right: [+ far_right_strength +]% ?]
-<img class="face-status" src="img/portraits/rohm.jpg">
 
 </div>
-
 
 [? if violence_timer > 0 : <h1>We have [+ violence_timer +] months to crush the paramilitaries</h1> ?]
 
