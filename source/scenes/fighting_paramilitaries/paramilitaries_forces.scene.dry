@@ -39,11 +39,15 @@ view-if: rb_leader != "karl holtermann"
 choose-if: budget > 0
 on-arrival: rb_dissent = 0; budget -=1; rb_militancy += 0.1; month_actions +=1
 
+Horsing's dreams have finally came true.
+
 @holtermann
 subtitle: -1 resource, heavily increases base of Reichsbanner membership. [? if z_relation <= 39 : The Center would not consider this. ?]
 view-if: rb_leader == "karl holtermann"
 choose-if: resources > 0 and z_relation >= 40
 on-arrival: resources -=1; rb_strength *= 1.3; month_actions +=1
+
+Together with the Z, we have begged the papacy fo support. Surprisingly, they accept!
 
 @reichsbanner
 subtitle: -1 resource
