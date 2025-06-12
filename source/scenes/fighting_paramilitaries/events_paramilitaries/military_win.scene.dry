@@ -3,7 +3,7 @@ view-if: bruning_plot == "successful" and violence_timer != -1 and military_wear
 new-page: true
 tags: event
 
-= Nothing done here rn, but im assuming millitary is strongest.
+= Military Coup!
 
 Nothing done here rn, but im assuming millitary is strongest.
 
