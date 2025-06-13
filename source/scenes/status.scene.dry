@@ -262,8 +262,6 @@ Current interior police loyalty: [+ interior_police_loyalty : loyalty +].
 
 Current prussian police loyalty: [+ prussian_police_loyalty : loyalty +]. 
 
-Current Reichsbanner dissent: [+ rb_dissent +]
-
 Loyalty decay: [+ s_loyalty_decay +].
 
 Spy network strength: [+ s_spy_network +].

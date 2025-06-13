@@ -10,21 +10,24 @@ Military Weariness: [+ military_weariness +]%
 
 [? if military_available < 0.25 : The military is coalescing and getting tired of the current deadlock. ?] [? if military_available >= 0.25 and military_available < 0.5 : The military has enforced discipline. ?] [? if military_available >= 0.5 and military_available < 0.75 : The military is split. ?] [? if military_available >= 0.75 : The military is racked with ideological infighting. ?]
 
-@support
+@reichsbanner
 
-= Support
+= Reichsbanner
+on-arrival: {!
+if (Q.rb_dissent) {
+    Q.rb_dissent_2 = rb_dissent * 50;
+}
+!}
 
-oh no, the military!
+<div class = "face-status-container">
+    [? if rb_leader != "karl holtermann" : <img class="face-status" src="img/portraits/Otto_Hörsing_1932"> ?]
+    [? if rb_leader != "karl holtermann" : Chairman Otto Hörsing ?]
 
-urban lower love SPD and maybe KPD, maybe NDSAP
+    <img class="face-status" src="img/portraits/Karl_Höltermann_1932"> 
+    [? if rb_leader != "karl holtermann" : Deputy Karl Höltermann ?] [? if rb_leader == "karl holtermann" : Chairman Karl Höltermann ?]
+</div>
 
-urban upper love DDP, ehhh it sgetting late
-
-rural lower love DNVP and NDSAP and maybe SPD or center 
-
-rural upper love DVP, DNVP, NDSAP
-
-
+Current Reichsbanner dissent: [+ rb_dissent_2 +]%
 
 
 
