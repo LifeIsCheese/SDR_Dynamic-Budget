@@ -1,6 +1,6 @@
 title: Martial Law!
 subtitle: The Harzburg Cabinet has declared martial law
-view-if: seldte_times >= 1 and harzburg_r >= 50 and chancellor == "Seldte" and papen_chancellor_timer <= 0
+view-if: ( ( seldte_times >= 1 and harzburg_r >= 50 and chancellor == "Seldte" and papen_chancellor_timer <= 0 ) and ( violence_timer == -1 or violence_timer == 0 ) )
 new-page: true
 on-arrival: sh_militancy += 0.03
 tags: event
