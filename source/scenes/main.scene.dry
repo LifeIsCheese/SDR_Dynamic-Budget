@@ -55,6 +55,8 @@ max-cards: 4
 
 [? if violence_timer > 0 : <h1>We have [+ violence_timer +] months to crush the paramilitaries</h1> ?]
 
+violence : [+ violence_level +]%
+
 - @party
 - @govt
 - @paramilitaries
