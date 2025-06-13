@@ -13,6 +13,7 @@ Military Weariness: [+ military_weariness +]%
 @reichsbanner
 
 = Reichsbanner
+
 on-arrival: {!
 if (Q.rb_dissent) {
     Q.rb_dissent_2 = rb_dissent * 50;
