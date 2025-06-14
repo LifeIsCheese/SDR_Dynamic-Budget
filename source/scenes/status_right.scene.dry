@@ -21,10 +21,10 @@ if (Q.rb_dissent) {
 !}
 
 <div class = "face-status-container">
-    [? if rb_leader != "karl holtermann" : <img class="face-status" src="img/portraits/Otto_Hörsing_1932"> ?]
+    [? if rb_leader != "karl holtermann" : <img class="face-status" src="img/portraits/Otto_Horsing_1932.jpg"> ?]
     [? if rb_leader != "karl holtermann" : Chairman Otto Hörsing ?]
 
-    <img class="face-status" src="img/portraits/Karl_Höltermann_1932"> 
+    <img class="face-status" src="img/portraits/Karl_Holtermann_1932.jpg"> 
     [? if rb_leader != "karl holtermann" : Deputy Karl Höltermann ?] [? if rb_leader == "karl holtermann" : Chairman Karl Höltermann ?]
 </div>
 
