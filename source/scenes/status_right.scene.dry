@@ -11,24 +11,27 @@ Military Weariness: [+ military_weariness +]%
 [? if military_available < 0.25 : The military is coalescing and getting tired of the current deadlock. ?] [? if military_available >= 0.25 and military_available < 0.5 : The military has enforced discipline. ?] [? if military_available >= 0.5 and military_available < 0.75 : The military is split. ?] [? if military_available >= 0.75 : The military is racked with ideological infighting. ?]
 
 @reichsbanner
-
-= Reichsbanner
-
 on-arrival: {!
 if (Q.rb_dissent) {
     Q.rb_dissent_2 = rb_dissent * 50;
 }
+
 !}
+
+= Reichsbanner
 
 <div class = "face-status-container">
     [? if rb_leader != "karl holtermann" : <img class="face-status" src="img/portraits/Otto_Horsing_1932.jpg"> ?]
 </div>
-[? if rb_leader != "karl holtermann" : Chairman Otto Hörsing ?]
+
+[? if rb_leader != "karl holtermann" : <p style="text-align: center;">Chairman Otto Hörsing</p> ?]
 
 <div class = "face-status-container">
     <img class="face-status" src="img/portraits/Karl_Holtermann_1932.jpg"> 
 </div>
-    [? if rb_leader != "karl holtermann" : Deputy Karl Höltermann ?] [? if rb_leader == "karl holtermann" : Chairman Karl Höltermann ?]
+
+[? if rb_leader != "karl holtermann" : <p style="text-align: center;">Deputy Karl Höltermann</p> ?] [? if rb_leader == "karl holtermann" : <p style="text-align: center;">Chairman Karl Höltermann</p> ?]
+
 Current Reichsbanner dissent: [+ rb_dissent_2 +]%
 
 
