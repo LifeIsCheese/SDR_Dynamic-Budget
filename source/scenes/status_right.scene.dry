@@ -13,7 +13,7 @@ Military Weariness: [+ military_weariness +]%
 @reichsbanner
 on-arrival: {!
 if (Q.rb_dissent) {
-    Q.rb_dissent_2 = rb_dissent * 50;
+    Q.rb_dissent_2 = Q.rb_dissent * 50;
 }
 
 !}
@@ -24,6 +24,7 @@ if (Q.rb_dissent) {
     [? if rb_leader != "karl holtermann" : <img class="face-status" src="img/portraits/Otto_Horsing_1932.jpg"> ?]
 </div>
 
+[? if rb_leader != "karl holtermann" : <p style="text-align: center;">Chairman Otto Hörsing</p> ?]
 [? if rb_leader != "karl holtermann" : <p style="text-align: center;">Chairman Otto Hörsing</p> ?]
 
 <div class = "face-status-container">
