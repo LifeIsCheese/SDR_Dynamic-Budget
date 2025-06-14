@@ -11,12 +11,6 @@ Military Weariness: [+ military_weariness +]%
 [? if military_available < 0.25 : The military is coalescing and getting tired of the current deadlock. ?] [? if military_available >= 0.25 and military_available < 0.5 : The military has enforced discipline. ?] [? if military_available >= 0.5 and military_available < 0.75 : The military is split. ?] [? if military_available >= 0.75 : The military is racked with ideological infighting. ?]
 
 @reichsbanner
-on-arrival: {!
-if (Q.rb_dissent) {
-    Q.rb_dissent_2 = Q.rb_dissent * 50;
-}
-
-!}
 
 = Reichsbanner
 
@@ -25,15 +19,16 @@ if (Q.rb_dissent) {
 </div>
 
 [? if rb_leader != "karl holtermann" : <p style="text-align: center;">Chairman Otto Hörsing</p> ?]
-[? if rb_leader != "karl holtermann" : <p style="text-align: center;">Chairman Otto Hörsing</p> ?]
+[? if rb_leader != "karl holtermann" : <p style="text-align: center;">Chance of murder: 0%</p> ?]
 
 <div class = "face-status-container">
     <img class="face-status" src="img/portraits/Karl_Holtermann_1932.jpg"> 
 </div>
 
 [? if rb_leader != "karl holtermann" : <p style="text-align: center;">Deputy Karl Höltermann</p> ?] [? if rb_leader == "karl holtermann" : <p style="text-align: center;">Chairman Karl Höltermann</p> ?]
+<p style="text-align: center;">Chance of murder: 0%</p>
 
-Current Reichsbanner dissent: [+ rb_dissent_2 +]%
+Current Reichsbanner dissent: [+ rb_dissent +]
 
 
 
