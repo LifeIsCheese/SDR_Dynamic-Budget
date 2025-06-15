@@ -454,21 +454,24 @@ Q.economic_goal = (Q.economic_base * Q.tax_reform) -
      (Q.upper_tax_rates / 3 / Q.inflation) +
      (Q.tariffs / 6 / Q.inflation)) + Q.inflation / 15;
 
+// Violence var
+const violenceMultiplier = Math.round((1 + (violence_level / 100) ) * 100) / 100;
+
 // Far right ramp up
 if (Q.violence_timer > 0) {
     if (Q.rohm_plot !== "successful") {
-        Q.sa_strength += Q.violence_timer * 3;
-        Q.sh_strength += Q.violence_timer * 2.9;
+        Q.sa_strength += (Q.violence_timer * 3) * violenceMultiplier;
+        Q.sh_strength += (Q.violence_timer * 2.9) * violenceMultiplier;
     } else {
-        Q.sa_strength += Q.violence_timer * 2;
-        Q.sh_strength += Q.violence_timer * 2.1;
+        (Q.sa_strength += Q.violence_timer * 2) * violenceMultiplier;
+        (Q.sh_strength += Q.violence_timer * 2.1) * violenceMultiplier;
     }
 }
 
 // Far left ramp up
 if (Q.violence_timer > 0) {
-    const leftMultiplier = (100 - Q.nationalism) / (Q.leow_plot !== "successful" ? 7 : 9);
-    Q.rfb_strength += Q.violence_timer * leftMultiplier;
+    const leftMultiplier = (100 - Q.nationalism) / (Q.leow_plot !== "successful" ? 8 : 12);
+    Q.rfb_strength += (Q.violence_timer * leftMultiplier) * violenceMultiplier;
 }
 
 // Military weariness change
@@ -482,7 +485,7 @@ if (Q.violence_timer > 0) {
 
 // Military ramp up
 if (Q.military_weariness >= 50) {
-    Q.reichswehr_strength += (24 - Q.violence_timer) * (15 + (Q.military_strength / 10));
+    Q.reichswehr_strength += ( (24 - Q.violence_timer) * (15 + (Q.military_strength / 10)) ) * violenceMultiplier;
 }
 
 // Military availability 
@@ -499,7 +502,7 @@ Q.far_right_strength = Math.round(
 );
 Q.military_strength = Math.round(Q.army_force * (1 - Q.military_available));
 
-/// violence
+/// violence events
 
 if (Q.violence_timer > 0) {
     Q.violence_events_pointer = 24 - Q.violence_timer;

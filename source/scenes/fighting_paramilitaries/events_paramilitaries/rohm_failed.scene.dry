@@ -2,10 +2,10 @@ title: Operation Lavender
 view-if: rohm_plot == "failed"
 new-page: true
 max-visits: 1
-on-arrival: plot_target = "None"; plot_strength = 0; z_relation -= 3; ddp_relation -=3; dvp_relation -=3
+on-arrival: plot_target = "None"; plot_strength = 0; z_relation -= 3; ddp_relation -=3; dvp_relation -=3; sa_militancy += 0.5; violence_add_on += 2
 tags: event
 
 = Oh well
 
-Well we tried our best, people are gonna be a little annoyed at us but like, atleast we tried.
+After a failed assassination, the SA have only furthered their militarization, ramping up efforts in destroying both the far left and republicans.
 
