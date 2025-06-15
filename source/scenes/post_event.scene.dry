@@ -455,7 +455,7 @@ Q.economic_goal = (Q.economic_base * Q.tax_reform) -
      (Q.tariffs / 6 / Q.inflation)) + Q.inflation / 15;
 
 // Violence var
-const violenceMultiplier = Math.round((1 + (violence_level / 100) ) * 100) / 100;
+const violenceMultiplier = Math.round((1 + (Q.violence_level / 100) ) * 100) / 100;
 
 // Far right ramp up
 if (Q.violence_timer > 0) {
