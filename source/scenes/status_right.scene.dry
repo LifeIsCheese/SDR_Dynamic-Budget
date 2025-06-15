@@ -8,11 +8,12 @@ Military Strength: [+ military_strength +]%
 
 Military Weariness: [+ military_weariness +]% 
 
-Concessions:
+[? if military_available < 0.25 : The military is coalescing and getting tired of the current deadlock. ?] [? if military_available >= 0.25 and military_available < 0.5 : The military has enforced discipline. ?] [? if military_available >= 0.5 and military_available < 0.75 : The military is split. ?] [? if military_available >= 0.75 : The military is racked with ideological infighting. ?]
+
+
+= Concessions
 
 None
-
-[? if military_available < 0.25 : The military is coalescing and getting tired of the current deadlock. ?] [? if military_available >= 0.25 and military_available < 0.5 : The military has enforced discipline. ?] [? if military_available >= 0.5 and military_available < 0.75 : The military is split. ?] [? if military_available >= 0.75 : The military is racked with ideological infighting. ?]
 
 @reichsbanner
 
