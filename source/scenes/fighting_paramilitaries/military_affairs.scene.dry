@@ -1,0 +1,40 @@
+title: The Army
+view-if: bruning_plot == "successful" and paramilitaries_timer == 0
+frequency: 100
+new-page: true
+is-card: true
+card-image: img/d_rose.jpg
+tags: fighting_paramilitaries
+
+= The Army
+
+AHHHHH the armys gonna kill us!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+We gotta beg them not to!!!!
+We swear were gonna get everything under control shhhhhhhhhhhhhhhhh.
+
+- @army_loyalty: Increase Loyalty of the Army.
+- @calm: Calm the army down
+- @root: Perhaps another time
+- @easy_discard
+
+@army_loyalty
+on-arrival: reichswehr_loyalty += 0.25; month_actions +=1; paramilitaries_timer = 2
+
+Yessssssssss now they are loyal and that is good
+
+but I dont think all of them are loyal
+
+that is bad
+
+@calm
+on-arrival: military_weariness -= 10 if military_weariness >= 10; month_actions +=1; paramilitaries_timer = 2
+
+The reichswehr is now calm, and will trust us that we can put down the violence in the streets
+
+that would be good
+
+but they are still big and scary
+
+that would be bad.
+
+.

@@ -11,7 +11,7 @@ tags: fighting_paramilitaries
 Due to increased violence in the streets, the repbulican parties are calmoring for further militarization.
 
 - @reichsbanner_menu: The Reichsbanner
-- @state_forces_menu: The army and police.
+- @state_forces_menu: Security and police.
 - @root: Perhaps another time
 - @easy_discard
 
@@ -95,7 +95,7 @@ What should we do?
 - @easy_discard
 
 @loyalty
-on-arrival: prussian_police_loyalty += 0.2; reichswehr_loyalty += 0.2; interior_police_loyalty +=0.2; month_actions +=1; paramilitaries_timer = 2
+on-arrival: prussian_police_loyalty += 0.2; interior_police_loyalty +=0.2; month_actions +=1; paramilitaries_timer = 2
 
 We root out corrupt or extremist policemen, we can justify this to our coalition partners with the violence in the streets.
 

@@ -1,7 +1,7 @@
 title: KPD influence
 view-if: kpd_strength < weimar_strength and bruning_plot == "successful" and violence_timer <= 18 and kpd_influence_timer == 0 and violence_timer != -1 and leow_plot != "successful"
 max-visits: 4
-on-arrival: rb_dissent +=50; kpd_influence_timer = 6
+on-arrival: rb_dissent +=25; kpd_influence_timer = 6
 new-page: true
 tags: event
 
@@ -17,4 +17,4 @@ With violence spreading even further in the streets, and the left being weaker t
 subtitle: We can use our vast network of spies to single out KPD dissidents.
 unavailable-subtitle: Our spy network does not have the capablility to carry this out.
 choose-if: spy_network >= 6
-on-arrival: rb_dissent -= 25
+on-arrival: rb_dissent -= 15
