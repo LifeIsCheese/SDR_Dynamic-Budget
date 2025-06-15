@@ -17,9 +17,9 @@ Due to the dire state of the Reichsbanner during this trying time, the democrati
 @repbulican_unity
 subtitle: Heavily increase membership. -2 resource
 choose-if: resources > 1
-on-arrival: rb_strength += 900; weimar_dissent -= 2; coalition_dissent -= 2; resources -=2; z_relation += 10; ddp_relation +=10; dvp_relation +=5; rb_militancy += 0.2
+on-arrival: rb_strength += 999; weimar_dissent -= 2; coalition_dissent -= 2; resources -=2; z_relation += 10; ddp_relation +=10; dvp_relation +=5; rb_militancy += 0.2
 
-We start using our media empure, in combination with the Center and the Democratic Party to heavily advertise the Reichsbanner.
+We start using our media empire, in combination with the Center and the Democratic Party to heavily advertise the Reichsbanner.
 
 
 @increase_militancy
