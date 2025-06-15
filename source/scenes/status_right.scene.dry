@@ -8,6 +8,10 @@ Military Strength: [+ military_strength +]%
 
 Military Weariness: [+ military_weariness +]% 
 
+Concessions:
+
+None
+
 [? if military_available < 0.25 : The military is coalescing and getting tired of the current deadlock. ?] [? if military_available >= 0.25 and military_available < 0.5 : The military has enforced discipline. ?] [? if military_available >= 0.5 and military_available < 0.75 : The military is split. ?] [? if military_available >= 0.75 : The military is racked with ideological infighting. ?]
 
 @reichsbanner
@@ -28,7 +32,7 @@ Military Weariness: [+ military_weariness +]%
 [? if rb_leader != "karl holtermann" : <p style="text-align: center;">Deputy Karl Höltermann</p> ?] [? if rb_leader == "karl holtermann" : <p style="text-align: center;">Chairman Karl Höltermann</p> ?]
 <p style="text-align: center;">Chance of murder: 0%</p>
 
-Current Reichsbanner dissent: [+ rb_dissent +]
+Current Reichsbanner dissent: [+ rb_dissent +]%
 
 
 
